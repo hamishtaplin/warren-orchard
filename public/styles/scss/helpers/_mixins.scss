@@ -1,0 +1,36 @@
+
+@mixin old-ie() {
+  @if $global-ie == true {
+    @content;
+  }
+}
+
+@mixin ie8 {
+  @if $global-ie == true {
+    @content;
+  }
+}
+
+@mixin ie7 {
+  @if $global-ie == true {
+    @content;
+  }
+}
+
+@mixin small(){
+  @include mq($min: 30em) {
+    @content;
+  }
+}
+
+@mixin lap(){
+  @include mq($min: $lap-start) {
+    @content;
+  }
+}
+
+@mixin desk(){
+  @include mq($min: $desk-start) {
+    @content;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "debug": true,
+  "domain": null,
+  "followLeader": false,
+  "ignoreDir": "node_modules",
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": "public",
+  "preprocessorScriptOutput": "public/scripts",
+  "preprocessorStyleOutput": "public/styles",
+  "projectDescription": "Warren Orchard, 2014",
+  "projectName": "warren-orchard",
+  "publishedId": "11172",
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": null,
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "mixture",
+  "useCompass": false
+}

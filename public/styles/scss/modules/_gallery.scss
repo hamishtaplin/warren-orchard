@@ -1,0 +1,42 @@
+.gallery {
+  margin: $header-height auto 0 auto;
+  width: 100%;
+  
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 0.25em;
+  }
+}
+
+
+@include mq($max: 500px) {
+
+  .job_page {
+    @include transition(all 100ms ease-in-out);
+  }
+
+  @media screen and (orientation:landscape) {
+
+    .job_page {
+      background: #000;
+      .wrapper {
+        @include transition(all 300ms ease-in-out);
+        padding: 0;
+      }
+      .header {
+        @include transform(translateY(-100%) scale(0.9));
+        opacity: 0;
+      }
+      .gallery {
+        margin: 0;
+        width: 100%;
+        img {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

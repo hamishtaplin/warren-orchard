@@ -1,0 +1,18 @@
+@include keyframes(fade-to-white) {
+	0% {
+		@include prefixer(filter, invert(0%), webkit mox o ms spec);
+	}
+	100% {
+		@include prefixer(filter, invert(100%), webkit mox o ms spec);
+	}
+}
+
+
+@include keyframes(fade-to-black) {
+	0% {
+		@include prefixer(filter, invert(100%), webkit mox o ms spec);
+	}
+	100% {
+		@include prefixer(filter, invert(0%), webkit mox o ms spec);
+	}
+}

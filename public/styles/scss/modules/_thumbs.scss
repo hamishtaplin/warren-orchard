@@ -1,0 +1,117 @@
+.thumbs {
+  letter-spacing: -0.31em;
+  margin: $header-height auto 0 auto;
+  width: 100%;
+  @include perspective(1000px);
+  @include perspective-origin(50% 50%);
+}
+
+.thumb {
+  letter-spacing: 0;
+  display: inline-block;
+  vertical-align: bottom;
+  padding: 0.25em;
+  width: 50%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  opacity: 0;
+  @include transition(all 300ms $ease-out-back);
+  // @include transform(translate3d(0,1em,0) rotate3d(1,0,0,-20deg));
+  @include transform(scale(0.9));
+  @include transform-origin(50% 50%);
+  &.is-loaded {
+    opacity: 1;
+    @include transform(translate3d(0,0,0));
+    @include transform(scale(1));
+    // @include transform(translate3d(0,0,0) rotate3d(1,0,0,0deg));
+    @for $i from 0 through 99 {
+      &:nth-child(#{$i}) {
+        @include transition-delay($i*10ms);
+      }
+    }
+  }
+}
+
+.thumb__img {
+  display: none;
+  width: 100%;
+  height: auto;
+  &:first-of-type {
+    display: block;
+  }
+}
+
+.thumb__title {
+  position: absolute;
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0.8;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color-black, 0.9);
+  color: $color-white;
+  padding: 1em;
+  line-height: 1em;
+  font-size: 1.2em;
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  @include transition(all 300ms $ease-out-back);
+  h2 {
+    opacity: 0;
+    @include transform(translateY(2em));
+    @include transition(all 300ms $ease-out-back 200ms);
+  }
+}
+
+.thumb__link {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  &:hover {
+    .thumb__title {
+      opacity: 1;
+      h2 {
+        opacity: 1;
+        @include transform(translateY(0));
+      }
+    }
+  }
+}
+
+@for $i from 2 through 8 {
+  @include mq($min: $i*$screen-width) {
+    .wrapper {
+      width: $i*$thumb-width;
+    }
+    .thumb {
+      width: 100%/$i;
+    }
+    .nav {
+      left: $thumb-width*nth($nav-offsets, $i);
+    }
+  }
+}

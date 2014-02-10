@@ -1,0 +1,901 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"ss",
+				"ssif	if-statement"
+			],
+			[
+				"ine",
+				"inline-block"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"ma",
+				"margin"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/styles/scss/modules/_common.scss",
+			"settings":
+			{
+				"buffer_size": 1942,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/styles/scss/base/_typography.scss",
+			"settings":
+			{
+				"buffer_size": 346,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/styles/scss/base/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 1164,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/styles/responsive.css",
+			"settings":
+			{
+				"buffer_size": 22730,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/layouts/layout.liquid",
+			"settings":
+			{
+				"buffer_size": 2962,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/index.liquid",
+			"settings":
+			{
+				"buffer_size": 301,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/info.liquid",
+			"settings":
+			{
+				"buffer_size": 522,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"include",
+				"Snippet: include"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"liqu",
+				"Set Syntax: HTML (Liquid)"
+			],
+			[
+				"liquid",
+				"Set Syntax: HTML (Liquid)"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 629.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/includes/header.liquid",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/_imports.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/layout.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/mixture.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/gruntfile.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/index.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.css",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Sass Snippets/if-statement.sublime-snippet",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_background.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_grid-width.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_transition-property-name.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_px-to-em.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_html5-input-types.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/base64.txt",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/preview.html",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/fixed.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_font-face.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/grunticon.loader.txt",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/responsive.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_responsive.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/_icons-svg.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_tables.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_print.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/logo.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_navs.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_navigation.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/webfonts/century_gothic_bold-webfont.svg",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/_icons-png.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_ctas.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.min.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/_icons-png.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_variables.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/_icons-svg.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/_bourbon.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_fonts.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_font-family.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_forms.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/_bourbon-deprecated-upcoming.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_buttons.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/index.html",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/app/public/styles/base.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/app/public/styles/scss/responsive.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/post.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/link-parse-opml.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/package.json",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/header.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/modules/_nav.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.htaccess",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.gitignore",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/config/deploy.rb",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/config/deploy/dev.rb",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/plugins/qtranslate/qtranslate.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/Gruntfile.js",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/config/deploy/live.rb",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/twentyfourteen/genericons/Genericons-Regular.otf",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-includes/http.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/old-ie.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/helpers/_ie.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/old-ie.css",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/modules/_common.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/old-ie.css",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/helpers/_media-queries.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/helpers/_helpers.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/vendor/bourbon/addons/_font-family.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/vendor/bourbon/css3/_linear-gradient.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/vendor/inuit/base/_lists.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/modules/_comments.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/helpers/_classes.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/_base.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/vendor/inuit/objects/_nav.scss",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.sass-cache/0fd7197eda63ee7d71be76432538cf8dafaadece/_classes.scssc",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/style.css",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.sass-cache/f8149e1146d6097de3d4d0393f86492f315b6938/style.scssc",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.sass-cache/f8149e1146d6097de3d4d0393f86492f315b6938/admin.scssc",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/style.css.map",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/style.css",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/node_modules/grunt-bower-task/node_modules/bower/node_modules/unzip/node_modules/match-stream/.idea/scopes/scope_settings.xml",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/setup-config.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/contact.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/scripts/app.js",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/app.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/admin-post.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/admin.css",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/node_modules/grunt/CONTRIBUTING.md",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/local-config.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-includes/class-oembed.php",
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/Capfile",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-includes/ID3/module.audio-video.flv.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/inc/VideoList.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-admin/css/colors/_admin.scss",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/style.css",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/.htaccess",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-config.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/header.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/functions.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/plugins/wordpress-seo/js/wp-seo-metabox.js",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/plugins/wordpress-seo/js/wp-seo-admin.js",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/plugins/wordpress-seo/wp-seo.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-settings.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-pass.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/_shared.scss",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/single-videos.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/style.scss",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-includes/theme-compat/header.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-includes/js/heartbeat.js",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-includes/http.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/functions.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/sidebar.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/videos-page.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/style.css",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-tv/functions.php",
+		"/Users/hamishtaplin/Library/Caches/Cleanup At Startup/Transmit/E02B7DF9-8FF1-4111-AF37-AD27D7033929/wp-config.php",
+		"/Users/hamishtaplin/Library/Caches/Cleanup At Startup/Transmit/88198FA5-BF66-4599-9452-CE76A9A943B7/.htaccess",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/plugins/qtranslate/qtranslate.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/gruntfile.js",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/themes/ceidiog/style.css",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html_/.htaccess",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/local-config.php",
+		"/Users/hamishtaplin/Library/Caches/Cleanup At Startup/Transmit/815CD9C6-5F6A-461F-A0F0-F8E0D60186B3/dev-config.php",
+		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/content/mu-plugins/symlink-fixer.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"spaces",
+			"17em",
+			"height: 5em;",
+			"5em",
+			"2.1em",
+			"div",
+			"//",
+			"30px",
+			"=\"",
+			"vectors",
+			"vectors_",
+			"app/",
+			"orig",
+			"app/",
+			"xml",
+			"inline-block",
+			".lt-ie8",
+			"site-nav",
+			".lt-ie",
+			".lt-ie9",
+			".site-nav",
+			"old-ie",
+			"ie",
+			"sidebar",
+			"font-size: 24px;",
+			"$attr",
+			"www",
+			".com",
+			"wolfestone.co.uk",
+			"WP_LOCAL_DEV",
+			"deploy",
+			"<li id=\"ceidiog-pr\">",
+			"\n",
+			"img",
+			"span",
+			"widget_twitter",
+			"A5A69F",
+			"#EBF5F7",
+			"#EDEADE",
+			"#edeade",
+			"Georgia, \"Times New Roman\", Times, serif",
+			"font-family",
+			"div",
+			"post-info",
+			"qtrans_strftime",
+			"post-info",
+			"$d1",
+			"post-info",
+			"$hash",
+			"$hash->video",
+			"video"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$color-white"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/styles/scss/modules/_common.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/styles/scss/base/_typography.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 346,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								346,
+								346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/styles/scss/base/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1161,
+								1161
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/styles/responsive.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22730,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								620,
+								620
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "templates/layouts/layout.liquid",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1314,
+								1314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/mixture-liquid-syntax-sublime-master/Syntaxes/HTML (Liquid).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "templates/index.liquid",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 301,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/mixture-liquid-syntax-sublime-master/Syntaxes/HTML (Liquid).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "templates/info.liquid",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/mixture-liquid-syntax-sublime-master/Syntaxes/HTML (Liquid).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "wo.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"var",
+				"public/styles/scss/base/_variables.scss"
+			],
+			[
+				"_typ",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"index",
+				"templates/index.liquid"
+			],
+			[
+				"layout",
+				"templates/layouts/layout.liquid"
+			],
+			[
+				"_comm",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"resp",
+				"public/styles/responsive.css"
+			],
+			[
+				"gruntfile",
+				"gruntfile.js"
+			],
+			[
+				"_t",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"_lay",
+				"public/styles/scss/base/_layout.scss"
+			],
+			[
+				"_ele",
+				"public/styles/scss/base/_elements.scss"
+			],
+			[
+				"lay",
+				"templates/layouts/layout.liquid"
+			],
+			[
+				"ele",
+				"public/styles/scss/base/_elements.scss"
+			],
+			[
+				"fixed",
+				"public/styles/scss/fixed.scss"
+			],
+			[
+				"gruntf",
+				"gruntfile.js"
+			],
+			[
+				"_respo",
+				"public/styles/scss/helpers/_responsive.scss"
+			],
+			[
+				"impo",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"_ty",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"imports",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"_navs",
+				"public/styles/scss/modules/_navs.scss"
+			],
+			[
+				"co",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"gru",
+				"gruntfile.js"
+			],
+			[
+				"_import",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"_impo",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"_var",
+				"public/styles/scss/base/_variables.scss"
+			],
+			[
+				"_fo",
+				"public/styles/scss/vendor/bourbon/css3/_font-face.scss"
+			],
+			[
+				"font",
+				"public/styles/scss/vendor/bourbon/css3/_font-face.scss"
+			],
+			[
+				"_bour",
+				"public/styles/scss/vendor/bourbon/_bourbon.scss"
+			],
+			[
+				"varia",
+				"public/styles/scss/base/_variables.scss"
+			],
+			[
+				"header",
+				"content/themes/arwydd/header.php"
+			],
+			[
+				"post",
+				"wp/wp-admin/post.php"
+			],
+			[
+				"heade",
+				"content/themes/arwydd/header.php"
+			],
+			[
+				"_nav",
+				"content/themes/arwydd/public/styles/sass/modules/_nav.scss"
+			],
+			[
+				"gruntfil",
+				"Gruntfile.js"
+			],
+			[
+				"old-ie",
+				"old-ie.css"
+			],
+			[
+				"old",
+				"old-ie.css"
+			],
+			[
+				"scss",
+				".sass-cache/0fd7197eda63ee7d71be76432538cf8dafaadece/_classes.scssc"
+			],
+			[
+				"app.js",
+				"content/themes/arwydd/public/scripts/app.js"
+			],
+			[
+				"contact",
+				"content/themes/arwydd/contact.php"
+			],
+			[
+				"video",
+				"inc/VideoList.php"
+			],
+			[
+				"head",
+				"wp-content/themes/ceidiog/header.php"
+			],
+			[
+				"_shar",
+				"wp-content/themes/ceidiog/_shared.scss"
+			],
+			[
+				"wp-seo-me",
+				"wp-content/plugins/wordpress-seo/js/wp-seo-metabox.js"
+			],
+			[
+				"grunt",
+				"gruntfile.js"
+			],
+			[
+				"dev",
+				"config/deploy/dev.rb"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"videolist",
+				"inc/VideoList.php"
+			],
+			[
+				"foo",
+				"content/themes/ceidiog/footer.php"
+			],
+			[
+				"style.scss",
+				"content/themes/ceidiog-pr/style.scss"
+			],
+			[
+				"style.",
+				"style.css"
+			],
+			[
+				"style",
+				"content/themes/css/style.css"
+			],
+			[
+				"functions",
+				"content/themes/ceidiog-pr/functions.php"
+			],
+			[
+				"videol",
+				"inc/VideoList.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 309.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,3 @@
+@function ems($pxval, $base: $base-font-size) {
+  @return em($pxval, $base);
+}

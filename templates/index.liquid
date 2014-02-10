@@ -1,0 +1,23 @@
+{% block content %} 
+
+{% include "header"  %}
+
+<div class="wrapper">
+  <div class="thumbs" id="thumbs">
+    <ul>
+      {% for job in global.jobs  %}
+      <li class="thumb">
+        <a href="/job?id={{job.id}}" class="thumb__link">
+        	<span class="thumb__title">
+            <h2 class="">Lorem Ipsum</h2>
+        	</span>
+          {% for img in job.images  %}
+            <img data-src="/public/images/content/thumbs/{{job.id}}/{{img}}-218x218.jpg" alt="" width="300" height="300" class="thumb__img">
+          {% endfor %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

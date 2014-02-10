@@ -1,0 +1,28 @@
+@mixin mq($max: none, $min: none) {  
+  @if ($max == none) {
+     @content;
+  }
+  @if ($max != none) and ($max < $desk-start) {
+     @content;
+  } 
+}
+
+// this overrides inuits media queries function
+
+@mixin ie8 {
+  .lt-ie9 {
+    @content;
+  }
+}
+
+@mixin ie7 {
+  .lt-ie8 {
+    @content;
+  }
+}
+
+.chromeframe {
+  background: $color-black;
+  color: $color-white;
+  padding: 1em 0;
+}

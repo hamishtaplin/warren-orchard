@@ -1,0 +1,35 @@
+// ********************************************************************
+//
+//      This file contains imports that are shared across 
+//      modern and legacy browser styles
+//
+// ********************************************************************
+
+/**
+ * Vendor styles and helpers
+ */
+
+@import "vendor/normalize-scss/normalize",
+        "vendor/bourbon/bourbon";
+
+@import "helpers/functions",
+		"helpers/animations";
+
+/**
+ * Base styling
+ */
+
+@import "base/fonts",
+        "base/elements",
+        "base/typography",        
+        "base/layout";
+
+/**
+ * Modules are the site content, organised into individual files.
+ */
+
+@import "modules/common",
+ 		"modules/nav",
+		"modules/info",
+		"modules/thumbs",
+		"modules/gallery";
