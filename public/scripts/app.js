@@ -22,49 +22,27 @@ window.App = window.App || {};
             });
 
             this.queue = [];
-
+            this.numLoaded = 0;
             for (var i = 0; i < this.numThumbs; i++) {
-                this.queue.push(new Views.Thumbnail({
+
+                var thumb = new Views.Thumbnail({
                     el: thumbs[i],
                     id: i
-                }));
-            };
+                });
 
-            this.startQueue();
-
-        },
-
-        startQueue: function() {
-            this.numLoaded = 0;
-              _.map(this.queue, function(thumb, i, list) {
-                if (i < this.QUEUE_SIZE) this.loadThumb(thumb);
-            }, this);       
-        },
-
-        loadThumb: function(thumb) {
-
-            console.log("loading: " + thumb.id);
-
-            if (typeof(thumb) !== 'undefined') {
                 thumb.once("load", this.onThumbLoaded, this);
-                thumb.load();
+
+                this.queue.push(thumb);
+                // thumb.load();
             };
         },
 
         onThumbLoaded: function(thumb) {
             this.numLoaded++;
+            
             if (this.numLoaded === this.numThumbs) {
                 this.progress.complete();
-                console.log("complete");
             } else {
-
-                console.log("loaded: " + thumb.id);
-                
-                this.queue.splice(this.queue.indexOf(thumb), 1);
-
-                console.log(this.queue);
-                this.loadThumb(this.queue[this.QUEUE_SIZE-1]);
-
                 this.progress.render(this.numLoaded);
                 
             }
@@ -73,26 +51,22 @@ window.App = window.App || {};
 
     Views.Thumbnail = Backbone.View.extend({
 
-        initialize: function() {
+        initialize: function(attributes) {
             _.bindAll(this, "onImgLoad");
             this.images = this.el.querySelectorAll("img");
+
+            // this.callback = attributes.callback;
+
+            this.load();
         },
 
         load: function () {
             var src = this.images[0].getAttribute("data-src");
             var newImg = new Image();
             
-            // newImg.onload = _.bind(this.onImgLoad, this);
+            newImg.onload = _.bind(this.onImgLoad, this);
             newImg.setAttribute("src", src);
-            newImg.src = src;
-
-            var that = this;
-
-            setInterval(function() {
-                that.onImgLoad({
-                    target: newImg
-                })
-            }, 1000);
+            newImg.src = src;          
         },
 
         onImgLoad: function(e) {
@@ -100,6 +74,7 @@ window.App = window.App || {};
             this.el.classList.add("is-loaded");
 
             this.trigger("load", this);
+            // this.callback(this);
         }
 
     });
@@ -128,7 +103,11 @@ window.App = window.App || {};
         },
 
         complete: function() {
-            this.el.classList.add("is-complete")
+
+            this.render(this.total);
+            window.setTimeout(_.bind(function() {
+                this.el.classList.add("is-complete");
+            }, this), 500);
         }
     });
 

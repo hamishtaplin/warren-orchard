@@ -56,22 +56,22 @@
 }
 
 .progress {
-  // position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   &.is-complete {
     .progress__bar {
-      @include transition-delay(2s);
+      @include transition-duration(500ms);
       height: 0;
-      opacity: 0;
+      // opacity: 0;
     }
   }
 }
 
 .progress__bar {
   background: $color-black;
-  height: 3px;
+  height: 2px;
   width: 0;
   @include transition(all 100ms ease-in-out);
 }

@@ -5,15 +5,16 @@
 <div class="wrapper">
   <div class="thumbs" id="thumbs">
     <ul>
-      {% for job in global.jobs  %}
+      {% for job in global.jobs limit:24  %}
       <li class="thumb">
         <a href="/job?id={{job.id}}" class="thumb__link">
         	<span class="thumb__title">
             <h2 class="">Lorem Ipsum</h2>
         	</span>
-          {% for img in job.images  %}
-            <img data-src="/public/images/content/thumbs/{{job.id}}/{{img}}-218x218.jpg" alt="" width="300" height="300" class="thumb__img">
-          {% endfor %}
+
+            {% capture myimg %}/public/images/content/thumbs/{{job.id}}/{{job.images[0]}}-218x218.jpg{% endcapture %}
+            <img data-src="{{ myimg | asset_url }}" alt="" width="300" height="300" class="thumb__img">
+         
         </a>
       </li>
       {% endfor %}
