@@ -1,10 +1,12 @@
-
-
-.wrapper {
+.global-wrapper {
   width: 100%;
-  padding: 0 0.25em;
+  height: 100%;
+}
+
+.global-width {
+  // padding: 0 0.25em;
   @include lap {
-    padding: 0 0.5em;
+    // padding: 0 0.5em;
   }
   margin: 0 auto;
   position: relative;
@@ -20,10 +22,10 @@
 .header {
 	height: $header-height;
 	width: 100%;
-	position: fixed;
-  top: 0;
-  left: 0;
+	
+  padding: 1em 0;
   z-index: 2;
+  top: 0;
   // background: rgba($color-white, 0.8);
   @include transition(all 300ms ease-in-out);
   opacity: 1;
@@ -32,7 +34,7 @@
 @include mq($max: 500px) {
   @media screen and (orientation:landscape) {
     .header {
-      height: $header-height / 2;
+      // height: $header-height / 2;
       @include transform(scale(0.5));
     }
    }
@@ -41,11 +43,7 @@
 .brand {
 	width: 78px;
 	height: 75px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	
 	margin: auto;
   // @include animation(fade-to-black 1.5s ease-in-out forwards);
 

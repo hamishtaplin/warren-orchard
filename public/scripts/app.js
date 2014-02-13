@@ -23,6 +23,7 @@ window.App = window.App || {};
 
             this.queue = [];
             this.numLoaded = 0;
+
             for (var i = 0; i < this.numThumbs; i++) {
 
                 var thumb = new Views.Thumbnail({
@@ -35,6 +36,14 @@ window.App = window.App || {};
                 this.queue.push(thumb);
                 // thumb.load();
             };
+
+
+            var fontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size')); 
+            this.headerHeight = document.getElementById("header").offsetHeight;
+
+            window.addEventListener("resize", _.bind(this.onWindowResize, this));
+            this.onWindowResize();
+
         },
 
         onThumbLoaded: function(thumb) {
@@ -44,8 +53,45 @@ window.App = window.App || {};
                 this.progress.complete();
             } else {
                 this.progress.render(this.numLoaded);
-                
             }
+        },
+
+        onWindowResize: function(e) {
+            var cols,
+                rows,
+                winHeight,
+                headerHeight,
+                thumbs = this.queue;
+
+            if (window.innerWidth >= 1290) {
+               cols = 4;
+               rows = 3;
+            } else if (window.innerWidth < 1290 && window.innerWidth > 840) {
+               cols = 3;
+               rows = 3;
+            } else if (window.innerWidth < 840 && window.innerWidth > 300) {
+               cols = 2;
+               rows = 2;
+            }
+
+            winHeight = window.innerHeight - (this.headerHeight * 2);
+            headerHeight = this.headerHeight;
+
+            this.el.style.height = (winHeight + "px");
+            this.el.style.width = ((winHeight / rows) * cols) + "px";
+            
+            for (var i = 0; i < this.numThumbs; i++) {
+                
+                thumbs[i].el.style.width = 100 / cols + "%"; 
+                thumbs[i].el.style.height = 100 / rows + "%"; 
+
+                if (i >= cols * rows) {
+                    thumbs[i].el.style.display = "none";
+                } else {
+                    thumbs[i].el.style.display = "inline-block";
+                }
+            }
+
         }
     });
 
@@ -53,7 +99,7 @@ window.App = window.App || {};
 
         initialize: function(attributes) {
             _.bindAll(this, "onImgLoad");
-            this.images = this.el.querySelectorAll("img");
+            this.images = this.el.querySelectorAll(".thumb__img");
 
             // this.callback = attributes.callback;
 
@@ -70,7 +116,8 @@ window.App = window.App || {};
         },
 
         onImgLoad: function(e) {
-            this.images[0].setAttribute("src", e.target.getAttribute("src"));
+            this.images[0].style.backgroundImage = "url(" + e.target.getAttribute("src") + ")";
+            // this.images[0].setAttribute("src", e.target.getAttribute("src"));
             this.el.classList.add("is-loaded");
 
             this.trigger("load", this);

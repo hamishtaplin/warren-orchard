@@ -2,9 +2,9 @@
 
 {% include "header"  %}
 
-<div class="wrapper">
-  <div class="thumbs" id="thumbs">
-    <ul>
+<div class="global-width">
+  
+    <ul class="thumbs" id="thumbs">
       {% for job in global.jobs limit:24  %}
       <li class="thumb">
         <a href="/job?id={{job.id}}" class="thumb__link">
@@ -12,13 +12,29 @@
             <h2 class="">Lorem Ipsum</h2>
         	</span>
 
-            {% capture myimg %}/public/images/content/thumbs/{{job.id}}/{{job.images[0]}}-218x218.jpg{% endcapture %}
-            <img data-src="{{ myimg | asset_url }}" alt="" width="300" height="300" class="thumb__img">
-         
+            {% capture myimg %}/public/images/content/thumbs/{{job.id}}/{{job.images[0]}}-436x436.jpg{% endcapture %}
+            {% if mixture.debug  %}
+              <div data-src="{{ myimg }}" class="thumb__img"></div>
+             {% else %}
+                <div data-src="{{ myimg | asset_url }}" class="thumb__img"></div>
+            {% endif %}
+            
         </a>
       </li>
       {% endfor %}
     </ul>
-  </div>
+
+    <div class="dots">
+     
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="40px" height="12px" viewBox="0 0 40 12" enable-background="new 0 0 40 12" xml:space="preserve">
+      <circle cx="6" cy="6" r="6"/>
+      <circle cx="30" cy="6" r="3"/>
+      </svg>
+
+    </div>
+
+
+ 
 </div>
 {% endblock %}
