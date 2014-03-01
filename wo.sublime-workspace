@@ -4,12 +4,160 @@
 		"selected_items":
 		[
 			[
-				"margin",
-				"margin-left"
+				"cla",
+				"classList"
+			],
+			[
+				"num",
+				"numLoaded"
+			],
+			[
+				"eas",
+				"ease-in-out-quint"
+			],
+			[
+				"trans",
+				"translate3d"
+			],
+			[
+				"ini",
+				"initRouter"
+			],
+			[
+				"cur",
+				"cursor"
 			],
 			[
 				"in",
-				"include"
+				"inline-block"
+			],
+			[
+				"g",
+				"grid"
+			],
+			[
+				"ce",
+				"ceil"
+			],
+			[
+				"App",
+				"AppView"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"MAX",
+				"MAX_COLS"
+			],
+			[
+				"bind",
+				"bindAll"
+			],
+			[
+				"pah",
+				"pageWidth"
+			],
+			[
+				"thumbsP",
+				"thumbsPagingNav"
+			],
+			[
+				"creat",
+				"createElement"
+			],
+			[
+				"fo",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"thumbs",
+				"thumbsInnerEl"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"thum",
+				"thumbPages"
+			],
+			[
+				"getA",
+				"getAvailableWidth"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"win",
+				"winHeight"
+			],
+			[
+				"new",
+				"newImg"
+			],
+			[
+				"pro",
+				"progress"
+			],
+			[
+				"load",
+				"loadThumb"
+			],
+			[
+				"on",
+				"onThumbLoaded"
+			],
+			[
+				"get",
+				"getAttribute"
+			],
+			[
+				"fn",
+				"fun	Function"
+			],
+			[
+				"Thum",
+				"Thumnails"
+			],
+			[
+				"cl",
+				"console	console.log()"
+			],
+			[
+				"if",
+				"if	if"
+			],
+			[
+				"tra",
+				"translate3d"
+			],
+			[
+				"webkit-tran",
+				"webkit-transform"
+			],
+			[
+				"webkit-tra",
+				"webkit-transform"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"webkit-tr",
+				"webkit-transform-style"
+			],
+			[
+				"color-",
+				"color-black"
+			],
+			[
+				"margin",
+				"margin-left"
 			],
 			[
 				"ss",
@@ -56,58 +204,66 @@
 	"buffers":
 	[
 		{
-			"file": "public/styles/scss/modules/_common.scss",
+			"file": "public/scripts/views/app.js",
 			"settings":
 			{
-				"buffer_size": 1942,
+				"buffer_size": 1293,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/styles/scss/base/_typography.scss",
+			"file": "public/scripts/views/job.js",
 			"settings":
 			{
-				"buffer_size": 346,
+				"buffer_size": 982,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/styles/scss/base/_variables.scss",
+			"file": "public/scripts/views/slider.js",
 			"settings":
 			{
-				"buffer_size": 1164,
+				"buffer_size": 1635,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/styles/responsive.css",
+			"file": "public/styles/scss/modules/_thumbs.scss",
 			"settings":
 			{
-				"buffer_size": 22730,
+				"buffer_size": 4106,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "templates/layouts/layout.liquid",
+			"file": "public/scripts/views/thumbnails.js",
 			"settings":
 			{
-				"buffer_size": 2962,
+				"buffer_size": 1110,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "templates/index.liquid",
+			"file": "public/scripts/views/img.js",
 			"settings":
 			{
-				"buffer_size": 301,
+				"buffer_size": 809,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "templates/info.liquid",
+			"file": "public/scripts/views/img-loader.js",
 			"settings":
 			{
-				"buffer_size": 522,
+				"buffer_size": 878,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/scripts/views/progress-bar.js",
+			"settings":
+			{
+				"buffer_size": 1042,
 				"line_ending": "Unix"
 			}
 		}
@@ -115,9 +271,113 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 127.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"Snippet: ",
+				"Snippet: console.log()"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"extend",
+				"Snippet: Backbone.js view extend"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"bb view",
+				"Snippet: Backbone.js view el"
+			],
+			[
+				"backbone view",
+				"Snippet: Backbone.js view constructor"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"bb",
+				"Snippet: Backbone.js collection clone"
+			],
+			[
+				"jav",
+				"Javascript Beautify"
+			],
+			[
+				"cons",
+				"Snippet: console.log()"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"constr",
+				"Snippet: JS constructor pattern"
+			],
+			[
+				"module",
+				"Snippet: JS module pattern"
+			],
+			[
+				"revealing",
+				"Snippet: JS revealing module pattern"
+			],
+			[
+				"con",
+				"consolewrap"
+			],
+			[
+				"module		",
+				"Snippet: JS module pattern"
+			],
+			[
+				"patt",
+				"Snippet: JS singleton pattern"
+			],
+			[
+				"patter",
+				"Snippet: JS revealing module pattern"
+			],
+			[
+				"json",
+				"Indent JSON"
+			],
+			[
+				"inde",
+				"Indent XML"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
 			[
 				"include",
 				"Snippet: include"
@@ -131,10 +391,6 @@
 				"Set Syntax: Sass"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"liqu",
 				"Set Syntax: HTML (Liquid)"
 			],
@@ -145,14 +401,6 @@
 			[
 				"remove",
 				"Package Control: Remove Package"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
-				"in",
-				"Package Control: Install Package"
 			],
 			[
 				"ins",
@@ -180,36 +428,102 @@
 	},
 	"file_history":
 	[
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/includes/header.liquid",
-		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/_imports.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/layout.liquid",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/mixture.json",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/gruntfile.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/wo.sublime-project",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/package.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job.liquid",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/index.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/app.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job-ajax.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img-loader.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnails.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/job.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.mix.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/vendor/backbone.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/grid.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/gruntfile.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.min (MacBook-Air's conflicted copy 2014-02-23).min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/img.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/image-loader.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/progress-bar.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/slider.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/layout.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/blank.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/routers/app-router.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/src",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/models/_global.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/info.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/_imports.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_radial-arg-parser.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.css",
-		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Sass Snippets/if-statement.sublime-snippet",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_background.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_grid-width.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/_bourbon-deprecated-upcoming.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_modular-scale.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/mixture.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/img.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/app.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_fonts.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/Underscorejs snippets.sublime-package",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/Console API Snippets (JavaScript).sublime-package",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/JavaScript Snippets.sublime-package",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/icon-dots.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_variables.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/includes/header.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_responsive.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/responsive.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.min.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_timing-functions.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_transition.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_transition-property-name.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_px-to-em.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_shape-size-stripper.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_animation.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_retina-image.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_position.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_linear-positions-parser.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_html5-input-types.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_size.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/backbone.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/bower.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/icon-info.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_image-rendering.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/zepto.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/utils.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/nav.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/underscore.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/images.txt",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/logo.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/vectors.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/icon-grid.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/vectors_logo.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/models/.gitignore",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_px-to-em.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_prefixer.scss",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Sass Snippets/if-statement.sublime-snippet",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_grid-width.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/base64.txt",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/preview.html",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/fixed.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_font-face.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/grunticon.loader.txt",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/responsive.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_responsive.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/_icons-svg.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_tables.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_print.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/logo.svg",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_navs.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_navigation.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/webfonts/century_gothic_bold-webfont.svg",
@@ -219,13 +533,10 @@
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.min.css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/_icons-png.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_variables.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/_icons-svg.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/_bourbon.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_fonts.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_font-family.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_forms.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/_bourbon-deprecated-upcoming.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_buttons.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/index.html",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/app/public/styles/base.css",
@@ -244,70 +555,7 @@
 		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/config/deploy/live.rb",
 		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/twentyfourteen/genericons/Genericons-Regular.otf",
 		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-includes/http.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/old-ie.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/helpers/_ie.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/old-ie.css",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/modules/_common.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/old-ie.css",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/helpers/_media-queries.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/helpers/_helpers.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/vendor/bourbon/addons/_font-family.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/vendor/bourbon/css3/_linear-gradient.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/vendor/inuit/base/_lists.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/modules/_comments.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/helpers/_classes.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/_base.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/vendor/inuit/objects/_nav.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.sass-cache/0fd7197eda63ee7d71be76432538cf8dafaadece/_classes.scssc",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/style.css",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.sass-cache/f8149e1146d6097de3d4d0393f86492f315b6938/style.scssc",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.sass-cache/f8149e1146d6097de3d4d0393f86492f315b6938/admin.scssc",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/style.css.map",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/style.css",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/node_modules/grunt-bower-task/node_modules/bower/node_modules/unzip/node_modules/match-stream/.idea/scopes/scope_settings.xml",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/setup-config.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/contact.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/scripts/app.js",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/app.min.js",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/admin-post.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/admin.css",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/node_modules/grunt/CONTRIBUTING.md",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/local-config.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-includes/class-oembed.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/Capfile",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-includes/ID3/module.audio-video.flv.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/inc/VideoList.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-admin/css/colors/_admin.scss",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/style.css",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/.htaccess",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-config.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/header.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/functions.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/plugins/wordpress-seo/js/wp-seo-metabox.js",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/plugins/wordpress-seo/js/wp-seo-admin.js",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/plugins/wordpress-seo/wp-seo.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-settings.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-pass.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/_shared.scss",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/single-videos.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/style.scss",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-includes/theme-compat/header.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-includes/js/heartbeat.js",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-includes/http.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/functions.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog/sidebar.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/videos-page.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-pr/style.css",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/themes/ceidiog-tv/functions.php",
-		"/Users/hamishtaplin/Library/Caches/Cleanup At Startup/Transmit/E02B7DF9-8FF1-4111-AF37-AD27D7033929/wp-config.php",
-		"/Users/hamishtaplin/Library/Caches/Cleanup At Startup/Transmit/88198FA5-BF66-4599-9452-CE76A9A943B7/.htaccess",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/wp-content/plugins/qtranslate/qtranslate.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/gruntfile.js",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/themes/ceidiog/style.css",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html_/.htaccess",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/local-config.php",
-		"/Users/hamishtaplin/Library/Caches/Cleanup At Startup/Transmit/815CD9C6-5F6A-461F-A0F0-F8E0D60186B3/dev-config.php",
-		"/Users/hamishtaplin/Dropbox/Work/010_ceidiog/public_html/content/mu-plugins/symlink-fixer.php"
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/old-ie.scss"
 	],
 	"find":
 	{
@@ -318,6 +566,8 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"*.js",
+			"*.liquid",
 			"*.scss",
 			"*.php",
 			"*.scss",
@@ -327,67 +577,148 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
-			"spaces",
-			"17em",
-			"height: 5em;",
-			"5em",
-			"2.1em",
+			"value",
+			"render",
+			"thumb",
+			"numThumbs",
+			"onThumbLoaded",
+			"onLoaded",
+			"this.thumbs",
+			"this.thumbs[0]",
+			"this.thumbs",
+			"this.q",
+			"this.queue",
+			" Backbone.View",
+			"thumb",
+			"Thumbs",
+			"thumbs",
+			"el",
+			"job-",
+			"this.thumbsInnerEl",
+			"this. ",
+			"thumbs__inner",
+			"link",
+			"thumbsPagingNav",
+			"this.thumbsInnerEl",
+			"thumbs__",
+			"thumbs__inner",
+			"grid__",
+			"console.log",
+			"thumbPages",
+			"numPerPage",
+			"numThumbs",
+			"thumbs__",
+			"numThumbs",
+			"queue",
+			"Thumbs",
+			"thumbs",
+			"this.queue",
+			"fontSize",
+			"this.MAX_THUMB_SIZE",
+			"ceil",
+			"height",
+			"width",
+			"MAX_THUMB_SIZE",
+			"onWindowResize",
+			"MAX_COLS",
+			"MAX_THUMB_SIZE",
+			"this.el",
+			"this.thumbPages[i]",
+			"pages[i]",
+			"thumbs[i]",
+			"thumbs[i].el",
+			"var ",
+			"this.el.style",
+			"ceil",
+			"initGrid",
+			"winHeight",
+			"class=\"wrapper\"",
+			"width",
+			"300",
+			"$header-height",
+			"$ease-out-back",
+			"100%",
+			"\"load\"",
+			"console.log",
+			"this.numLoaded",
+			"update",
+			"numThumbs",
+			"render",
+			"this.queue[i]",
+			"change",
+			"blah",
+			"0%",
+			"1,1",
+			"100px",
+			"loadImg",
+			"\";",
+			"Thumnails",
+			"\";",
+			"this.numThumbs",
+			"this.thumbs",
+			"args",
 			"div",
-			"//",
-			"30px",
-			"=\"",
-			"vectors",
-			"vectors_",
-			"app/",
-			"orig",
-			"app/",
-			"xml",
-			"inline-block",
-			".lt-ie8",
-			"site-nav",
-			".lt-ie",
-			".lt-ie9",
-			".site-nav",
-			"old-ie",
-			"ie",
-			"sidebar",
-			"font-size: 24px;",
-			"$attr",
-			"www",
-			".com",
-			"wolfestone.co.uk",
-			"WP_LOCAL_DEV",
-			"deploy",
-			"<li id=\"ceidiog-pr\">",
-			"\n",
-			"img",
+			".jpg",
+			"\"id\": ",
+			": {",
+			"job-",
+			"\"job-",
+			"\"images\": [",
+			"\"job-",
+			"resp",
+			"],",
+			": [",
+			"],\n\n",
+			"\n\n\n",
+			"\n\n",
+			"\", \"",
+			"\n\n\n\n\n    ",
+			"\",\n    ],",
+			",\n    ],",
+			"\n\n\n\n\n\n\n",
+			"\n\n\n\n\n\n",
+			"\n\n\n\n\n",
+			"\n\n\n\n",
+			"\n\n\n",
+			"\n\n",
+			"],\n\"image-",
+			"],\n\"",
+			".DS_Store",
+			"]",
+			".jpg",
+			": {",
+			"image-",
+			"job-",
+			"-large",
+			"-small",
+			"http://",
 			"span",
-			"widget_twitter",
-			"A5A69F",
-			"#EBF5F7",
-			"#EDEADE",
-			"#edeade",
-			"Georgia, \"Times New Roman\", Times, serif",
-			"font-family",
-			"div",
-			"post-info",
-			"qtrans_strftime",
-			"post-info",
-			"$d1",
-			"post-info",
-			"$hash",
-			"$hash->video",
-			"video"
+			"rt",
+			"filter",
+			"-webkit-transform-style: preserve-3d;",
+			"374",
+			"187",
+			"50",
+			"svgmin",
+			"});\n",
+			"svgmin",
+			".thumb__title",
+			"		<",
+			"@include animation"
 		],
 		"highlight": true,
 		"in_selection": false,
-		"preserve_case": false,
+		"preserve_case": true,
 		"regex": false,
 		"replace_history":
 		[
+			"img",
+			"class=\"global-width\"",
+			"image",
+			"class=\"global-width\"",
 			"$color-white"
 		],
 		"reverse": false,
@@ -399,24 +730,111 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/styles/scss/modules/_common.scss",
+					"file": "public/scripts/views/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1942,
+						"buffer_size": 1293,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								44,
-								44
+								373,
+								373
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/scripts/views/job.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 982,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								938,
+								938
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/scripts/views/slider.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1635,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/styles/scss/modules/_thumbs.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4106,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								879,
+								879
 							]
 						],
 						"settings":
@@ -433,144 +851,55 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "public/styles/scss/base/_typography.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								346,
-								346
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/styles/scss/base/_variables.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1161,
-								1161
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/styles/responsive.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 22730,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								620,
-								620
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "templates/layouts/layout.liquid",
+					"file": "public/scripts/views/thumbnails.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2962,
+						"buffer_size": 1110,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1314,
-								1314
+								208,
+								208
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/User/mixture-liquid-syntax-sublime-master/Syntaxes/HTML (Liquid).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "templates/index.liquid",
+					"file": "public/scripts/views/img.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 301,
+						"buffer_size": 809,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								43,
-								43
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/User/mixture-liquid-syntax-sublime-master/Syntaxes/HTML (Liquid).tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -582,32 +911,60 @@
 				},
 				{
 					"buffer": 6,
-					"file": "templates/info.liquid",
+					"file": "public/scripts/views/img-loader.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 522,
+						"buffer_size": 878,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								26,
-								26
+								353,
+								353
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/User/mixture-liquid-syntax-sublime-master/Syntaxes/HTML (Liquid).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "public/scripts/views/progress-bar.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								749,
+								749
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -651,7 +1008,7 @@
 	"project": "wo.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -660,12 +1017,60 @@
 		"selected_items":
 		[
 			[
-				"var",
-				"public/styles/scss/base/_variables.scss"
+				"_thumbs",
+				"public/styles/scss/modules/_thumbs.scss"
 			],
 			[
-				"_typ",
-				"public/styles/scss/base/_typography.scss"
+				"progr",
+				"public/scripts/views/progress-bar.js"
+			],
+			[
+				"thumbs",
+				"public/scripts/views/thumbnails.js"
+			],
+			[
+				"jobs",
+				"public/scripts/views/job.js"
+			],
+			[
+				"app",
+				"public/scripts/views/app.js"
+			],
+			[
+				"aja",
+				"templates/job-ajax.liquid"
+			],
+			[
+				"_gallery",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"grid",
+				"public/scripts/views/grid.js"
+			],
+			[
+				"scripts",
+				"public/scripts/scripts.mix.js"
+			],
+			[
+				"_anim",
+				"public/styles/scss/helpers/_animations.scss"
+			],
+			[
+				"ap",
+				"public/scripts/views/app.js"
+			],
+			[
+				"thumbs.js",
+				"public/scripts/views/thumbnails.js"
+			],
+			[
+				"_thu",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"scrip",
+				"public/scripts/scripts.mix.js"
 			],
 			[
 				"index",
@@ -676,8 +1081,148 @@
 				"templates/layouts/layout.liquid"
 			],
 			[
+				"_th",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"icon-do",
+				"public/images/icons/icon-dots.svg"
+			],
+			[
+				"comm",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"_co",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"_var",
+				"public/styles/scss/base/_variables.scss"
+			],
+			[
+				"app.js",
+				"public/scripts/app.js"
+			],
+			[
+				"hea",
+				"templates/includes/header.liquid"
+			],
+			[
+				"ele",
+				"public/styles/scss/base/_elements.scss"
+			],
+			[
+				"common",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"respo",
+				"public/styles/scss/helpers/_responsive.scss"
+			],
+			[
+				"var",
+				"public/styles/scss/base/_variables.scss"
+			],
+			[
+				"_impo",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"_inf",
+				"public/styles/scss/modules/_info.scss"
+			],
+			[
+				"_nav",
+				"public/styles/scss/modules/_nav.scss"
+			],
+			[
 				"_comm",
 				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"_res",
+				"public/styles/scss/helpers/_responsive.scss"
+			],
+			[
+				"header",
+				"templates/includes/header.liquid"
+			],
+			[
+				"thumb",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"la",
+				"templates/layouts/layout.liquid"
+			],
+			[
+				"job",
+				"templates/job.liquid"
+			],
+			[
+				"thum",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"grunt",
+				"gruntfile.js"
+			],
+			[
+				"_thumb",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"gallery.sc",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"gruntf",
+				"gruntfile.js"
+			],
+			[
+				"_navs",
+				"public/styles/scss/modules/_nav.scss"
+			],
+			[
+				"_ty",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"_ga",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"_im",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"typ",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"impo",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"head",
+				"templates/includes/header.liquid"
+			],
+			[
+				"_typo",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"index.",
+				"templates/index.liquid"
+			],
+			[
+				"info",
+				"templates/info.liquid"
+			],
+			[
+				"_typ",
+				"public/styles/scss/base/_typography.scss"
 			],
 			[
 				"resp",
@@ -704,36 +1249,16 @@
 				"templates/layouts/layout.liquid"
 			],
 			[
-				"ele",
-				"public/styles/scss/base/_elements.scss"
-			],
-			[
 				"fixed",
 				"public/styles/scss/fixed.scss"
-			],
-			[
-				"gruntf",
-				"gruntfile.js"
 			],
 			[
 				"_respo",
 				"public/styles/scss/helpers/_responsive.scss"
 			],
 			[
-				"impo",
-				"public/styles/scss/_imports.scss"
-			],
-			[
-				"_ty",
-				"public/styles/scss/base/_typography.scss"
-			],
-			[
 				"imports",
 				"public/styles/scss/_imports.scss"
-			],
-			[
-				"_navs",
-				"public/styles/scss/modules/_navs.scss"
 			],
 			[
 				"co",
@@ -746,14 +1271,6 @@
 			[
 				"_import",
 				"public/styles/scss/_imports.scss"
-			],
-			[
-				"_impo",
-				"public/styles/scss/_imports.scss"
-			],
-			[
-				"_var",
-				"public/styles/scss/base/_variables.scss"
 			],
 			[
 				"_fo",
@@ -772,20 +1289,12 @@
 				"public/styles/scss/base/_variables.scss"
 			],
 			[
-				"header",
-				"content/themes/arwydd/header.php"
-			],
-			[
 				"post",
 				"wp/wp-admin/post.php"
 			],
 			[
 				"heade",
 				"content/themes/arwydd/header.php"
-			],
-			[
-				"_nav",
-				"content/themes/arwydd/public/styles/sass/modules/_nav.scss"
 			],
 			[
 				"gruntfil",
@@ -804,10 +1313,6 @@
 				".sass-cache/0fd7197eda63ee7d71be76432538cf8dafaadece/_classes.scssc"
 			],
 			[
-				"app.js",
-				"content/themes/arwydd/public/scripts/app.js"
-			],
-			[
 				"contact",
 				"content/themes/arwydd/contact.php"
 			],
@@ -816,20 +1321,12 @@
 				"inc/VideoList.php"
 			],
 			[
-				"head",
-				"wp-content/themes/ceidiog/header.php"
-			],
-			[
 				"_shar",
 				"wp-content/themes/ceidiog/_shared.scss"
 			],
 			[
 				"wp-seo-me",
 				"wp-content/plugins/wordpress-seo/js/wp-seo-metabox.js"
-			],
-			[
-				"grunt",
-				"gruntfile.js"
 			],
 			[
 				"dev",
@@ -893,7 +1390,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 309.0,
+	"side_bar_width": 510.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

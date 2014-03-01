@@ -4695,228 +4695,501 @@ window.$ === undefined && (window.$ = Zepto)
     };
 
 }).call(this);
-// safer global namespace
+
 window.App = window.App || {};
+
+App.Router = Backbone.Router.extend({
+
+	routes: {
+		"": "index",
+		"jobs/:id": "job"
+	}
+
+});
+
+window.App = window.App || {};
+App.Views = App.Views || {};
+
+App.Views.ImageView = Backbone.View.extend({
+
+    initialize: function(args) {
+        _.bindAll(this, "onImgLoad", "load");
+        this.imgEl = this.el.querySelector('.img');
+        this.load();
+    },
+
+    load: function () {
+        var src = this.imgEl.getAttribute("data-src");
+        var newImg = new Image();
+        
+        newImg.onload = _.bind(this.onImgLoad, this);
+        newImg.setAttribute("src", src);
+        newImg.src = src;          
+    },
+
+    onImgLoad: function(e) {
+        this.imgEl.style.backgroundImage = "url(" + e.target.getAttribute("src") + ")";
+        // this.el.setAttribute("src", e.target.getAttribute("src"));
+        this.el.classList.add("is-loaded");
+
+        this.trigger("load", this);
+
+    }
+
+});
+
+
+window.App = window.App || {};
+App.Views = App.Views || {};
+
+App.Views.ImageLoader = Backbone.View.extend({
+
+	initialize: function(args) {
+		var imgs = args.imgs;		
+		
+		this.numImages = imgs.length;
+		this.queue = [];
+		this.numLoaded = 0;
+
+		for (var i = 0; i < this.numImages; i++) {
+
+			var img = new App.Views.ImageView({
+				el: imgs[i],
+				id: i
+			});
+
+			img.once("load", this.onImageLoaded, this);
+			this.queue.push(img);
+
+		};
+	},
+
+	onImageLoaded: function(img) {
+		this.numLoaded++;
+
+		img.el.classList.add("img-" + this.numLoaded);
+
+		if (this.numLoaded === this.numImages) {
+			App.eventDispatcher.trigger("progress:complete");
+			this.trigger("progress:complete");
+
+		} else {
+			App.eventDispatcher.trigger("progress:change", (this.numLoaded / this.numImages) * 100);
+			this.trigger("progress:change", (this.numLoaded / this.numImages) * 100);
+		}
+	}
+
+});
+
+
+
+
+window.App = window.App || {};
+App.Views = App.Views || {};
+
+App.Views.Thumbnails = Backbone.View.extend({
+
+	el: "#thumbs",
+
+	initialize: function() {		
+		this.thumbs = document.querySelectorAll(".thumb");
+				
+		this.imgLoader = new App.Views.ImageLoader({
+			imgs: this.thumbs
+		});
+
+		// this.imgLoader.on("progress:change", this.onImageLoaded);
+
+		this.thumbsInnerEl = document.createElement('div');
+		this.thumbsInnerEl.className = "thumbs__inner";
+
+		this.el.appendChild(this.thumbsInnerEl);
+
+		this.grid = new App.Views.Grid({
+			thumbs: this.thumbs,
+			el: this.el,
+			thumbsInnerEl: this.thumbsInnerEl
+		});
+
+		this.slider = new App.Views.Slider({
+			el: this.el,
+			thumbsInnerEl: this.thumbsInnerEl
+		});
+
+		this.grid.on("change:numpages", this.slider.draw);
+
+		window.addEventListener("resize", _.bind(this.onWindowResize, this));
+		this.grid.draw();
+	},
+
+	onWindowResize: function(e) {
+		this.grid.draw();
+	},
+
+	hide: function() {
+		this.el.classList.add("is-off-screen");
+		this.slider.hide();
+	},
+
+	show: function() {
+		this.el.classList.remove("is-off-screen");
+		this.slider.show();
+	}
+});
+
+
+
+
+window.App = window.App || {};
+App.Views = App.Views || {};
+
+App.Views.ProgressBar = Backbone.View.extend({
+
+	el: document.getElementById("progress"),
+
+	initialize: function(attributes) {
+		_.bindAll(this, "update", "complete");
+		this.render();
+
+		// this.total = attributes.total;
+
+		App.eventDispatcher.on("progress:change", this.update);
+		App.eventDispatcher.on("progress:complete", this.complete);
+
+	},
+
+	render: function() {
+
+		var wrapper = document.getElementById("global-wrapper");
+		wrapper.insertBefore(this.el, wrapper.firstChild);
+		this.innerEl = document.createElement("div");
+		this.el.classList.add("progress");
+		this.innerEl.classList.add("progress__bar")
+		this.el.appendChild(this.innerEl);
+	},
+
+	update: function(perc) {
+		// console.log(perc);
+		// var perc = ((value / this.total) * 100).toString() + "%";
+
+		this.innerEl.style.width = perc.toString() + "%";
+	},
+
+	complete: function() {
+
+		this.update(100);
+		window.setTimeout(_.bind(function() {
+			this.el.classList.add("is-complete");
+		}, this), 500);
+	}
+
+});
+
+
+window.App = window.App || {};
+App.Views = App.Views || {};
 
 (function(window, $) {
 
-		var Models = {};
-		var Views = {};
+	App.Views.Slider = Backbone.View.extend({
 
-		Views.Thumbnails = Backbone.View.extend({
+		initialize: function(args) {
+			_.bindAll(this, "draw", "onPageNavClick");
+			this.thumbsInnerEl = args.thumbsInnerEl;
+			this.pageNav = document.createElement('div');
+			this.pageNav.className = "thumbs__paging";
+			this.el.parentElement.appendChild(this.pageNav);
+			this.pageNav.addEventListener("click", this.onPageNavClick);
+			this.pageNavItems = [];
+			this.numPages = 0;
+			this.currentPage = 0;
+		},
 
-				MAX_COLS: 4,
-				MAX_ROWS: 3,
-				MAX_THUMB_SIZE: 436,
+		draw: function(numPages) {
+			
+			var i = 0;
+			
+			this.numPages = numPages;
+			this.pageNavItems = [];
+			this.pageNav.innerHTML = "";
 
-				el: "#thumbs",
+			while (i < numPages) {
+				
+				var btn = document.createElement('div');
+				btn.setAttribute("data-i", i.toString());
+				btn.className = "thumbs__paging-btn";
+				this.pageNavItems[i] = btn;
+				this.pageNav.appendChild(btn);
+				
+				i++;
 
-				initialize: function() {
-						_.bindAll(this, "drawGrid")						
-						var thumbs = document.querySelectorAll(".thumb");
-						this.numThumbs = thumbs.length;
+			}
 
-						this.progress = new Views.ProgressBar({
-								total: this.numThumbs
-						});
+			this.navigateTo(this.currentPage, false);
+		},
 
-						this.queue = [];
-						this.numLoaded = 0;
+		onPageNavClick: function(e) {
+			this.navigateTo(e.target.getAttribute("data-i"), true);
+		},
 
-						// create this for later use
-						this.numPagesOfThumbs = 0;
-						this.thumbPages = [];
+		navigateTo: function(i, animate) {
+			var el = this.thumbsInnerEl;
 
-						this.thumbsInnerEl = document.createElement('div');
-						this.thumbsInnerEl.className = "thumbs__inner";
-						this.el.appendChild(this.thumbsInnerEl);
+			if (!animate) {
+				el.classList.remove("will-animate");
+			}
 
-						this.thumbsPagingNav = document.createElement('nav');
-						this.thumbsPagingNav.className = "thumbs__paging";
-						this.el.parentElement.appendChild(this.thumbsPagingNav);
+			this.currentPage = i;
+			el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numPages)) +"%,0,0)";
 
-						for (var i = 0; i < this.numThumbs; i++) {
+			if (!animate) {
+				_.delay(function(arguments) {
+					el.classList.add("will-animate");
+				}, 100)
+			};
+		},
 
-								var thumb = new Views.Thumbnail({
-										el: thumbs[i],
-										id: i
-								});
+		hide: function() {
+			this.pageNav.classList.add("is-off-screen");
+		},
 
-								thumb.once("load", this.onThumbLoaded, this);
-								this.queue.push(thumb);
-						};
+		show: function() {
+			this.pageNav.classList.remove("is-off-screen");
+		}
+
+	});
+	
+}).call(this, window, Zepto);
+
+window.App = window.App || {};
+App.Views = App.Views || {};
+
+App.Views.Grid = Backbone.View.extend({
+
+	MAX_COLS: 5,
+	MAX_ROWS: 3,
 
 
-						var fontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size')); 
-						this.headerHeight = document.getElementById("header").offsetHeight;
+	initialize: function(args) {
+		this.el = args.el;
+		// create this for later use
+		this.numPagesOfThumbs = 0;
+		this.thumbPages = [];
 
-						window.addEventListener("resize", _.bind(this.onWindowResize, this));
-						this.drawGrid();
+		this.thumbsInnerEl = args.thumbsInnerEl;
+		
+		this.thumbs = args.thumbs;
+		this.numThumbs = this.thumbs.length;
 
-				},
+		var fontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size')); 
+		this.headerHeight = document.getElementById("header").offsetHeight;
+	},
 
-				onThumbLoaded: function(thumb) {
-						this.numLoaded++;
-						
-						if (this.numLoaded === this.numThumbs) {
-								this.progress.complete();
-						} else {
-								this.progress.render(this.numLoaded);
-						}
-				},
+	draw: function() {
 
-				drawGrid: function() {
-						var width = this.getAvailableWidth(),
-								height = this.getAvailableHeight(),
-								thumbs = this.queue,
-								numThumbs = this.numThumbs,
-								style = this.el.style,
-								numPerPage = 0,
-								numPages = 0,
-								pageWidth = 0,
-								pageHeight = 0,
-								i = 0;
+		var winWidth = window.innerWidth,
+				winHeight = window.innerHeight - (this.headerHeight * 2),
+				maxThumbSize = parseInt(this.getStyleProp(this.thumbs[0], "max-width")),
+				style = this.el.style,
+				thumbs = this.thumbs,
+				numThumbs = this.numThumbs,
+				numPerPage = 0,
+				numPages = 0,
+				pageWidth = 0,
+				pageHeight = 0,
+				i = 0;
 
-						cols = Math.ceil(width / this.MAX_THUMB_SIZE);
-						rows = Math.ceil(height / this.MAX_THUMB_SIZE);
+		
+		rows = Math.ceil(winHeight / maxThumbSize);
 
-						numPerPage = cols * rows;
-						numPages = Math.ceil(numThumbs / numPerPage);
+		cols = (rows < 2) ? Math.ceil(winWidth / maxThumbSize) : Math.ceil(winWidth / maxThumbSize)
 
-						if (numPages !== this.numPagesOfThumbs) {
-							
-							this.numPagesOfThumbs = numPages;
+		if (cols > this.MAX_COLS) cols = this.MAX_COLS;
+		if (rows > this.MAX_ROWS) rows = this.MAX_ROWS;
 
-							for (i = 0; i < numPages; i++) {
+		numPerPage = cols * rows;
+		numPages = Math.ceil(numThumbs / numPerPage);
 
-								if (typeof(this.thumbPages[i]) === 'undefined') {
-									var page = document.createElement('div');
-									page.id = "thumbs-page-" + i;
-									page.className = "thumbs__page";
-									this.thumbPages[i] = page;
-									if (typeof(page.parent === 'undefined')) {
-										this.thumbsInnerEl.appendChild(page);
-									}
-								} else {
-								 	// this.thumbPages[i] = null;
-								}
-							}
-							for (i = 0; i < numThumbs; i++) {
-								var thumb = thumbs[i].el;
-								thumb.style.width = 100 / cols + "%"; 
-								thumb.style.height = 100 / rows + "%"; 
-								
-								this.thumbPages[Math.floor(i / numPerPage)].appendChild(thumb);
-							}
-						}
+		if (numPages !== this.numPagesOfThumbs) {
 
-						pageWidth = ((height / rows) * cols);
-						
-						if (pageWidth <= width) {
-							pageWidth = pageWidth;
-						} else {
-							pageWidth = width;
-						}
-						pageHeight = height;
+			this.numPagesOfThumbs = numPages;
 
-						console.log(pageWidth, pageHeight);
-						style.width = pageWidth + "px";
-						style.height = pageHeight + "px";
+			i = 0;
+			while (i < numPages) {
 
-						for (i = 0; i < numPages; i++) {
-							this.thumbPages[i].style.width = pageWidth + "px";
-							// this.thumbPages[i].style.height = pageWidth + "px";
-						};
-
-						this.thumbsInnerEl.style.width = (pageWidth * numPages) + "px";
-						this.thumbsInnerEl.style.height = pageHeight + "px";
-						
-				},
-
-				getAvailableHeight: function() {
-						return window.innerHeight - (this.headerHeight * 2);
-				},
-
-				getAvailableWidth: function() {
-						return window.innerWidth;
-				},
-
-				onWindowResize: function(e) {
-					_.defer(this.drawGrid)
-				}
-		});
-
-		Views.Thumbnail = Backbone.View.extend({
-
-				initialize: function(attributes) {
-						_.bindAll(this, "onImgLoad");
-						this.images = this.el.querySelectorAll(".thumb__img");
-
-						// this.callback = attributes.callback;
-
-						this.load();
-				},
-
-				load: function () {
-						var src = this.images[0].getAttribute("data-src");
-						var newImg = new Image();
-						
-						newImg.onload = _.bind(this.onImgLoad, this);
-						newImg.setAttribute("src", src);
-						newImg.src = src;          
-				},
-
-				onImgLoad: function(e) {
-						this.images[0].style.backgroundImage = "url(" + e.target.getAttribute("src") + ")";
-						// this.images[0].setAttribute("src", e.target.getAttribute("src"));
-						this.el.classList.add("is-loaded");
-
-						this.trigger("load", this);
-						// this.callback(this);
+				if (typeof(this.thumbPages[i]) === 'undefined') {
+					var page = document.createElement('div');
+					page.id = "thumbs-page-" + i;
+					page.className = "thumbs__page";
+					this.thumbPages[i] = page;
+					
+					if (typeof(page.parent === 'undefined')) {
+						this.thumbsInnerEl.appendChild(page);
+					}
+				} else {
+				// this.thumbPages[i] = null;
 				}
 
-		});
+				i++;
+			}
 
-		Views.ProgressBar = Backbone.View.extend({
+			i = 0;
+			while	(i < numThumbs) {
+				var thumb = thumbs[i];
+				thumb.style.width = 100 / cols + "%"; 
+				thumb.style.height = 100 / rows + "%"; 
+				this.thumbPages[Math.floor(i / numPerPage)].appendChild(thumb);
+				i++;
+			}
 
-				id: "progress",
+			this.trigger("change:numpages", numPages);
+		}
 
-				initialize: function(attributes) {
-						var wrapper = document.getElementById("global-wrapper");
-						wrapper.insertBefore(this.el, wrapper.firstChild);
-						this.innerEl = document.createElement("div");
-						this.el.classList.add("progress");
-						this.innerEl.classList.add("progress__bar")
-						this.el.appendChild(this.innerEl);
+		pageWidth = ((winHeight / rows) * cols);
+		pageHeight = winHeight;
 
-						this.total = attributes.total;
-						
+		style.width = pageWidth + "px";
+		style.height = pageHeight + "px";
+
+		i = 0;
+		while (i < numPages) {
+			this.thumbPages[i].style.width = pageWidth + "px";
+			this.thumbPages[i].style.height = pageHeight + "px";
+			i++;
+		};
+
+		this.thumbsInnerEl.style.width = (pageWidth * numPages) + "px";
+		this.thumbsInnerEl.style.height = pageHeight + "px";
+
+	},
+
+	getStyleProp: function(elem, prop){
+		if(window.getComputedStyle)
+			return window.getComputedStyle(elem, null).getPropertyValue(prop);
+		else if(elem.currentStyle) return elem.currentStyle[prop]; //IE
+	}
+
+});
+(function(window, $) {
+	
+	window.App = window.App || {};
+	App.Views = App.Views || {};
+
+	App.Views.JobView = Backbone.View.extend({
+		
+		tagName: "div",
+
+		className: "job-view",
+
+		initialize: function() {
+			_.bindAll(this, "onAjaxLoaded", "show");
+
+			this.render();
+		},
+
+		render: function() {
+			var wrapper = document.getElementById("global-wrapper");
+			wrapper.insertBefore(this.el, wrapper.firstChild);
+		},
+
+		load: function(id) {
+			
+			Backbone.ajax({
+				url: '/job-ajax',
+				data: {
+					'id': id
 				},
 
-				render: function(value) {
-							// console.log(value);
-						var perc = ((value / this.total) * 100).toString() + "%";
-						
-						this.innerEl.style.width = perc;
-				},
+				success: this.onAjaxLoaded
 
-				complete: function() {
+			});
+			
+		},
 
-						this.render(this.total);
-						window.setTimeout(_.bind(function() {
-								this.el.classList.add("is-complete");
-						}, this), 500);
-				}
-		});
+		show: function() {
+			this.el.classList.add("is-visible");
+		},
 
+		hide: function() {
+			this.el.classList.remove("is-visible");
+		},
 
-		var thumbnailsView = new Views.Thumbnails();
+		onAjaxLoaded: function(data) {
 
+			
 
+			this.el.innerHTML = data;
 
+			this.imgLoader = new App.Views.ImageLoader({
+				imgs: this.el.querySelectorAll(".gallery__item")
+			});
+
+			this.imgLoader.on("progress:complete", this.show);
+		}
+
+	});
+	
 
 }).call(this, window, Zepto);
 
-window.onload = function(e) {
-		document.body.className += "loaded";
-};
+
+window.App = window.App || {};
+App.Views = App.Views || {};
+
+(function(window, $) {
+
+	App.Views.AppView = Backbone.View.extend({
+
+		el: "body",
+
+		initialize: function() {
+			_.bindAll(this, "jobRoute", "indexRoute");
+
+			App.eventDispatcher = _.clone(Backbone.Events); 
+
+			window.onload = _.bind(this.onWindowLoad, this);
+			
+			this.progress = new App.Views.ProgressBar();
+
+			this.thumbsView = new App.Views.Thumbnails();
+	
+			this.jobsView = new App.Views.JobView();
+		
+			App.eventDispatcher.on("progress:change", this.progress.update);
+			App.eventDispatcher.on("progress:complete", this.progress.complete);
+
+			this.initRouter();
+		},
+
+		initRouter: function() {
+			this.router = new App.Router();
+			this.router.on('route:index', this.indexRoute);
+			this.router.on('route:job', this.jobRoute);
+
+			Backbone.history.start();
+		},
+
+		jobRoute: function(id) {
+			this.thumbsView.hide();
+			// this.jobsView.on("progress:change", this.progress.update);
+			// this.jobsView.on("progress:complete", this.onJobLoaded);
+
+
+			this.jobsView.load(id);
+		},
+
+		indexRoute: function() {
+			this.thumbsView.show();
+			this.jobsView.hide();
+		},
+
+		onWindowLoad: function(arguments) {
+			this.el.className += "loaded";
+		}
+
+	});
+	
+	var app = new App.Views.AppView();
+
+}).call(this, window, Zepto);
+

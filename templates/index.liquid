@@ -3,27 +3,22 @@
 {% include "header"  %}
 
 <div class="global-width">
-  
-
-    <ul class="thumbs" id="thumbs">
-      {% for job in global.jobs limit:24  %}
-      <li class="thumb">
-        <a href="/job?id={{job.id}}" class="thumb__link">
-        	<span class="thumb__title">
-            <h2 class="">Lorem Ipsum</h2>
-        	</span>
-
-            {% capture myimg %}/public/images/content/thumbs/{{job.id}}/{{job.images[0]}}-436x436.jpg{% endcapture %}
-            {% if mixture.debug  %}
-              <div data-src="{{ myimg }}" class="thumb__img"></div>
-             {% else %}
-                <div data-src="{{ myimg | asset_url }}" class="thumb__img"></div>
-            {% endif %}
-            
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-
+	<ul class="thumbs  grid" id="thumbs">
+		{% for job in global.jobs limit:24  %}
+		<li class="thumb">
+			<a href="#jobs/{{job.id}}" class="thumb__link">
+				<span class="thumb__title">
+					<h2 class="">Lorem Ipsum</h2>
+				</span>
+				{% capture myimg %}/public/images/content/thumbs/job-{{job.id}}/{{job.images[0]}}-436x436.jpg{% endcapture %}
+				{% if mixture.debug  %}
+					<div data-src="{{ myimg }}" class="thumb__img  img"></div>
+				 {% else %}
+					<div data-src="{{ myimg | asset_url }}" class="thumb__img  img"></div>
+				{% endif %}    
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
 </div>
 {% endblock %}

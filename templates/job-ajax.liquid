@@ -1,0 +1,23 @@
+{% layout "blank" %}
+{% block content %} 
+
+  <ul class="gallery">
+    
+    {% for job in global.jobs  %}
+      {% if job.id == {{request.query.id}} %}
+        {% for img in job.images %}
+          <li class="gallery__item">
+            {% capture myimg %}/public/images/content/fullsize/job-{{job.id}}/{{img}}.jpg{% endcapture %}
+            {% if mixture.debug  %}
+              <div data-src="{{ myimg }}" class="thumb__img  img"></div>
+             {% else %}
+              <div data-src="{{ myimg | asset_url }}" class="gallery__img  img"></div>
+            {% endif %}    
+          </li>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </ul>    
+
+
+{% endblock %}

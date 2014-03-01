@@ -4,10 +4,23 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  opacity: 1;
+  @include transition(opacity 500ms $ease-in-out-quint 300ms);
   @include perspective(1000px);
   @include perspective-origin(50% 50%);
   ul {
     height: 100%;
+  }
+
+  &.is-off-screen {
+    opacity: 0;
+    @include transform(translate3d(0, 0, 0));
+    .thumb {  
+      // @include transform(translate3d(0, 0, 0));
+      // @include animation(fade 500ms forwards 0);
+      @include animation(fade-out 500ms $ease-in-out-quint);
+      // @include animation-direction(reverse);
+    }
   }
 }
 
@@ -21,40 +34,36 @@
   -webkit-backface-visibility: hidden;
   opacity: 0;
   padding: 0.25em;
+  max-width: 200px;
+  max-height: 200px;
   // position: absolute;
   // @include transition(all 300ms $ease-out-back);
   // @include transform(translate3d(0,1em,0) rotate3d(1,0,0,-20deg));
   // @include transform(scale(0.8));
-  @include transform-origin(50% 50%);
+  // @include transform-origin(50% 50%);
   &.is-loaded {
-    @include animation(fade 500ms forwards);
+    @include animation(fade 500ms $ease-in-out-quint both);
+    @include animation-direction(normal);
     // opacity: 1;
     // position: relative;
     // @include transform(translate3d(0,0,0));
     // @include transform(scale(1));
     // // @include transform(translate3d(0,0,0) rotate3d(1,0,0,0deg));
     @for $i from 0 through 99 {
-      &:nth-child(#{$i}) {
+      &.thumb-#{$i} {
         @include animation-delay( $i*20ms );
       }
     }
   }
-}
 
-@include keyframes(fade) {
-  0% {
-    opacity: 0;
-
-    -webkit-filter:brightness(0) contrast(5) saturate(0.5); 
+  @include lap {
+    max-width: 250px;
+    max-height: 250px;
   }
-  25%: {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
 
-    -webkit-filter:brightness(1) contrast(1) saturate(1);
-    
+  @include desk {
+    max-width: 350px;
+    max-height: 350px;
   }
 }
 
@@ -136,7 +145,7 @@
   height: 100%;
   width: 100%;
   float: left;
-  opacity: 0.1;
+  opacity: 1;
   padding: 0;
   &:nth-of-type(1) {
     opacity: 1;
@@ -148,15 +157,40 @@
   position: absolute;
   left: 0;
   top: 0;
+  
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+
+  &.will-animate {
+    @include transition(all 300ms $ease-in-out-quint);
+  }
 }
 
 
-.dots {
+.thumbs__paging {
   position: absolute;
   left: 0;
   right: 0;
   bottom: -48px;
   margin: auto;
-  width: 40px;
+  width: 3em;
+  text-align: center;
   height: 12px;
+
+  @include transition(-webkit-transform 300ms $ease-in-out-quint);
+
+  &.is-off-screen {
+    @include transform(translate3d(0, 10em, 0))
+  }
+}
+
+.thumbs__paging-btn {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: $color-black;
+  border-radius: 100%;
+  margin: 0.2em;
+  cursor: pointer;
 }

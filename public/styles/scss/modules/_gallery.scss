@@ -1,12 +1,37 @@
-.gallery {
-  margin: $header-height auto 0 auto;
+.job-view {
   width: 100%;
-  
-  img {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  @include transition(all 1s $ease-in-out-quint);
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+.gallery {
+  // margin: $header-height auto 0 auto;
+  width: 100%;
+  height: 100%;
+
+  img, .img {
     max-width: 100%;
     width: 100%;
     height: auto;
-    padding: 0.25em;
+    padding: 0;
+  }
+}
+
+.gallery__item {
+  // display: none;
+  width: 100%;
+  height: 100%;
+  .img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
