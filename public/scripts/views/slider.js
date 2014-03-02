@@ -7,8 +7,12 @@ App.Views = App.Views || {};
 
 		initialize: function(args) {
 			_.bindAll(this, "draw", "onPageNavClick");
-			this.innerEl = args.innerEl;
-			this.pageNav = document.createElement('div');
+
+			this.type = args.type;
+
+			this.innerEl = document.createElement("div");
+			this.el.appendChild(this.innerEl);
+			this.pageNav = document.createElement("div");
 			this.pageNav.className = "paging";
 			this.el.parentElement.appendChild(this.pageNav);
 			this.pageNav.addEventListener("click", this.onPageNavClick);
@@ -52,7 +56,12 @@ App.Views = App.Views || {};
 			}
 
 			this.currentPage = i;
-			el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numPages)) + "%,0,0)";
+
+			if (this.style === "slide") {
+				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numPages)) + "%,0,0)";
+			} else if (this.style === "fade") {
+
+			}
 
 			if (!animate) {
 				_.delay(function(arguments) {

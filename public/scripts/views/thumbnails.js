@@ -6,6 +6,7 @@ App.Views.Thumbnails = Backbone.View.extend({
 	el: "#thumbs",
 
 	initialize: function() {
+		_.bindAll(this, "hide", "show", "onHideAnimationEnd");
 		this.thumbs = document.querySelectorAll(".thumb");
 
 		this.imgLoader = new App.Views.ImageLoader({
@@ -26,6 +27,11 @@ App.Views.Thumbnails = Backbone.View.extend({
 
 	hide: function() {
 		this.el.classList.add("is-off-screen");
+		this.el.addEventListener("webkitAnimationEnd", this.onHideAnimationEnd, true);
+	},
+
+	onHideAnimationEnd: function(e) {
+		console.log(e);
 	},
 
 	show: function() {

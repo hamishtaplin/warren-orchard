@@ -10,16 +10,16 @@ App.Views = App.Views || {};
 		initialize: function() {
 			_.bindAll(this, "jobRoute", "indexRoute");
 
-			App.eventDispatcher = _.clone(Backbone.Events); 
+			App.eventDispatcher = _.clone(Backbone.Events);
 
 			window.onload = _.bind(this.onWindowLoad, this);
-			
+
 			this.progress = new App.Views.ProgressBar();
 
 			this.thumbsView = new App.Views.Thumbnails();
-	
+
 			this.jobsView = new App.Views.JobView();
-		
+
 			App.eventDispatcher.on("progress:change", this.progress.update);
 			App.eventDispatcher.on("progress:complete", this.progress.complete);
 
@@ -36,15 +36,11 @@ App.Views = App.Views || {};
 
 		jobRoute: function(id) {
 			this.thumbsView.hide();
-			// this.jobsView.on("progress:change", this.progress.update);
-			// this.jobsView.on("progress:complete", this.onJobLoaded);
-
-
 			this.jobsView.load(id);
 		},
 
 		indexRoute: function() {
-			this.thumbsView.show();
+			_.delay(this.thumbsView.show, 500);
 			this.jobsView.hide();
 		},
 
@@ -53,7 +49,7 @@ App.Views = App.Views || {};
 		}
 
 	});
-	
+
 	var app = new App.Views.AppView();
 
 }).call(this, window, Zepto);

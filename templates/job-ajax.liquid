@@ -1,8 +1,7 @@
 {% layout "blank" %}
 {% block content %} 
 
-  <ul class="gallery">
-    
+  <ul class="gallery" id="gallery">
     {% for job in global.jobs  %}
       {% if job.id == {{request.query.id}} %}
         {% for img in job.images %}

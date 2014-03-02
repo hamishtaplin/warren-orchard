@@ -36,10 +36,10 @@
 
 		show: function() {
 			this.el.classList.add("is-visible");
-			BackgroundCheck.init({
-				targets: '.brand',
-				images: '.gallery__item'
-			});
+			// BackgroundCheck.init({
+			// 	targets: '.brand',
+			// 	images: '.gallery__item'
+			// });
 			BackgroundCheck.refresh();
 		},
 
@@ -50,11 +50,23 @@
 		onAjaxLoaded: function(data) {
 
 			this.el.innerHTML = data;
-			BackgroundCheck.refresh();
+			// BackgroundCheck.refresh();
 
 			this.imgLoader = new App.Views.ImageLoader({
 				imgs: this.el.querySelectorAll(".gallery__item")
 			});
+
+			this.initSlider();
+
+		},
+
+		initSlider: function() {
+
+			this.slider = new App.Views.Slider({
+				type: "fade",
+				el: document.getElementById("gallery")
+			});
+
 
 			this.imgLoader.on("progress:complete", this.show);
 		}

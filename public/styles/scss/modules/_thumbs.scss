@@ -14,13 +14,9 @@
 
   &.is-off-screen {
     pointer-events: none;
-    opacity: 0;
     @include transform(translate3d(0, 0, 0));
     .thumb {  
-      // @include transform(translate3d(0, 0, 0));
-      // @include animation(fade 500ms forwards 0);
       @include animation(fade-out 500ms $ease-in-out-quint);
-      // @include animation-direction(reverse);
     }
   }
 }

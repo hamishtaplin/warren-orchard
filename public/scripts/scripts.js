@@ -5030,6 +5030,7 @@ App.Views.Thumbnails = Backbone.View.extend({
 	el: "#thumbs",
 
 	initialize: function() {
+		_.bindAll(this, "hide", "show", "onHideAnimationEnd");
 		this.thumbs = document.querySelectorAll(".thumb");
 
 		this.imgLoader = new App.Views.ImageLoader({
@@ -5050,6 +5051,11 @@ App.Views.Thumbnails = Backbone.View.extend({
 
 	hide: function() {
 		this.el.classList.add("is-off-screen");
+		this.el.addEventListener("webkitAnimationEnd", this.onHideAnimationEnd, true);
+	},
+
+	onHideAnimationEnd: function(e) {
+		console.log(e);
 	},
 
 	show: function() {
@@ -5111,8 +5117,12 @@ App.Views = App.Views || {};
 
 		initialize: function(args) {
 			_.bindAll(this, "draw", "onPageNavClick");
-			this.innerEl = args.innerEl;
-			this.pageNav = document.createElement('div');
+
+			this.type = args.type;
+
+			this.innerEl = document.createElement("div");
+			this.el.appendChild(this.innerEl);
+			this.pageNav = document.createElement("div");
 			this.pageNav.className = "paging";
 			this.el.parentElement.appendChild(this.pageNav);
 			this.pageNav.addEventListener("click", this.onPageNavClick);
@@ -5156,7 +5166,12 @@ App.Views = App.Views || {};
 			}
 
 			this.currentPage = i;
-			el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numPages)) + "%,0,0)";
+
+			if (this.style === "slide") {
+				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numPages)) + "%,0,0)";
+			} else if (this.style === "fade") {
+
+			}
 
 			if (!animate) {
 				_.delay(function(arguments) {
@@ -5323,10 +5338,10 @@ App.Views.Grid = Backbone.View.extend({
 
 		show: function() {
 			this.el.classList.add("is-visible");
-			BackgroundCheck.init({
-				targets: '.brand',
-				images: '.gallery__item'
-			});
+			// BackgroundCheck.init({
+			// 	targets: '.brand',
+			// 	images: '.gallery__item'
+			// });
 			BackgroundCheck.refresh();
 		},
 
@@ -5337,11 +5352,23 @@ App.Views.Grid = Backbone.View.extend({
 		onAjaxLoaded: function(data) {
 
 			this.el.innerHTML = data;
-			BackgroundCheck.refresh();
+			// BackgroundCheck.refresh();
 
 			this.imgLoader = new App.Views.ImageLoader({
 				imgs: this.el.querySelectorAll(".gallery__item")
 			});
+
+			this.initSlider();
+
+		},
+
+		initSlider: function() {
+
+			this.slider = new App.Views.Slider({
+				type: "fade",
+				el: document.getElementById("gallery")
+			});
+
 
 			this.imgLoader.on("progress:complete", this.show);
 		}
@@ -5363,16 +5390,16 @@ App.Views = App.Views || {};
 		initialize: function() {
 			_.bindAll(this, "jobRoute", "indexRoute");
 
-			App.eventDispatcher = _.clone(Backbone.Events); 
+			App.eventDispatcher = _.clone(Backbone.Events);
 
 			window.onload = _.bind(this.onWindowLoad, this);
-			
+
 			this.progress = new App.Views.ProgressBar();
 
 			this.thumbsView = new App.Views.Thumbnails();
-	
+
 			this.jobsView = new App.Views.JobView();
-		
+
 			App.eventDispatcher.on("progress:change", this.progress.update);
 			App.eventDispatcher.on("progress:complete", this.progress.complete);
 
@@ -5389,15 +5416,11 @@ App.Views = App.Views || {};
 
 		jobRoute: function(id) {
 			this.thumbsView.hide();
-			// this.jobsView.on("progress:change", this.progress.update);
-			// this.jobsView.on("progress:complete", this.onJobLoaded);
-
-
 			this.jobsView.load(id);
 		},
 
 		indexRoute: function() {
-			this.thumbsView.show();
+			_.delay(this.thumbsView.show, 500);
 			this.jobsView.hide();
 		},
 
@@ -5406,8 +5429,7 @@ App.Views = App.Views || {};
 		}
 
 	});
-	
+
 	var app = new App.Views.AppView();
 
 }).call(this, window, Zepto);
-
