@@ -3,29 +3,32 @@ App.Views = App.Views || {};
 
 App.Views.ImageView = Backbone.View.extend({
 
-    initialize: function(args) {
-        _.bindAll(this, "onImgLoad", "load");
-        this.imgEl = this.el.querySelector('.img');
-        this.load();
-    },
+	initialize: function(args) {
+		_.bindAll(this, "onImgLoad", "load");
+		this.imgEl = this.el.querySelector('.img');
+		this.load();
+	},
 
-    load: function () {
-        var src = this.imgEl.getAttribute("data-src");
-        var newImg = new Image();
-        
-        newImg.onload = _.bind(this.onImgLoad, this);
-        newImg.setAttribute("src", src);
-        newImg.src = src;          
-    },
+	load: function() {
+		var src = this.imgEl.getAttribute("data-src");
+		var newImg = new Image();
 
-    onImgLoad: function(e) {
-        this.imgEl.style.backgroundImage = "url(" + e.target.getAttribute("src") + ")";
-        // this.el.setAttribute("src", e.target.getAttribute("src"));
-        this.el.classList.add("is-loaded");
+		newImg.onload = _.bind(this.onImgLoad, this);
+		newImg.setAttribute("src", src);
+		newImg.src = src;
+	},
 
-        this.trigger("load", this);
+	onImgLoad: function(e) {
+		var newImg = e.target;
+		if (newImg.naturalWidth < newImg.naturalHeight) {
+			this.el.classList.add("portrait");
+		};
+		// this.imgEl.style.backgroundImage = "url(" + newImg.getAttribute("src") + ")";
+		this.imgEl.setAttribute("src", newImg.getAttribute("src"));
+		this.el.classList.add("is-loaded");
 
-    }
+		this.trigger("load", this);
+
+	}
 
 });
-

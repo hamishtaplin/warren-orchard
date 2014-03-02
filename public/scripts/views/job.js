@@ -1,10 +1,10 @@
 (function(window, $) {
-	
+
 	window.App = window.App || {};
 	App.Views = App.Views || {};
 
 	App.Views.JobView = Backbone.View.extend({
-		
+
 		tagName: "div",
 
 		className: "job-view",
@@ -21,7 +21,7 @@
 		},
 
 		load: function(id) {
-			
+
 			Backbone.ajax({
 				url: '/job-ajax',
 				data: {
@@ -31,11 +31,16 @@
 				success: this.onAjaxLoaded
 
 			});
-			
+
 		},
 
 		show: function() {
 			this.el.classList.add("is-visible");
+			BackgroundCheck.init({
+				targets: '.brand',
+				images: '.gallery__item'
+			});
+			BackgroundCheck.refresh();
 		},
 
 		hide: function() {
@@ -44,9 +49,8 @@
 
 		onAjaxLoaded: function(data) {
 
-			
-
 			this.el.innerHTML = data;
+			BackgroundCheck.refresh();
 
 			this.imgLoader = new App.Views.ImageLoader({
 				imgs: this.el.querySelectorAll(".gallery__item")
@@ -56,6 +60,6 @@
 		}
 
 	});
-	
+
 
 }).call(this, window, Zepto);

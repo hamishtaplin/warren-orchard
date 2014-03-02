@@ -12,9 +12,9 @@
 				</span>
 				{% capture myimg %}/public/images/content/thumbs/job-{{job.id}}/{{job.images[0]}}-436x436.jpg{% endcapture %}
 				{% if mixture.debug  %}
-					<div data-src="{{ myimg }}" class="thumb__img  img"></div>
+					<img data-src="{{ myimg }}" class="thumb__img  img" width="436" height="436" />
 				 {% else %}
-					<div data-src="{{ myimg | asset_url }}" class="thumb__img  img"></div>
+					<img data-src="{{ myimg | asset_url }}" class="thumb__img  img" width="436" height="436" />
 				{% endif %}    
 			</a>
 		</li>

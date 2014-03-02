@@ -7,9 +7,9 @@ App.Views = App.Views || {};
 
 		initialize: function(args) {
 			_.bindAll(this, "draw", "onPageNavClick");
-			this.thumbsInnerEl = args.thumbsInnerEl;
+			this.innerEl = args.innerEl;
 			this.pageNav = document.createElement('div');
-			this.pageNav.className = "thumbs__paging";
+			this.pageNav.className = "paging";
 			this.el.parentElement.appendChild(this.pageNav);
 			this.pageNav.addEventListener("click", this.onPageNavClick);
 			this.pageNavItems = [];
@@ -18,21 +18,21 @@ App.Views = App.Views || {};
 		},
 
 		draw: function(numPages) {
-			
+
 			var i = 0;
-			
+
 			this.numPages = numPages;
 			this.pageNavItems = [];
 			this.pageNav.innerHTML = "";
 
 			while (i < numPages) {
-				
+
 				var btn = document.createElement('div');
 				btn.setAttribute("data-i", i.toString());
-				btn.className = "thumbs__paging-btn";
+				btn.className = "paging-btn";
 				this.pageNavItems[i] = btn;
 				this.pageNav.appendChild(btn);
-				
+
 				i++;
 
 			}
@@ -45,14 +45,14 @@ App.Views = App.Views || {};
 		},
 
 		navigateTo: function(i, animate) {
-			var el = this.thumbsInnerEl;
+			var el = this.innerEl;
 
 			if (!animate) {
 				el.classList.remove("will-animate");
 			}
 
 			this.currentPage = i;
-			el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numPages)) +"%,0,0)";
+			el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numPages)) + "%,0,0)";
 
 			if (!animate) {
 				_.delay(function(arguments) {
@@ -70,5 +70,5 @@ App.Views = App.Views || {};
 		}
 
 	});
-	
+
 }).call(this, window, Zepto);

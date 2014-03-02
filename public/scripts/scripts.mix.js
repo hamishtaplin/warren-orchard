@@ -2,6 +2,7 @@
 @import "vendor/underscore.js";
 @import "vendor/zepto.js";
 @import "vendor/backbone.js";
+@import "vendor/background-check.min.js";
 
 @import "routers/app-router.js";
 
