@@ -5,7 +5,7 @@ App.Views.ProgressBar = Backbone.View.extend({
 
 	el: document.getElementById("progress"),
 
-	initialize: function(attributes) {
+	initialize: function (attributes) {
 		_.bindAll(this, "update", "complete");
 		this.render();
 
@@ -16,30 +16,26 @@ App.Views.ProgressBar = Backbone.View.extend({
 
 	},
 
-	render: function() {
-
+	render: function () {
 		var wrapper = document.getElementById("global-wrapper");
 		wrapper.insertBefore(this.el, wrapper.firstChild);
 		this.innerEl = document.createElement("div");
 		this.el.classList.add("progress");
-		this.innerEl.classList.add("progress__bar")
+		this.innerEl.classList.add("progress-bar");
 		this.el.appendChild(this.innerEl);
 	},
 
-	update: function(perc) {
-		// console.log(perc);
-		// var perc = ((value / this.total) * 100).toString() + "%";
-
+	update: function (perc) {
+		this.el.classList.remove("is-complete");
 		this.innerEl.style.width = perc.toString() + "%";
 	},
 
-	complete: function() {
+	complete: function () {
 
 		this.update(100);
-		window.setTimeout(_.bind(function() {
+		window.setTimeout(_.bind(function () {
 			this.el.classList.add("is-complete");
 		}, this), 500);
 	}
 
 });
-

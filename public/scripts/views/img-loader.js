@@ -14,7 +14,8 @@ App.Views.ImageLoader = Backbone.View.extend({
 
 			var img = new App.Views.ImageView({
 				el: imgs[i],
-				id: i
+				id: i,
+				useBg: args.useBg
 			});
 
 			img.once("load", this.onImageLoaded, this);

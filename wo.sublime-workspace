@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"flo",
+				"float"
+			],
+			[
+				"inn",
+				"innerEl"
+			],
+			[
+				"an",
+				"animType"
+			],
+			[
+				"sli",
+				"slides"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"cr",
+				"createElement  (function)"
+			],
+			[
+				"curr",
+				"currentJob"
+			],
+			[
+				"pro",
+				"project"
+			],
+			[
+				"new",
+				"newIndex"
+			],
+			[
+				"cur",
+				"currentJobIDIndex"
+			],
+			[
+				"if",
+				"ife	if … else"
+			],
+			[
+				"job",
+				"jobIDs"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"abs",
+				"absolute"
+			],
+			[
 				"cla",
 				"classList"
 			],
@@ -22,10 +82,6 @@
 			[
 				"ini",
 				"initRouter"
-			],
-			[
-				"cur",
-				"cursor"
 			],
 			[
 				"in",
@@ -76,10 +132,6 @@
 				"thumbsInnerEl"
 			],
 			[
-				"class",
-				"className"
-			],
-			[
 				"thum",
 				"thumbPages"
 			],
@@ -94,14 +146,6 @@
 			[
 				"win",
 				"winHeight"
-			],
-			[
-				"new",
-				"newImg"
-			],
-			[
-				"pro",
-				"progress"
 			],
 			[
 				"load",
@@ -126,10 +170,6 @@
 			[
 				"cl",
 				"console	console.log()"
-			],
-			[
-				"if",
-				"if	if"
 			],
 			[
 				"tra",
@@ -203,70 +243,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "public/scripts/views/app.js",
-			"settings":
-			{
-				"buffer_size": 1293,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/scripts/views/job.js",
-			"settings":
-			{
-				"buffer_size": 982,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/scripts/views/slider.js",
-			"settings":
-			{
-				"buffer_size": 1635,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/styles/scss/modules/_thumbs.scss",
-			"settings":
-			{
-				"buffer_size": 4106,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/scripts/views/thumbnails.js",
-			"settings":
-			{
-				"buffer_size": 1110,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/scripts/views/img.js",
-			"settings":
-			{
-				"buffer_size": 809,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/scripts/views/img-loader.js",
-			"settings":
-			{
-				"buffer_size": 878,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/scripts/views/progress-bar.js",
-			"settings":
-			{
-				"buffer_size": 1042,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -428,64 +404,79 @@
 	},
 	"file_history":
 	[
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/wo.sublime-project",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/package.json",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/index.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/app.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job-ajax.liquid",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img-loader.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnails.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/job.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.mix.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/vendor/backbone.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/grid.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/gruntfile.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.min (MacBook-Air's conflicted copy 2014-02-23).min.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.min.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail.min.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/img.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/image-loader.min.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/progress-bar.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/slider.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/layout.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/blank.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/routers/app-router.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/src",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/models/_global.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/projectnav.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/project.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/project-ajax.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/project.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/index.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/mixture.json",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/info.liquid",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/_imports.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_radial-arg-parser.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/slider.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/app.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/progress-bar.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.mix.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive (dit08090801.bluegg's conflicted copy 2014-03-11).css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/gruntfile.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/jobnav.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/job.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/routers/app-router.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/routers/app-router.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/projectnav.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/models/_global.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job-ajax.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/jobnav.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive (iMac's conflicted copy 2014-03-11 (1)).css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/responsive.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/css/responsive.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/css/responsive.min.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_responsive.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/job.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed (dit08090801.bluegg's conflicted copy 2014-03-10 (1)).css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/includes/header.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/layout.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/img.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnails.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/wo.sublime-project",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/package.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/vendor/backbone.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/grid.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.min (MacBook-Air's conflicted copy 2014-02-23).min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/image-loader.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/blank.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/src",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_radial-arg-parser.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_background.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/_bourbon-deprecated-upcoming.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_modular-scale.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/mixture.json",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/img.min.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/app.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail",
 		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_fonts.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss",
 		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/Underscorejs snippets.sublime-package",
 		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/Console API Snippets (JavaScript).sublime-package",
 		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/JavaScript Snippets.sublime-package",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/icon-dots.svg",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_variables.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/includes/header.liquid",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_responsive.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/responsive.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.min.css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_timing-functions.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_transition.scss",
@@ -531,7 +522,6 @@
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/_icons-png.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_ctas.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.min.css",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/_icons-png.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/_icons-svg.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/_bourbon.scss",
@@ -541,21 +531,7 @@
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/index.html",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/app/public/styles/base.css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/app/public/styles/scss/responsive.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/post.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/link-parse-opml.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/package.json",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/header.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/modules/_nav.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.htaccess",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/.gitignore",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/config/deploy.rb",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/config/deploy/dev.rb",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/plugins/qtranslate/qtranslate.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/Gruntfile.js",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/config/deploy/live.rb",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/twentyfourteen/genericons/Genericons-Regular.otf",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-includes/http.php",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/content/themes/arwydd/public/styles/sass/old-ie.scss"
+		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/post.php"
 	],
 	"find":
 	{
@@ -566,6 +542,9 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"*.js",
+			"*.scss",
+			"*.liquid",
 			"*.js",
 			"*.liquid",
 			"*.scss",
@@ -580,6 +559,37 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"imgLoader",
+			"navigate",
+			"trigger",
+			"currentPage",
+			"initSlider",
+			"gallery-inner",
+			"projectDictionary",
+			"onAjaxLoaded",
+			".el.",
+			"slider.on",
+			".on",
+			"console.log",
+			".trigger",
+			"currentJobIDIndex",
+			"projectsDict",
+			"job",
+			".job-view-item ",
+			".job-view-item",
+			"this.jobsView",
+			"this.slider",
+			"his.imgLoader",
+			"this.",
+			"jobEl",
+			"jobElements",
+			"JobsView",
+			"nextBtn",
+			"this.previousJobID",
+			"load",
+			"onSliderNext",
+			"referenceNode",
+			"wrapper",
 			"value",
 			"render",
 			"thumb",
@@ -676,38 +686,7 @@
 			"\n\n",
 			"\", \"",
 			"\n\n\n\n\n    ",
-			"\",\n    ],",
-			",\n    ],",
-			"\n\n\n\n\n\n\n",
-			"\n\n\n\n\n\n",
-			"\n\n\n\n\n",
-			"\n\n\n\n",
-			"\n\n\n",
-			"\n\n",
-			"],\n\"image-",
-			"],\n\"",
-			".DS_Store",
-			"]",
-			".jpg",
-			": {",
-			"image-",
-			"job-",
-			"-large",
-			"-small",
-			"http://",
-			"span",
-			"rt",
-			"filter",
-			"-webkit-transform-style: preserve-3d;",
-			"374",
-			"187",
-			"50",
-			"svgmin",
-			"});\n",
-			"svgmin",
-			".thumb__title",
-			"		<",
-			"@include animation"
+			"\",\n    ],"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -715,6 +694,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"project",
 			"img",
 			"class=\"global-width\"",
 			"image",
@@ -730,243 +710,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "public/scripts/views/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1293,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								373,
-								373
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/scripts/views/job.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 982,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								938,
-								938
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/scripts/views/slider.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1635,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/styles/scss/modules/_thumbs.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4106,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								879,
-								879
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "public/scripts/views/thumbnails.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1110,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								208,
-								208
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "public/scripts/views/img.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 809,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/scripts/views/img-loader.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 878,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								353,
-								353
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "public/scripts/views/progress-bar.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1042,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								749,
-								749
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1017,8 +762,84 @@
 		"selected_items":
 		[
 			[
+				"project",
+				"public/scripts/views/projectnav.js"
+			],
+			[
+				"index",
+				"templates/index.liquid"
+			],
+			[
+				"app",
+				"public/scripts/views/app.js"
+			],
+			[
+				"proj",
+				"public/scripts/views/projectnav.js"
+			],
+			[
+				"slider",
+				"public/scripts/views/slider.js"
+			],
+			[
+				"ajax",
+				"templates/project-ajax.liquid"
+			],
+			[
+				"gallery",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"aja",
+				"templates/project-ajax.liquid"
+			],
+			[
+				"res",
+				"public/styles/responsive.css"
+			],
+			[
+				"resp",
+				"public/styles/responsive.css"
+			],
+			[
+				"respo",
+				"public/styles/scss/responsive.scss"
+			],
+			[
+				"_ga",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"script",
+				"public/scripts/scripts.mix.js"
+			],
+			[
+				"_co",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"job",
+				"public/scripts/views/job.js"
+			],
+			[
+				"_gallery",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
 				"_thumbs",
 				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"_lay",
+				"public/styles/scss/base/_layout.scss"
+			],
+			[
+				"mixt",
+				"mixture.json"
+			],
+			[
+				"layout",
+				"templates/layouts/layout.liquid"
 			],
 			[
 				"progr",
@@ -1031,18 +852,6 @@
 			[
 				"jobs",
 				"public/scripts/views/job.js"
-			],
-			[
-				"app",
-				"public/scripts/views/app.js"
-			],
-			[
-				"aja",
-				"templates/job-ajax.liquid"
-			],
-			[
-				"_gallery",
-				"public/styles/scss/modules/_gallery.scss"
 			],
 			[
 				"grid",
@@ -1073,14 +882,6 @@
 				"public/scripts/scripts.mix.js"
 			],
 			[
-				"index",
-				"templates/index.liquid"
-			],
-			[
-				"layout",
-				"templates/layouts/layout.liquid"
-			],
-			[
 				"_th",
 				"public/styles/scss/modules/_thumbs.scss"
 			],
@@ -1090,10 +891,6 @@
 			],
 			[
 				"comm",
-				"public/styles/scss/modules/_common.scss"
-			],
-			[
-				"_co",
 				"public/styles/scss/modules/_common.scss"
 			],
 			[
@@ -1115,10 +912,6 @@
 			[
 				"common",
 				"public/styles/scss/modules/_common.scss"
-			],
-			[
-				"respo",
-				"public/styles/scss/helpers/_responsive.scss"
 			],
 			[
 				"var",
@@ -1157,10 +950,6 @@
 				"templates/layouts/layout.liquid"
 			],
 			[
-				"job",
-				"templates/job.liquid"
-			],
-			[
 				"thum",
 				"public/styles/scss/modules/_thumbs.scss"
 			],
@@ -1187,10 +976,6 @@
 			[
 				"_ty",
 				"public/styles/scss/base/_typography.scss"
-			],
-			[
-				"_ga",
-				"public/styles/scss/modules/_gallery.scss"
 			],
 			[
 				"_im",
@@ -1225,20 +1010,12 @@
 				"public/styles/scss/base/_typography.scss"
 			],
 			[
-				"resp",
-				"public/styles/responsive.css"
-			],
-			[
 				"gruntfile",
 				"gruntfile.js"
 			],
 			[
 				"_t",
 				"public/styles/scss/base/_typography.scss"
-			],
-			[
-				"_lay",
-				"public/styles/scss/base/_layout.scss"
 			],
 			[
 				"_ele",
@@ -1390,7 +1167,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 510.0,
+	"side_bar_width": 313.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

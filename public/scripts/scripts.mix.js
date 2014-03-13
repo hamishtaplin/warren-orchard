@@ -12,6 +12,7 @@
 @import "views/progress-bar.js";
 @import "views/slider.js";
 @import "views/grid.js";
-@import "views/job.js";
+@import "views/projectnav.js";
+@import "views/project.js";
 
 @import "views/app.js";

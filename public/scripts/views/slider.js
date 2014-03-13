@@ -1,80 +1,123 @@
 window.App = window.App || {};
 App.Views = App.Views || {};
 
-(function(window, $) {
+(function (window, $) {
 
 	App.Views.Slider = Backbone.View.extend({
 
-		initialize: function(args) {
-			_.bindAll(this, "draw", "onPageNavClick");
+		initialize: function (args) {
+			var i = 0;
+			_.bindAll(this, "onPageNavClick");
 
-			this.type = args.type;
+			this.animType = args.animType;
+			this.innerEl = args.innerEl;
+			this.slides = this.innerEl.children;
+			this.numSlides = this.innerEl.childElementCount;
+			this.currentPageIndex = 0;
+			this.el.classList.add("slider");
+			this.innerEl.classList.add("slider-inner");
 
-			this.innerEl = document.createElement("div");
-			this.el.appendChild(this.innerEl);
-			this.pageNav = document.createElement("div");
-			this.pageNav.className = "paging";
-			this.el.parentElement.appendChild(this.pageNav);
-			this.pageNav.addEventListener("click", this.onPageNavClick);
-			this.pageNavItems = [];
-			this.numPages = 0;
-			this.currentPage = 0;
+			while (i < this.numSlides) {
+				var slide = this.slides[i];
+				slide.classList.add("slider-slide");
+				if (this.animType === "slide") {
+					slide.style.width = (100 / this.numSlides).toString() + "%";
+				}
+				i++;
+			}
+			if (this.animType === "slide") {
+				this.innerEl.style.width = (this.numSlides * 100).toString() + "%";
+			} else {
+				this.addUI();
+			}
+			
+			this.navigateTo(0);
 		},
 
-		draw: function(numPages) {
-
+		addUI: function () {
 			var i = 0;
 
-			this.numPages = numPages;
-			this.pageNavItems = [];
+			this.pageNav = document.createElement("div");
+			this.pageNav.className = "slider-paging  bg-check";
+			this.pageNav.addEventListener("click", this.onPageNavClick);
+
 			this.pageNav.innerHTML = "";
 
-			while (i < numPages) {
-
-				var btn = document.createElement('div');
+			while (i < this.numSlides) {
+				var btn = document.createElement("div");
 				btn.setAttribute("data-i", i.toString());
-				btn.className = "paging-btn";
-				this.pageNavItems[i] = btn;
+				btn.className = "slider-paging-btn";
 				this.pageNav.appendChild(btn);
-
 				i++;
-
 			}
 
-			this.navigateTo(this.currentPage, false);
+			this.el.appendChild(this.pageNav);
+
 		},
 
-		onPageNavClick: function(e) {
+		onPageNavClick: function (e) {
 			this.navigateTo(e.target.getAttribute("data-i"), true);
 		},
 
-		navigateTo: function(i, animate) {
+		next: function () {
+			if ((this.currentPageIndex + 1) < this.numSlides) {
+				this.navigateTo(this.currentPageIndex + 1);
+			} else {
+				this.trigger("navigate:next");
+			}
+		},
+
+		prev: function () {
+			if (this.currentPageIndex - 1 >= 0) {
+				this.navigateTo(this.currentPageIndex - 1);
+			} else {
+				this.trigger("navigate:prev");
+			}
+		},
+
+		navigateTo: function (i, animate) {
 			var el = this.innerEl;
 
 			if (!animate) {
 				el.classList.remove("will-animate");
 			}
 
-			this.currentPage = i;
+			this.currentPageIndex = i;
 
-			if (this.style === "slide") {
-				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numPages)) + "%,0,0)";
-			} else if (this.style === "fade") {
+			if (this.currentSlide) {
+				this.currentSlide.classList.remove("is-current");
+			}
 
+			this.currentSlide = this.slides[i];
+			this.currentSlide.classList.add("is-current");
+
+			if (this.animType === "slide") {
+				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numSlides)) + "%,0,0)";
 			}
 
 			if (!animate) {
-				_.delay(function(arguments) {
+				_.delay(function (arguments) {
 					el.classList.add("will-animate");
 				}, 100)
-			};
+			};	
+
+			if (this.pageNav) {
+				
+				if (this.pageNav.querySelector(".is-current")) {
+					this.pageNav.querySelector(".is-current").classList.remove("is-current");
+				}
+				
+				this.pageNav.children[i].classList.add("is-current");
+			}
+
+			this.trigger("slidechanged", this.currentSlide);
 		},
 
-		hide: function() {
+		hide: function () {
 			this.pageNav.classList.add("is-off-screen");
 		},
 
-		show: function() {
+		show: function () {
 			this.pageNav.classList.remove("is-off-screen");
 		}
 

@@ -1,14 +1,45 @@
-.job-view {
+.project-view {
   width: 100%;
   height: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  // border: 0.4em solid #FFF;
   @include transition(all 1s $ease-in-out-quint);
   &.is-visible {
     opacity: 1;
   }
+  @include lap {
+    position: absolute;
+    
+  }
+}
+
+.project-view-item-inner {
+  &.will-animate {
+    @include transition(all 500ms $ease-in-out-quint);
+  }
+  &.slider-inner {
+    height: 100%;
+  }
+}
+
+.project-view-item {
+  width: 100%;
+  height: 100%;
+
+  &.slider-slide {
+    float: left;
+  }
+  // position: absolute;
+  // top: 0;
+  // @for $i from 0 through 50 {
+  //   &:nth-child(#{$i}) {
+  //     left: percentage($i - 1);
+  //   }
+  // }
 }
 
 .gallery {
@@ -19,55 +50,143 @@
   img, .img {
     max-width: 100%;
     width: 100%;
-    height: auto;
+    // height: auto;
     padding: 0;
   }
 }
 
-.gallery__item {
+.gallery-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-item {
   // display: none;
-  // width: 100%;
-  // height: 100%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   text-align: center;
+  z-index: 0;
+  @include animation(fade-out 0 $ease-in-out-quint both);
   .img {
-    // background-size: cover;
-    // width: 100%;
-    // height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
   }
   &.portrait {
-    .gallery__img {
-      height: auto;
-      width: auto;
+    background-color: #E8E8E8;
+    .gallery-img {
+      height: 100%;
+      background-position: center;
+      background-size: auto 100%;
     }
+  }
+  &.is-current {
+    z-index: 2;
+    @include animation(fade-in 400ms $ease-in-out-quint both);
   }
 }
 
-.gallery_img {
+.gallery-img {
   display: inherit;
   margin: 0 auto;
 }
 
+.gallery.slider {
+  position: relative;
+}
+
+.slider-paging {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 2em;
+  margin: 0 auto;
+  z-index: 10;
+  text-align: center;
+}
+
+.slider-paging-btn {
+  width: 0.8em;
+  height: 0.8em;
+  background: rgba($color-white, 1);
+  display: inline-block;
+  border-radius: 1em;
+  margin: 0 0.5em;
+  cursor: pointer;
+  -webkit-transform-style: preserve3d;
+  vertical-align: middle;
+  &:hover {
+    opacity:1;
+  }
+  &:active {
+    @include transform(scale(0.9));
+  }
+  &.is-current {
+    width: 1.1em;
+    height: 1.1em;
+  }
+}
+
+.btn {
+  padding: 1em;
+  width: 2.5em;
+  height: 2.5em;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  text-indent: -999em;
+  opacity:0.9;
+  z-index: 10;
+  @include transition(all 100ms $ease-in-out-quint);
+  @include user-select(none);
+  -webkit-transform-style: preserve3d;
+  &:hover {
+    opacity:1;
+  }
+  &:active {
+    @include transform(scale(0.9));
+  }
+  @include lap {
+    display: block;
+  }
+}
+
+.btn-next {
+  right: 2em;
+  background-image: url(/public/images/btn-right.svg);
+}
+
+.btn-prev {
+  left: 2em;
+  background-image: url(/public/images/btn-left.svg);
+}
 
 @include mq($max: 500px) {
 
-  .job_page {
+  .project-page {
     @include transition(all 100ms ease-in-out);
   }
 
   @media screen and (orientation:landscape) {
 
-    .job_page {
+    .project_page {
       background: #000;
       .wrapper {
         @include transition(all 300ms ease-in-out);
         padding: 0;
       }
       .header {
-        @include transform(translateY(-100%) scale(0.9));
+        @include transform(scale(0.5));
         opacity: 0;
+        
       }
       .gallery {
         margin: 0;

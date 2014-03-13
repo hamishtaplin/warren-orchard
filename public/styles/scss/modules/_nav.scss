@@ -3,15 +3,14 @@
   letter-spacing: -0.31em;
   width: 100%;
   height: $header-height;
-  position: relative;
-  display: none;
+  position: absolute;
+  top: 0;
   @include lap {
-    margin-left: -3.3em;
-    width: 6.6em;
+    
   }
 }
 
-.nav__item {
+.nav-item {
   overflow: hidden;
   @include inline-block;
   vertical-align: bottom;
@@ -37,7 +36,7 @@
   }
 }
 
-.nav__item--grid {
+.nav-item--grid {
 	@extend .icon-grid !optional;
   left: 2em;
   @include lap {
@@ -48,7 +47,7 @@
   }
 }
 
-.nav__item--info {
+.nav-item--info {
 	@extend .icon-info !optional;
   right: 2em;
   @include lap {

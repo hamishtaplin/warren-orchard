@@ -3,32 +3,50 @@ App.Views = App.Views || {};
 
 App.Views.ImageView = Backbone.View.extend({
 
-	initialize: function(args) {
+	initialize: function (args) {
 		_.bindAll(this, "onImgLoad", "load");
+		this.useBg = args.useBg;
 		this.imgEl = this.el.querySelector('.img');
 		this.load();
 	},
 
-	load: function() {
+	load: function () {
 		var src = this.imgEl.getAttribute("data-src");
-		var newImg = new Image();
+		var img = new Image();
 
-		newImg.onload = _.bind(this.onImgLoad, this);
-		newImg.setAttribute("src", src);
-		newImg.src = src;
+		img.onload = _.bind(this.onImgLoad, this);
+		// img.setAttribute('crossorigin', '');
+		img.setAttribute("src", src);
 	},
 
-	onImgLoad: function(e) {
-		var newImg = e.target;
-		if (newImg.naturalWidth < newImg.naturalHeight) {
+	onImgLoad: function (e) {
+		var img = e.target;
+
+		if (img.naturalWidth < img.naturalHeight) {
 			this.el.classList.add("portrait");
-		};
-		// this.imgEl.style.backgroundImage = "url(" + newImg.getAttribute("src") + ")";
-		this.imgEl.setAttribute("src", newImg.getAttribute("src"));
+		}
+
+		if (this.useBg) {
+			this.imgEl.style.backgroundImage = "url(" + img.getAttribute("src") + ")";
+		} else {
+			this.imgEl.setAttribute("src", img.getAttribute("src"));
+		}
+
 		this.el.classList.add("is-loaded");
 
 		this.trigger("load", this);
 
+	},
+
+	convertImageToDataURI: function (img) {
+		var canvas = document.createElement('canvas');
+		canvas.width = img.width;
+		canvas.height = img.height;
+
+		var ctx = canvas.getContext('2d');
+		ctx.drawImage(img, 0, 0);
+
+		return canvas.toDataURL('image/png');
 	}
 
 });

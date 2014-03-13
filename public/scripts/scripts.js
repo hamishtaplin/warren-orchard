@@ -4695,250 +4695,893 @@ window.$ === undefined && (window.$ = Zepto)
     };
 
 }).call(this);
-/* BackgroundCheck
-   http://kennethcachia.com/background-check
-   v1.2.2 */
 
-! function(a, b) {
-	"function" == typeof define && define.amd ? define(b) : a.BackgroundCheck = b(a)
-}(this, function() {
-	"use strict";
+/*
+ * BackgroundCheck
+ * http://kennethcachia.com/background-check
+ *
+ * v1.2.2
+ */
 
-	function a(a) {
-		if (void 0 === a || void 0 === a.targets) throw "Missing attributes";
-		H.debug = d(a.debug, !1), H.debugOverlay = d(a.debugOverlay, !1), H.targets = g(a.targets), H.images = g(a.images || "img", !0), H.changeParent = d(a.changeParent, !1), H.threshold = d(a.threshold, 50), H.minComplexity = d(a.minComplexity, 30), H.minOverlap = d(a.minOverlap, 50), H.windowEvents = d(a.windowEvents, !0), H.maxDuration = d(a.maxDuration, 500), H.mask = d(a.mask, {
-			r: 0,
-			g: 255,
-			b: 0
-		}), H.classes = d(a.classes, {
-			dark: "background--dark",
-			light: "background--light",
-			complex: "background--complex"
-		}), void 0 === B && (h(), B && (C.style.position = "fixed", C.style.top = "0px", C.style.left = "0px", C.style.width = "100%", C.style.height = "100%", window.addEventListener(G, x.bind(null, function() {
-			k(), w()
-		})), window.addEventListener("scroll", x.bind(null, w)), k(), w()))
-	}
+(function (root, factory) {
 
-	function b() {
-		B = null, C = null, D = null, H = {}, E && clearTimeout(E)
-	}
+  if (typeof define === 'function' && define.amd) {
+    define(factory);
+  } else {
+    root.BackgroundCheck = factory(root);
+  }
 
-	function c(a) {
-		z("debug") && console.log(a)
-	}
+}(this, function () {
 
-	function d(a, b) {
-		return e(a, typeof b), void 0 === a ? b : a
-	}
+  'use strict';
 
-	function e(a, b) {
-		if (void 0 !== a && typeof a !== b) throw "Incorrect attribute type"
-	}
+  var resizeEvent = window.orientation !== undefined ? 'orientationchange' : 'resize';
+  var supported;
+  var canvas;
+  var context;
+  var throttleDelay;
+  var viewport;
+  var attrs = {};
 
-	function f(a) {
-		for (var b, d, e = [], f = 0; f < a.length; f++)
-			if (b = a[f], e.push(b), "IMG" !== b.tagName) {
-				if (d = window.getComputedStyle(b).backgroundImage, d.split(/,url|, url/).length > 1) throw "Multiple backgrounds are not supported";
-				if (!d || "none" === d) throw "Element is not an <img> but does not have a background-image";
-				e[f] = {
-					img: new Image,
-					el: e[f]
-				}, d = d.slice(4, -1), d = d.replace(/"/g, ""), e[f].img.src = d, c("CSS Image - " + d)
-			}
-		return e
-	}
 
-	function g(a, b) {
-		var c = a;
-		if ("string" == typeof a ? c = document.querySelectorAll(a) : a && 1 === a.nodeType && (c = [a]), !c || 0 === c.length || void 0 === c.length) throw "Elements not found";
-		return b && (c = f(c)), c = Array.prototype.slice.call(c)
-	}
+  /*
+   * Initializer
+   */
+  function init(a) {
 
-	function h() {
-		C = document.createElement("canvas"), C && C.getContext ? (D = C.getContext("2d"), B = !0) : B = !1, i()
-	}
+    if (a === undefined || a.targets === undefined) {
+      throw 'Missing attributes';
+    }
 
-	function i() {
-		z("debugOverlay") ? (C.style.opacity = .5, C.style.pointerEvents = "none", document.body.appendChild(C)) : C.parentNode && C.parentNode.removeChild(C)
-	}
+    // Default values
+    attrs.debug         = checkAttr(a.debug, false);
+    attrs.debugOverlay  = checkAttr(a.debugOverlay, false);
+    attrs.targets       = getElements(a.targets);
+    attrs.images        = getElements(a.images || 'img', true);
+    attrs.changeParent  = checkAttr(a.changeParent, false);
+    attrs.threshold     = checkAttr(a.threshold, 50);
+    attrs.minComplexity = checkAttr(a.minComplexity, 30);
+    attrs.minOverlap    = checkAttr(a.minOverlap, 50);
+    attrs.windowEvents  = checkAttr(a.windowEvents, true);
+    attrs.maxDuration   = checkAttr(a.maxDuration, 500);
 
-	function j(a) {
-		var d = (new Date).getTime() - a;
-		c("Duration: " + d + "ms"), d > z("maxDuration") && (console.log("BackgroundCheck - Killed"), q(), b())
-	}
+    attrs.mask = checkAttr(a.mask, {
+      r: 0,
+      g: 255,
+      b: 0
+    });
 
-	function k() {
-		F = {
-			left: 0,
-			top: 0,
-			right: document.body.clientWidth,
-			bottom: window.innerHeight
-		}, C.width = document.body.clientWidth, C.height = window.innerHeight
-	}
+    attrs.classes = checkAttr(a.classes, {
+      dark: 'background--dark',
+      light: 'background--light',
+      complex: 'background--complex'
+    });
 
-	function l(a, b, c) {
-		var d, e;
-		return -1 !== a.indexOf("px") ? d = parseFloat(a) : -1 !== a.indexOf("%") ? (d = parseFloat(a), e = d / 100, d = e * b, c && (d -= c * e)) : d = b, d
-	}
+    if (supported === undefined) {
+      checkSupport();
 
-	function m(a) {
-		var b = window.getComputedStyle(a.el);
-		a.el.style.backgroundRepeat = "no-repeat", a.el.style.backgroundOrigin = "padding-box";
-		var c = b.backgroundSize.split(" "),
-			d = c[0],
-			e = void 0 === c[1] ? "auto" : c[1],
-			f = a.el.clientWidth / a.el.clientHeight,
-			g = a.img.naturalWidth / a.img.naturalHeight;
-		"cover" === d ? f >= g ? (d = "100%", e = "auto") : (d = "auto", c[0] = "auto", e = "100%") : "contain" === d && (1 / g > 1 / f ? (d = "auto", c[0] = "auto", e = "100%") : (d = "100%", e = "auto")), d = "auto" === d ? a.img.naturalWidth : l(d, a.el.clientWidth), e = "auto" === e ? d / a.img.naturalWidth * a.img.naturalHeight : l(e, a.el.clientHeight), "auto" === c[0] && "auto" !== c[1] && (d = e / a.img.naturalHeight * a.img.naturalWidth);
-		var h = b.backgroundPosition;
-		"top" === h ? h = "50% 0%" : "left" === h ? h = "0% 50%" : "right" === h ? h = "100% 50%" : "bottom" === h ? h = "50% 100%" : "center" === h && (h = "50% 50%"), h = h.split(" ");
-		var i, j;
-		return 4 === h.length ? (i = h[1], j = h[3]) : (i = h[0], j = h[1]), j = j || "50%", i = l(i, a.el.clientWidth, d), j = l(j, a.el.clientHeight, e), 4 === h.length && ("right" === h[0] && (i = a.el.clientWidth - a.img.naturalWidth - i), "bottom" === h[2] && (j = a.el.clientHeight - a.img.naturalHeight - j)), i += a.el.getBoundingClientRect().left, j += a.el.getBoundingClientRect().top, {
-			left: Math.floor(i),
-			right: Math.floor(i + d),
-			top: Math.floor(j),
-			bottom: Math.floor(j + e),
-			width: Math.floor(d),
-			height: Math.floor(e)
-		}
-	}
+      if (supported) {
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0px';
+        canvas.style.left = '0px';
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
 
-	function n(a) {
-		var b, c, d;
-		if (a.nodeType) {
-			var e = a.getBoundingClientRect();
-			b = {
-				left: e.left,
-				right: e.right,
-				top: e.top,
-				bottom: e.bottom,
-				width: e.width,
-				height: e.height
-			}, d = a.parentNode, c = a
-		} else b = m(a), d = a.el, c = a.img;
-		d = d.getBoundingClientRect(), b.imageTop = 0, b.imageLeft = 0, b.imageWidth = c.naturalWidth, b.imageHeight = c.naturalHeight;
-		var f, g = b.imageHeight / b.height;
-		return b.top < d.top && (f = d.top - b.top, b.imageTop = g * f, b.imageHeight -= g * f, b.top += f, b.height -= f), b.left < d.left && (f = d.left - b.left, b.imageLeft += g * f, b.imageWidth -= g * f, b.width -= f, b.left += f), b.bottom > d.bottom && (f = b.bottom - d.bottom, b.imageHeight -= g * f, b.height -= f), b.right > d.right && (f = b.right - d.right, b.imageWidth -= g * f, b.width -= f), b.imageTop = Math.floor(b.imageTop), b.imageLeft = Math.floor(b.imageLeft), b.imageHeight = Math.floor(b.imageHeight), b.imageWidth = Math.floor(b.imageWidth), b
-	}
+        window.addEventListener(resizeEvent, throttle.bind(null, function () {
+          resizeCanvas();
+          check();
+        }));
 
-	function o(a) {
-		var b = n(a);
-		a = a.nodeType ? a : a.img, b.imageWidth > 0 && b.imageHeight > 0 && b.width > 0 && b.height > 0 ? D.drawImage(a, b.imageLeft, b.imageTop, b.imageWidth, b.imageHeight, b.left, b.top, b.width, b.height) : c("Skipping image - " + a.src + " - area too small")
-	}
+        window.addEventListener('scroll', throttle.bind(null, check));
 
-	function p(a, b, c) {
-		var d = a.className;
-		switch (c) {
-			case "add":
-				d += " " + b;
-				break;
-			case "remove":
-				var e = new RegExp("(?:^|\\s)" + b + "(?!\\S)", "g");
-				d = d.replace(e, "")
-		}
-		a.className = d.trim()
-	}
+        resizeCanvas();
+        check();
+      }
+    }
+  }
 
-	function q(a) {
-		for (var b, c = a ? [a] : z("targets"), d = 0; d < c.length; d++) b = c[d], b = z("changeParent") ? b.parentNode : b, p(b, z("classes").light, "remove"), p(b, z("classes").dark, "remove"), p(b, z("classes").complex, "remove")
-	}
 
-	function r(a) {
-		var b, d, e, f, g = a.getBoundingClientRect(),
-			h = 0,
-			i = 0,
-			j = 0,
-			k = 0,
-			l = z("mask");
-		if (g.width > 0 && g.height > 0) {
-			q(a), a = z("changeParent") ? a.parentNode : a, d = D.getImageData(g.left, g.top, g.width, g.height).data;
-			for (var m = 0; m < d.length; m += 4) d[m] === l.r && d[m + 1] === l.g && d[m + 2] === l.b ? k++ : (h++, b = .2126 * d[m] + .7152 * d[m + 1] + .0722 * d[m + 2], e = b - j, i += e * e, j += e / h);
-			k <= d.length / 4 * (1 - z("minOverlap") / 100) && (f = Math.sqrt(i / h) / 255, j /= 255, c("Target: " + a.className + " lum: " + j + " var: " + f), p(a, j <= z("threshold") / 100 ? z("classes").dark : z("classes").light, "add"), f > z("minComplexity") / 100 && p(a, z("classes").complex, "add"))
-		}
-	}
+  /*
+   * Destructor
+   */
+  function destroy() {
+    supported = null;
+    canvas = null;
+    context = null;
+    attrs = {};
 
-	function s(a, b) {
-		return a = (a.nodeType ? a : a.el).getBoundingClientRect(), b = b === F ? b : (b.nodeType ? b : b.el).getBoundingClientRect(), !(a.right < b.left || a.left > b.right || a.top > b.bottom || a.bottom < b.top)
-	}
+    if (throttleDelay) {
+      clearTimeout(throttleDelay);
+    }
+  }
 
-	function t(a) {
-		for (var b, c = (new Date).getTime(), d = a && ("IMG" === a.tagName || a.img) ? "image" : "targets", e = a ? !1 : !0, f = z("targets").length, g = 0; f > g; g++) b = z("targets")[g], s(b, F) && ("targets" !== d || a && a !== b ? "image" === d && s(b, a) && r(b) : (e = !0, r(b)));
-		if ("targets" === d && !e) throw a + " is not a target";
-		j(c)
-	}
 
-	function u(a) {
-		var b = function(a) {
-			var b = 0;
-			return "static" !== window.getComputedStyle(a).position && (b = parseInt(window.getComputedStyle(a).zIndex, 10) || 0, b >= 0 && b++), b
-		}, c = a.parentNode,
-			d = c ? b(c) : 0,
-			e = b(a);
-		return 1e5 * d + e
-	}
+  /*
+   * Output debug logs
+   */
+  function log(msg) {
 
-	function v(a) {
-		var b = !1;
-		return a.sort(function(a, c) {
-			a = a.nodeType ? a : a.el, c = c.nodeType ? c : c.el;
-			var d = a.compareDocumentPosition(c),
-				e = 0;
-			return a = u(a), c = u(c), a > c && (b = !0), a === c && 2 === d ? e = 1 : a === c && 4 === d && (e = -1), e || a - c
-		}), c("Sorted: " + b), b && c(a), b
-	}
+    if (get('debug')) {
+      console.log(msg);
+    }
+  }
 
-	function w(a, b, d) {
-		if (B) {
-			var e = z("mask");
-			c("--- BackgroundCheck ---"), c("onLoad event: " + (d && d.src)), b !== !0 && (D.clearRect(0, 0, C.width, C.height), D.fillStyle = "rgb(" + e.r + ", " + e.g + ", " + e.b + ")", D.fillRect(0, 0, C.width, C.height));
-			for (var f, g, h = d ? [d] : z("images"), i = v(h), j = !1, k = 0; k < h.length; k++) f = h[k], s(f, F) && (g = f.nodeType ? f : f.img, 0 === g.naturalWidth ? (j = !0, c("Loading... " + f.src), g.removeEventListener("load", w), i ? g.addEventListener("load", w.bind(null, null, !1, null)) : g.addEventListener("load", w.bind(null, a, !0, f))) : (c("Drawing: " + f.src), o(f)));
-			d || j ? d && t(d) : t(a)
-		}
-	}
 
-	function x(a) {
-		z("windowEvents") === !0 && (E && clearTimeout(E), E = setTimeout(a, 200))
-	}
+  /*
+   * Get attribute value, use a default
+   * when undefined
+   */
+  function checkAttr(value, def) {
+    checkType(value, typeof def);
+    return (value === undefined) ? def : value;
+  }
 
-	function y(a, b) {
-		if (void 0 === H[a]) throw "Unknown property - " + a;
-		if (void 0 === b) throw "Missing value for " + a;
-		if ("targets" === a || "images" === a) try {
-			b = g("images" !== a || b ? b : "img", "images" === a ? !0 : !1)
-		} catch (c) {
-			throw b = [], c
-		} else e(b, typeof H[a]);
-		q(), H[a] = b, w(), "debugOverlay" === a && i()
-	}
 
-	function z(a) {
-		if (void 0 === H[a]) throw "Unknown property - " + a;
-		return H[a]
-	}
+  /*
+   * Reject unwanted types
+   */
+  function checkType(value, type) {
 
-	function A() {
-		for (var a, b = z("images"), c = [], d = 0; d < b.length; d++) a = n(b[d]), c.push(a);
-		return c
-	}
-	var B, C, D, E, F, G = void 0 !== window.orientation ? "orientationchange" : "resize",
-		H = {};
-	return {
-		init: a,
-		destroy: b,
-		refresh: w,
-		set: y,
-		get: z,
-		getImageData: A
-	}
-});
+    if (value !== undefined && typeof value !== type) {
+      throw 'Incorrect attribute type';
+    }
+  }
+
+
+  /*
+   * Convert elements with background-image
+   * to Images
+   */
+  function checkForCSSImages(els) {
+    var el;
+    var url;
+    var list = [];
+
+    for (var e = 0; e < els.length; e++) {
+      el = els[e];
+      list.push(el);
+
+      if (el.tagName !== 'IMG') {
+        url = window.getComputedStyle(el).backgroundImage;
+
+        // Ignore multiple backgrounds
+        if (url.split(/,url|, url/).length > 1) {
+          throw 'Multiple backgrounds are not supported';
+        }
+
+        if (url && url !== 'none') {
+          list[e] = {
+            img: new Image(),
+            el: list[e]
+          };
+
+          url = url.slice(4, -1);
+          url = url.replace(/"/g, '');
+
+          list[e].img.src = url;
+          log('CSS Image - ' + url);
+        } else {
+          throw 'Element is not an <img> but does not have a background-image';
+        }
+      }
+    }
+
+    return list;
+  }
+
+
+  /*
+   * Check for String, Element or NodeList
+   */
+  function getElements(selector, convertToImages) {
+    var els = selector;
+
+    if (typeof selector === 'string') {
+      els = document.querySelectorAll(selector);
+    } else if (selector && selector.nodeType === 1) {
+      els = [selector];
+    }
+
+    if (!els || els.length === 0 || els.length === undefined) {
+      throw 'Elements not found';
+    } else {
+
+      if (convertToImages) {
+        els = checkForCSSImages(els);
+      }
+
+      els = Array.prototype.slice.call(els);
+    }
+
+    return els;
+  }
+
+
+  /*
+   * Check if browser supports <canvas>
+   */
+  function checkSupport() {
+    canvas = document.createElement('canvas');
+
+    if (canvas && canvas.getContext) {
+      context = canvas.getContext('2d');
+      supported = true;
+    } else {
+      supported = false;
+    }
+
+    showDebugOverlay();
+  }
+
+
+  /*
+   * Show <canvas> on top of page
+   */
+  function showDebugOverlay() {
+
+    if (get('debugOverlay')) {
+      canvas.style.opacity = 0.5;
+      canvas.style.pointerEvents = 'none';
+      document.body.appendChild(canvas);
+    } else {
+
+      // Check if it was previously added
+      if (canvas.parentNode) {
+        canvas.parentNode.removeChild(canvas);
+      }
+    }
+  }
+
+
+  /*
+   * Stop if it's slow
+   */
+  function kill(start) {
+    var duration = new Date().getTime() - start;
+    
+    log('Duration: ' + duration + 'ms');
+
+    if (duration > get('maxDuration')) {
+      // Log a message even when debug is false
+      console.log('BackgroundCheck - Killed');
+      removeClasses();
+      destroy();
+    }
+  }
+
+
+  /*
+   * Set width and height of <canvas>
+   */
+  function resizeCanvas() {
+    viewport = {
+      left: 0,
+      top: 0,
+      right: document.body.clientWidth,
+      bottom: window.innerHeight
+    };
+
+    canvas.width = document.body.clientWidth;
+    canvas.height = window.innerHeight;
+  }
+
+
+  /*
+   * Process px and %, discard anything else
+   */
+  function getValue(css, parent, delta) {
+    var value;
+    var percentage;
+
+    if (css.indexOf('px') !== -1) {
+      value = parseFloat(css);
+    } else if (css.indexOf('%') !== -1) {
+      value = parseFloat(css);
+      percentage = value / 100;
+      value = percentage * parent;
+
+      if (delta) {
+        value -= delta * percentage;
+      }
+    } else {
+      value = parent;
+    }
+
+    return value;
+  }
+
+
+  /*
+   * Calculate top, left, width and height
+   * using the object's CSS
+   */
+  function calculateAreaFromCSS(obj) {
+    var css = window.getComputedStyle(obj.el);
+
+    // Force no-repeat and padding-box
+    obj.el.style.backgroundRepeat = 'no-repeat';
+    obj.el.style.backgroundOrigin = 'padding-box';
+
+    // Background Size
+    var size = css.backgroundSize.split(' ');
+    var width = size[0];
+    var height = size[1] === undefined ? 'auto' : size[1];
+
+    var parentRatio = obj.el.clientWidth / obj.el.clientHeight;
+    var imgRatio = obj.img.naturalWidth / obj.img.naturalHeight;
+
+    if (width === 'cover') {
+
+      if (parentRatio >= imgRatio) {
+        width = '100%';
+        height = 'auto';
+      } else {
+        width = 'auto';
+        size[0] = 'auto';
+        height = '100%';
+      }
+
+    } else if (width === 'contain') {
+
+      if (1 / parentRatio < 1 / imgRatio) {
+        width = 'auto';
+        size[0] = 'auto';
+        height = '100%';
+      } else {
+        width = '100%';
+        height = 'auto';
+      }
+    }
+
+    if (width === 'auto') {
+      width = obj.img.naturalWidth;
+    } else {
+      width = getValue(width, obj.el.clientWidth);
+    }
+
+    if (height === 'auto') {
+      height = (width / obj.img.naturalWidth) * obj.img.naturalHeight;
+    } else {
+      height = getValue(height, obj.el.clientHeight);
+    }
+
+    if (size[0] === 'auto' && size[1] !== 'auto') {
+      width = (height / obj.img.naturalHeight) * obj.img.naturalWidth;
+    }
+
+    var position = css.backgroundPosition;
+
+    // Fix inconsistencies between browsers
+    if (position === 'top') {
+      position = '50% 0%';
+    } else if (position === 'left') {
+      position = '0% 50%';
+    } else if (position === 'right') {
+      position = '100% 50%';
+    } else if (position === 'bottom') {
+      position = '50% 100%';
+    } else if (position === 'center') {
+      position = '50% 50%';
+    }
+
+    position = position.split(' ');
+
+    var x;
+    var y;
+
+    // Two-value syntax vs Four-value syntax
+    if (position.length === 4) {
+      x = position[1];
+      y = position[3];
+    } else {
+      x = position[0];
+      y = position[1];
+    }
+
+    // Use a default value
+    y = y || '50%';
+
+    // Background Position
+    x = getValue(x, obj.el.clientWidth, width);
+    y = getValue(y, obj.el.clientHeight, height);
+
+    // Take care of ex: background-position: right 20px bottom 20px;
+    if (position.length === 4) {
+
+      if (position[0] === 'right') {
+        x = obj.el.clientWidth - obj.img.naturalWidth - x;
+      }
+
+      if (position[2] === 'bottom') {
+        y = obj.el.clientHeight - obj.img.naturalHeight - y;
+      }
+    }
+
+    x += obj.el.getBoundingClientRect().left;
+    y += obj.el.getBoundingClientRect().top;
+
+    return {
+      left: Math.floor(x),
+      right: Math.floor(x + width),
+      top: Math.floor(y),
+      bottom: Math.floor(y + height),
+      width: Math.floor(width),
+      height: Math.floor(height)
+    };
+  }
+
+
+  /*
+   * Get Bounding Client Rect
+   */
+  function getArea(obj) {
+    var area;
+    var image;
+    var parent;
+
+    if (obj.nodeType) {
+      var rect = obj.getBoundingClientRect();
+
+      // Clone ClientRect for modification purposes
+      area = {
+        left: rect.left,
+        right: rect.right,
+        top: rect.top,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height
+      };
+
+      parent = obj.parentNode;
+      image = obj;
+    } else {
+      area = calculateAreaFromCSS(obj);
+      parent = obj.el;
+      image = obj.img;
+    }
+
+    parent = parent.getBoundingClientRect();
+
+    area.imageTop = 0;
+    area.imageLeft = 0;
+    area.imageWidth = image.naturalWidth;
+    area.imageHeight = image.naturalHeight;
+
+    var ratio = area.imageHeight / area.height;
+    var delta;
+
+    // Stay within the parent's boundary
+    if (area.top < parent.top) {
+      delta = parent.top - area.top;
+      area.imageTop = ratio * delta;
+      area.imageHeight -= ratio * delta;
+      area.top += delta;
+      area.height -= delta;
+    }
+
+    if (area.left < parent.left) {
+      delta = parent.left - area.left;
+      area.imageLeft += ratio * delta;
+      area.imageWidth -= ratio * delta;
+      area.width -= delta;
+      area.left += delta;
+    }
+
+    if (area.bottom > parent.bottom) {
+      delta = area.bottom - parent.bottom;
+      area.imageHeight -= ratio * delta;
+      area.height -= delta;
+    }
+
+    if (area.right > parent.right) {
+      delta = area.right - parent.right;
+      area.imageWidth -= ratio * delta;
+      area.width -= delta;
+    }
+
+    area.imageTop = Math.floor(area.imageTop);
+    area.imageLeft = Math.floor(area.imageLeft);
+    area.imageHeight = Math.floor(area.imageHeight);
+    area.imageWidth = Math.floor(area.imageWidth);
+
+    return area;
+  }
+
+
+  /*
+   * Render image on canvas
+   */
+  function drawImage(image) {
+    var area = getArea(image);
+
+    image = image.nodeType ? image : image.img;
+
+    if (area.imageWidth > 0 && area.imageHeight > 0 && area.width > 0 && area.height > 0) {
+      context.drawImage(image,
+                        area.imageLeft, area.imageTop, area.imageWidth, area.imageHeight,
+                        area.left, area.top, area.width, area.height);
+    } else {
+      log('Skipping image - ' + image.src + ' - area too small');
+    }
+  }
+
+
+  /*
+   * Add/remove classes
+   */
+  function classList(node, name, mode) {
+    var className = node.className;
+
+    switch (mode) {
+    case 'add':
+      className += ' ' + name;
+      break;
+    case 'remove':
+      var pattern = new RegExp('(?:^|\\s)' + name + '(?!\\S)', 'g');
+      className = className.replace(pattern, '');
+      break;
+    }
+
+    node.className = className.trim();
+  }
+
+
+  /*
+   * Remove classes from element or
+   * their parents, depending on checkParent
+   */
+  function removeClasses(el) {
+    var targets = el ? [el] : get('targets');
+    var target;
+
+    for (var t = 0; t < targets.length; t++) {
+      target = targets[t];
+      target = get('changeParent') ? target.parentNode : target;
+      
+      classList(target, get('classes').light, 'remove');
+      classList(target, get('classes').dark, 'remove');
+      classList(target, get('classes').complex, 'remove');
+    }
+  }
+
+
+  /*
+   * Calculate average pixel brightness of a region 
+   * and add 'light' or 'dark' accordingly
+   */
+  function calculatePixelBrightness(target) {
+    var dims = target.getBoundingClientRect();
+    var brightness;
+    var data;
+    var pixels = 0;
+    var delta;
+    var deltaSqr = 0;
+    var mean = 0;
+    var variance;
+    var minOverlap = 0;
+    var mask = get('mask');
+
+    if (dims.width > 0 && dims.height > 0) {
+      removeClasses(target);
+
+      target = get('changeParent') ? target.parentNode : target;
+      data = context.getImageData(dims.left, dims.top, dims.width, dims.height).data;
+
+      for (var p = 0; p < data.length; p += 4) {
+
+        if (data[p] === mask.r && data[p + 1] === mask.g && data[p + 2] === mask.b) {
+          minOverlap++;
+        } else {
+          pixels++;
+          brightness = (0.2126 * data[p]) + (0.7152 * data[p + 1]) + (0.0722 * data[p + 2]);
+          delta = brightness - mean;
+          deltaSqr += delta * delta;
+          mean = mean + delta / pixels;
+        }
+      }
+
+      if (minOverlap <= (data.length / 4) * (1 - (get('minOverlap') / 100))) {
+        variance = Math.sqrt(deltaSqr / pixels) / 255;
+        mean = mean / 255;
+        log('Target: ' + target.className +  ' lum: ' + mean + ' var: ' + variance);
+        classList(target, mean <= (get('threshold') / 100) ? get('classes').dark : get('classes').light, 'add');
+
+        if (variance > get('minComplexity') / 100) {
+          classList(target, get('classes').complex, 'add');
+        }
+      }
+    }
+  }
+
+
+  /*
+   * Test if a is within b's boundary
+   */
+  function isInside(a, b) {
+    a = (a.nodeType ? a : a.el).getBoundingClientRect();
+    b = b === viewport ? b : (b.nodeType ? b : b.el).getBoundingClientRect();
+
+    return !(a.right < b.left || a.left > b.right || a.top > b.bottom || a.bottom < b.top);
+  }
+
+
+  /*
+   * Process all targets (checkTarget is undefined)
+   * or a single target (checkTarget is a previously set target)
+   *
+   * When not all images are loaded, checkTarget is an image
+   * to avoid processing all targets multiple times
+   */
+  function processTargets(checkTarget) {
+    var start = new Date().getTime();
+    var mode = (checkTarget && (checkTarget.tagName === 'IMG' || checkTarget.img)) ? 'image' : 'targets';
+    var found = checkTarget ? false : true;
+    var total = get('targets').length;
+    var target;
+
+    for (var t = 0; t < total; t++) {
+      target = get('targets')[t];
+
+      if (isInside(target, viewport)) {
+        if (mode === 'targets' && (!checkTarget || checkTarget === target)) {
+          found = true;
+          calculatePixelBrightness(target);
+        } else if (mode === 'image' && isInside(target, checkTarget)) {
+          calculatePixelBrightness(target);
+        }
+      }
+    }
+
+    if (mode === 'targets' && !found) {
+      throw checkTarget + ' is not a target';
+    }
+
+    kill(start);
+  }
+
+
+  /*
+   * Find the element's zIndex. Also checks
+   * the zIndex of its parent
+   */
+  function getZIndex(el) {
+    var calculate = function (el) {
+      var zindex = 0;
+
+      if (window.getComputedStyle(el).position !== 'static') {
+        zindex = parseInt(window.getComputedStyle(el).zIndex, 10) || 0;
+
+        // Reserve zindex = 0 for elements with position: static;
+        if (zindex >= 0) {
+          zindex++;
+        }
+      }
+
+      return zindex;
+    };
+
+    var parent = el.parentNode;
+    var zIndexParent = parent ? calculate(parent) : 0;
+    var zIndexEl = calculate(el);
+
+    return (zIndexParent * 100000) + zIndexEl;
+  }
+
+
+  /*
+   * Check zIndexes
+   */
+  function sortImagesByZIndex(images) {
+    var sorted = false;
+
+    images.sort(function (a, b) {
+      a = a.nodeType ? a : a.el;
+      b = b.nodeType ? b : b.el;
+
+      var pos = a.compareDocumentPosition(b);
+      var reverse = 0;
+
+      a = getZIndex(a);
+      b = getZIndex(b);
+
+      if (a > b) {
+        sorted = true;
+      }
+
+      // Reposition if zIndex is the same but the elements are not
+      // sorted according to their document position
+      if (a === b && pos === 2) {
+        reverse = 1;
+      } else if (a === b && pos === 4) {
+        reverse = -1;
+      }
+
+      return reverse || a - b;
+    });
+
+    log('Sorted: ' + sorted);
+
+    if (sorted) {
+      log(images);
+    }
+
+    return sorted;
+  }
+
+
+  /*
+   * Main function
+   */
+  function check(target, avoidClear, imageLoaded) {
+
+    if (supported) {
+      var mask = get('mask');
+
+      log('--- BackgroundCheck ---');
+      log('onLoad event: ' + (imageLoaded && imageLoaded.src));
+
+      if (avoidClear !== true) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = 'rgb(' + mask.r + ', ' + mask.g + ', ' + mask.b + ')';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      var processImages = imageLoaded ? [imageLoaded] : get('images');
+      var sorted = sortImagesByZIndex(processImages);
+
+      var image;
+      var imageNode;
+      var loading = false;
+
+      for (var i = 0; i < processImages.length; i++) {
+        image = processImages[i];
+
+        if (isInside(image, viewport)) {
+          imageNode = image.nodeType ? image : image.img;
+
+          if (imageNode.naturalWidth === 0) {
+            loading = true;
+            log('Loading... ' + image.src);
+
+            imageNode.removeEventListener('load', check);
+
+            if (sorted) {
+              // Sorted -- redraw all images
+              imageNode.addEventListener('load', check.bind(null, null, false, null));
+            } else {
+              // Not sorted -- just draw one image
+              imageNode.addEventListener('load', check.bind(null, target, true, image));
+            }
+          } else {
+            log('Drawing: ' + image.src);
+            drawImage(image);
+          }
+        }
+      }
+
+      if (!imageLoaded && !loading) {
+        processTargets(target);
+      } else if (imageLoaded) {
+        processTargets(imageLoaded);
+      }
+    }
+  }
+
+
+  /*
+   * Throttle events
+   */
+  function throttle(callback) {
+
+    if (get('windowEvents') === true) {
+
+      if (throttleDelay) {
+        clearTimeout(throttleDelay);
+      }
+
+      throttleDelay = setTimeout(callback, 200);
+    }
+  }
+
+
+  /*
+   * Setter
+   */
+  function set(property, newValue) {
+
+    if (attrs[property] === undefined) {
+      throw 'Unknown property - ' + property;
+    } else if (newValue === undefined) {
+      throw 'Missing value for ' + property;
+    }
+
+    if (property === 'targets' || property === 'images') {
+
+      try {
+        newValue = getElements(property === 'images' && !newValue ? 'img' : newValue, property === 'images' ? true : false);
+      } catch (err) {
+        newValue = [];
+        throw err;
+      }
+    } else {
+      checkType(newValue, typeof attrs[property]);
+    }
+
+    removeClasses();
+    attrs[property] = newValue;
+    check();
+
+    if (property === 'debugOverlay') {
+      showDebugOverlay();
+    }
+  }
+
+
+  /*
+   * Getter
+   */
+  function get(property) {
+
+    if (attrs[property] === undefined) {
+      throw 'Unknown property - ' + property;
+    }
+
+    return attrs[property];
+  }
+
+
+  /*
+   * Get position and size of all images.
+   * Used for testing purposes
+   */
+  function getImageData() {
+    var images = get('images');
+    var area;
+    var data = [];
+
+    for (var i = 0; i < images.length; i++) {
+      area = getArea(images[i]);
+      data.push(area);
+    }
+
+    return data;
+  }
+
+
+  return {
+    /*
+     * Init and destroy
+     */
+    init: init,
+    destroy: destroy,
+
+    /*
+     * Expose main function
+     */
+    refresh: check,
+
+    /*
+     * Setters and getters
+     */
+    set: set,
+    get: get,
+
+    /*
+     * Return image data
+     */
+    getImageData: getImageData
+  };
+
+}));
 
 window.App = window.App || {};
 
 App.Router = Backbone.Router.extend({
 
 	routes: {
-		"": "index",
-		"jobs/:id": "job"
+		"": "root",
+		"home": "index",
+		"projects/:id": "project"
 	}
 
 });
@@ -4948,32 +5591,50 @@ App.Views = App.Views || {};
 
 App.Views.ImageView = Backbone.View.extend({
 
-	initialize: function(args) {
+	initialize: function (args) {
 		_.bindAll(this, "onImgLoad", "load");
+		this.useBg = args.useBg;
 		this.imgEl = this.el.querySelector('.img');
 		this.load();
 	},
 
-	load: function() {
+	load: function () {
 		var src = this.imgEl.getAttribute("data-src");
-		var newImg = new Image();
+		var img = new Image();
 
-		newImg.onload = _.bind(this.onImgLoad, this);
-		newImg.setAttribute("src", src);
-		newImg.src = src;
+		img.onload = _.bind(this.onImgLoad, this);
+		// img.setAttribute('crossorigin', '');
+		img.setAttribute("src", src);
 	},
 
-	onImgLoad: function(e) {
-		var newImg = e.target;
-		if (newImg.naturalWidth < newImg.naturalHeight) {
+	onImgLoad: function (e) {
+		var img = e.target;
+
+		if (img.naturalWidth < img.naturalHeight) {
 			this.el.classList.add("portrait");
-		};
-		// this.imgEl.style.backgroundImage = "url(" + newImg.getAttribute("src") + ")";
-		this.imgEl.setAttribute("src", newImg.getAttribute("src"));
+		}
+
+		if (this.useBg) {
+			this.imgEl.style.backgroundImage = "url(" + img.getAttribute("src") + ")";
+		} else {
+			this.imgEl.setAttribute("src", img.getAttribute("src"));
+		}
+
 		this.el.classList.add("is-loaded");
 
 		this.trigger("load", this);
 
+	},
+
+	convertImageToDataURI: function (img) {
+		var canvas = document.createElement('canvas');
+		canvas.width = img.width;
+		canvas.height = img.height;
+
+		var ctx = canvas.getContext('2d');
+		ctx.drawImage(img, 0, 0);
+
+		return canvas.toDataURL('image/png');
 	}
 
 });
@@ -4993,7 +5654,8 @@ App.Views.ImageLoader = Backbone.View.extend({
 
 			var img = new App.Views.ImageView({
 				el: imgs[i],
-				id: i
+				id: i,
+				useBg: args.useBg
 			});
 
 			img.once("load", this.onImageLoaded, this);
@@ -5029,37 +5691,45 @@ App.Views.Thumbnails = Backbone.View.extend({
 
 	el: "#thumbs",
 
-	initialize: function() {
+	initialize: function () {
 		_.bindAll(this, "hide", "show", "onHideAnimationEnd");
 		this.thumbs = document.querySelectorAll(".thumb");
+		this.numThumbs = this.thumbs.length;
+		this.thumbsParent = this.el.parentElement;
 
 		this.imgLoader = new App.Views.ImageLoader({
 			imgs: this.thumbs
 		});
 
-		// this.imgLoader.on("progress:change", this.onImageLoaded);
-
 		this.thumbsInnerEl = document.createElement('div');
-		this.thumbsInnerEl.className = "thumbs__inner";
-
+		this.thumbsInnerEl.className = "thumbs-inner";
 		this.el.appendChild(this.thumbsInnerEl);
+
+		this.show();
 	},
 
-	onWindowResize: function(e) {
-		this.grid.draw();
-	},
-
-	hide: function() {
+	hide: function () {
+		this.eventCount = 0;
 		this.el.classList.add("is-off-screen");
-		this.el.addEventListener("webkitAnimationEnd", this.onHideAnimationEnd, true);
+		this.el.addEventListener("webkitAnimationEnd", this.onHideAnimationEnd, false);
 	},
 
-	onHideAnimationEnd: function(e) {
-		console.log(e);
+	onHideAnimationEnd: function (e) {
+		this.eventCount++;
+		if (this.eventCount === this.numThumbs) {
+			this.thumbsParent.removeChild(this.el);
+			this.el.removeEventListener("webkitAnimationEnd", this.onHideAnimationEnd);
+		}
 	},
 
-	show: function() {
-		this.el.classList.remove("is-off-screen");
+	show: function () {
+		console.log("show");
+		this.el.classList.remove("hide");
+
+		if (this.el.parentElement === null) {
+			this.thumbsParent.appendChild(this.el);
+			this.el.classList.remove("is-off-screen");
+		}
 	}
 });
 window.App = window.App || {};
@@ -5069,7 +5739,7 @@ App.Views.ProgressBar = Backbone.View.extend({
 
 	el: document.getElementById("progress"),
 
-	initialize: function(attributes) {
+	initialize: function (attributes) {
 		_.bindAll(this, "update", "complete");
 		this.render();
 
@@ -5080,111 +5750,149 @@ App.Views.ProgressBar = Backbone.View.extend({
 
 	},
 
-	render: function() {
-
+	render: function () {
 		var wrapper = document.getElementById("global-wrapper");
 		wrapper.insertBefore(this.el, wrapper.firstChild);
 		this.innerEl = document.createElement("div");
 		this.el.classList.add("progress");
-		this.innerEl.classList.add("progress__bar")
+		this.innerEl.classList.add("progress-bar");
 		this.el.appendChild(this.innerEl);
 	},
 
-	update: function(perc) {
-		// console.log(perc);
-		// var perc = ((value / this.total) * 100).toString() + "%";
-
+	update: function (perc) {
+		this.el.classList.remove("is-complete");
 		this.innerEl.style.width = perc.toString() + "%";
 	},
 
-	complete: function() {
+	complete: function () {
 
 		this.update(100);
-		window.setTimeout(_.bind(function() {
+		window.setTimeout(_.bind(function () {
 			this.el.classList.add("is-complete");
 		}, this), 500);
 	}
 
 });
-
-
 window.App = window.App || {};
 App.Views = App.Views || {};
 
-(function(window, $) {
+(function (window, $) {
 
 	App.Views.Slider = Backbone.View.extend({
 
-		initialize: function(args) {
-			_.bindAll(this, "draw", "onPageNavClick");
+		initialize: function (args) {
+			var i = 0;
+			_.bindAll(this, "onPageNavClick");
 
-			this.type = args.type;
+			this.animType = args.animType;
+			this.innerEl = args.innerEl;
+			this.slides = this.innerEl.children;
+			this.numSlides = this.innerEl.childElementCount;
+			this.currentPageIndex = 0;
+			this.el.classList.add("slider");
+			this.innerEl.classList.add("slider-inner");
 
-			this.innerEl = document.createElement("div");
-			this.el.appendChild(this.innerEl);
-			this.pageNav = document.createElement("div");
-			this.pageNav.className = "paging";
-			this.el.parentElement.appendChild(this.pageNav);
-			this.pageNav.addEventListener("click", this.onPageNavClick);
-			this.pageNavItems = [];
-			this.numPages = 0;
-			this.currentPage = 0;
+			while (i < this.numSlides) {
+				var slide = this.slides[i];
+				slide.classList.add("slider-slide");
+				if (this.animType === "slide") {
+					slide.style.width = (100 / this.numSlides).toString() + "%";
+				}
+				i++;
+			}
+			if (this.animType === "slide") {
+				this.innerEl.style.width = (this.numSlides * 100).toString() + "%";
+			} else {
+				this.addUI();
+			}
+			
+			this.navigateTo(0);
 		},
 
-		draw: function(numPages) {
-
+		addUI: function () {
 			var i = 0;
 
-			this.numPages = numPages;
-			this.pageNavItems = [];
+			this.pageNav = document.createElement("div");
+			this.pageNav.className = "slider-paging  bg-check";
+			this.pageNav.addEventListener("click", this.onPageNavClick);
+
 			this.pageNav.innerHTML = "";
 
-			while (i < numPages) {
-
-				var btn = document.createElement('div');
+			while (i < this.numSlides) {
+				var btn = document.createElement("div");
 				btn.setAttribute("data-i", i.toString());
-				btn.className = "paging-btn";
-				this.pageNavItems[i] = btn;
+				btn.className = "slider-paging-btn";
 				this.pageNav.appendChild(btn);
-
 				i++;
-
 			}
 
-			this.navigateTo(this.currentPage, false);
+			this.el.appendChild(this.pageNav);
+
 		},
 
-		onPageNavClick: function(e) {
+		onPageNavClick: function (e) {
 			this.navigateTo(e.target.getAttribute("data-i"), true);
 		},
 
-		navigateTo: function(i, animate) {
+		next: function () {
+			if ((this.currentPageIndex + 1) < this.numSlides) {
+				this.navigateTo(this.currentPageIndex + 1);
+			} else {
+				this.trigger("navigate:next");
+			}
+		},
+
+		prev: function () {
+			if (this.currentPageIndex - 1 >= 0) {
+				this.navigateTo(this.currentPageIndex - 1);
+			} else {
+				this.trigger("navigate:prev");
+			}
+		},
+
+		navigateTo: function (i, animate) {
 			var el = this.innerEl;
 
 			if (!animate) {
 				el.classList.remove("will-animate");
 			}
 
-			this.currentPage = i;
+			this.currentPageIndex = i;
 
-			if (this.style === "slide") {
-				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numPages)) + "%,0,0)";
-			} else if (this.style === "fade") {
+			if (this.currentSlide) {
+				this.currentSlide.classList.remove("is-current");
+			}
 
+			this.currentSlide = this.slides[i];
+			this.currentSlide.classList.add("is-current");
+
+			if (this.animType === "slide") {
+				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numSlides)) + "%,0,0)";
 			}
 
 			if (!animate) {
-				_.delay(function(arguments) {
+				_.delay(function (arguments) {
 					el.classList.add("will-animate");
 				}, 100)
-			};
+			};	
+
+			if (this.pageNav) {
+				
+				if (this.pageNav.querySelector(".is-current")) {
+					this.pageNav.querySelector(".is-current").classList.remove("is-current");
+				}
+				
+				this.pageNav.children[i].classList.add("is-current");
+			}
+
+			this.trigger("slidechanged", this.currentSlide);
 		},
 
-		hide: function() {
+		hide: function () {
 			this.pageNav.classList.add("is-off-screen");
 		},
 
-		show: function() {
+		show: function () {
 			this.pageNav.classList.remove("is-off-screen");
 		}
 
@@ -5300,77 +6008,172 @@ App.Views.Grid = Backbone.View.extend({
 	}
 
 });
-(function(window, $) {
+(function (window, $) {
 
 	window.App = window.App || {};
 	App.Views = App.Views || {};
 
-	App.Views.JobView = Backbone.View.extend({
+	App.Views.JobNavView = Backbone.View.extend({
 
 		tagName: "div",
 
-		className: "job-view",
+		className: "project-view",
 
-		initialize: function() {
-			_.bindAll(this, "onAjaxLoaded", "show");
+		projects: [],
+
+		initialize: function (args) {
+			_.bindAll(this, "load", "onAjaxSuccess", "show", "onProjectImgsLoaded", "onSliderPrev", "onSliderNext", "onBtnClick");
+			this.projectIDs = args.projectIDs;
 
 			this.render();
 		},
 
-		render: function() {
-			var wrapper = document.getElementById("global-wrapper");
-			wrapper.insertBefore(this.el, wrapper.firstChild);
-		},
+		render: function () {
+			var header = document.getElementById("header");
 
-		load: function(id) {
+			this.nextBtn = this.makeBtn("next");
+			this.prevBtn = this.makeBtn("prev");
 
-			Backbone.ajax({
-				url: '/job-ajax',
-				data: {
-					'id': id
-				},
+			this.innerEl = document.createElement("div");
+			this.innerEl.setAttribute("class", "project-view-item-inner");
+			this.el.appendChild(this.innerEl);
 
-				success: this.onAjaxLoaded
+			for (var i = 0; i < this.projectIDs.length; i++) {
+				var id = this.projectIDs[i];
 
+				var project = {
+					id: id,
+					el: document.createElement("div")
+				}
+
+				project.el.setAttribute("class", "project-view-item");
+				project.el.setAttribute("id", "project-" + id);
+
+				this.projects.push(project);
+				this.innerEl.appendChild(project.el);
+			}
+
+			header.parentNode.insertBefore(this.el, header.nextSibling);
+
+			this.slider = new App.Views.Slider({
+				animType: "slide",
+				el: this.el,
+				innerEl: this.innerEl
 			});
 
 		},
 
-		show: function() {
-			this.el.classList.add("is-visible");
-			// BackgroundCheck.init({
-			// 	targets: '.brand',
-			// 	images: '.gallery__item'
-			// });
-			BackgroundCheck.refresh();
+		makeBtn: function (type) {
+			var btn = document.createElement("div");
+
+			btn.className = "bg-check btn  btn-" + type;
+			btn.innerHTML = type;
+			btn.addEventListener("click", this.onBtnClick);
+			this.el.appendChild(btn);
+
+			return btn;
 		},
 
-		hide: function() {
+		onBtnClick: function (e) {
+			if (e.target === this.nextBtn) {
+				this.currentJob.slider.next();
+			} else if (e.target === this.prevBtn) {
+				this.currentJob.slider.prev();
+			}
+		},
+
+		show: function () {
+			this.el.classList.add("is-visible");
+		},
+
+		hide: function () {
 			this.el.classList.remove("is-visible");
 		},
 
-		onAjaxLoaded: function(data) {
-
-			this.el.innerHTML = data;
-			// BackgroundCheck.refresh();
-
-			this.imgLoader = new App.Views.ImageLoader({
-				imgs: this.el.querySelectorAll(".gallery__item")
+		load: function (id) {
+			this.currentJob = _.find(this.projects, function (project) {
+				return project.id === id;
 			});
 
-			this.initSlider();
+			Backbone.ajax({
+				url: '/project-ajax',
+				data: {
+					'id': id
+				},
+				success: this.onAjaxSuccess
+			});
 
 		},
 
-		initSlider: function() {
+		onAjaxSuccess: function (data, textStatus, jqXHR) {
+			this.currentJob.el.innerHTML = data;
 
-			this.slider = new App.Views.Slider({
-				type: "fade",
-				el: document.getElementById("gallery")
+			this.currentJob.imgLoader = new App.Views.ImageLoader({
+				imgs: this.currentJob.el.querySelectorAll(".gallery-item"),
+				useBg: true
 			});
 
+			this.currentJob.imgLoader.on("progress:complete", this.onProjectImgsLoaded);
+		},
 
-			this.imgLoader.on("progress:complete", this.show);
+		onProjectImgsLoaded: function (e) {
+			
+			BackgroundCheck.init({
+				targets: '.bg-check',
+				images: '.slider .img',
+				debug: true
+			});
+			
+
+			this.initSlider();
+			this.slider.navigateTo(this.projects.indexOf(this.currentJob), true);
+			this.trigger("loaded");
+		},
+
+		initSlider: function () {
+			this.currentJob.slider = new App.Views.Slider({
+				animType: "fade",
+				el: this.currentJob.el.querySelector(".gallery"),
+				innerEl: this.currentJob.el.querySelector(".gallery-inner")
+			});
+
+			this.currentJob.slider.on("slidechanged", this.onSlideChanged);
+			this.currentJob.slider.on("navigate:next", this.onSliderNext);
+			this.currentJob.slider.on("navigate:prev", this.onSliderPrev);
+		},
+
+		onSliderPrev: function () {
+			this.unloadCurrentJob("prev");
+		},
+
+		onSliderNext: function () {
+			this.unloadCurrentJob("next");
+		},
+
+		unloadCurrentJob: function (dir) {
+			var currentJobIndex = this.projects.indexOf(this.currentJob);
+			var newIndex = 0;
+
+			this.currentJob.imgLoader.off("progress:complete");
+			this.currentJob.slider.off("slidechanged");
+			this.currentJob.slider.off("navigate:next");
+			this.currentJob.slider.off("navigate:prev");
+
+			if (dir === "next") {
+				newIndex = currentJobIndex + 1;
+			} else {
+				newIndex = currentJobIndex - 1;
+			}
+
+			this.trigger("route:project", this.projects[newIndex].id);
+
+			// this.load();
+
+		},
+
+		onSlideChanged: function (slide) {
+			BackgroundCheck.set('targets', '.bg-check')
+			BackgroundCheck.refresh();
 		}
 
 	});
@@ -5378,27 +6181,35 @@ App.Views.Grid = Backbone.View.extend({
 
 }).call(this, window, Zepto);
 
+
 window.App = window.App || {};
 App.Views = App.Views || {};
 
-(function(window, $) {
+(function (window, $) {
 
 	App.Views.AppView = Backbone.View.extend({
 
 		el: "body",
 
-		initialize: function() {
-			_.bindAll(this, "jobRoute", "indexRoute");
+		initialize: function () {
+			var projectIDs = [];
+
+			_.bindAll(this, "projectRoute", "homeRoute", "rootRoute", "onJobLoaded");
 
 			App.eventDispatcher = _.clone(Backbone.Events);
 
 			window.onload = _.bind(this.onWindowLoad, this);
 
 			this.progress = new App.Views.ProgressBar();
-
 			this.thumbsView = new App.Views.Thumbnails();
 
-			this.jobsView = new App.Views.JobView();
+			for (var i = 0; i < this.thumbsView.thumbs.length; i++) {
+				projectIDs.push(this.thumbsView.thumbs[i].getAttribute("data-project-id"));
+			}
+
+			this.projectsNavView = new App.Views.JobNavView({
+				projectIDs: projectIDs
+			});
 
 			App.eventDispatcher.on("progress:change", this.progress.update);
 			App.eventDispatcher.on("progress:complete", this.progress.complete);
@@ -5406,25 +6217,47 @@ App.Views = App.Views || {};
 			this.initRouter();
 		},
 
-		initRouter: function() {
-			this.router = new App.Router();
-			this.router.on('route:index', this.indexRoute);
-			this.router.on('route:job', this.jobRoute);
+		initRouter: function () {
+			var router = new App.Router();
+			this.router = router;
+			this.router.on('route:root', this.rootRoute);
+			this.router.on('route:home', this.homeRoute);
+			this.router.on('route:project', this.projectRoute);
 
-			Backbone.history.start();
+			this.projectsNavView.on("route:project", function (id) {
+				router.navigate("#projects/" + id, {
+					trigger: true
+				});
+			});
+
+			Backbone.history.start({
+				pushState: false
+			});
 		},
 
-		jobRoute: function(id) {
+		rootRoute: function () {
+			this.router.navigate("#home", {
+				trigger: true
+			});
+		},
+
+		projectRoute: function (id) {
+			this.projectsNavView.on("loaded", this.onJobLoaded);
+			this.projectsNavView.load(id);
+		},
+
+		onJobLoaded: function () {
+			this.projectsNavView.off("loaded");
+			this.projectsNavView.show();
 			this.thumbsView.hide();
-			this.jobsView.load(id);
 		},
 
-		indexRoute: function() {
+		homeRoute: function () {
 			_.delay(this.thumbsView.show, 500);
-			this.jobsView.hide();
+			this.projectsNavView.hide();
 		},
 
-		onWindowLoad: function(arguments) {
+		onWindowLoad: function () {
 			this.el.className += "loaded";
 		}
 

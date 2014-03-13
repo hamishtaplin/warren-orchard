@@ -5,12 +5,20 @@
   position: relative;
   overflow: hidden;
   opacity: 1;
+  padding: 0.2em;
+  @include lap {
+    padding: 0.4em;
+  }
   @include transition(opacity 500ms $ease-in-out-quint 300ms);
   @include perspective(1000px);
   @include perspective-origin(50% 50%);
   ul {
     height: 100%;
   }
+
+	&.hide {
+		opacity: 0;
+	}
 
   &.is-off-screen {
     pointer-events: none;
@@ -24,38 +32,58 @@
 .thumb {
   letter-spacing: 0;
   display: inline-block;
-  vertical-align: baseline; 
-  width: 25%;
+  vertical-align: bottom; 
+  width: 50%;
   position: relative;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   opacity: 0;
-  padding: 0.25em;
-
+  padding: 0.2em;
+  @include lap {
+    padding: 0.4em;
+  }
   // position: absolute;
   // @include transition(all 300ms $ease-out-back);
   // @include transform(translate3d(0,1em,0) rotate3d(1,0,0,-20deg));
   // @include transform(scale(0.8));
   // @include transform-origin(50% 50%);
+
   &.is-loaded {
-    @include animation(fade 500ms $ease-in-out-quint both);
+    @include animation(fade-in 500ms $ease-in-out-quint both);
     @include animation-direction(normal);
     // opacity: 1;
     // position: relative;
     // @include transform(translate3d(0,0,0));
     // @include transform(scale(1));
     // // @include transform(translate3d(0,0,0) rotate3d(1,0,0,0deg));
-    @for $i from 0 through 99 {
-      &.thumb-#{$i} {
-        @include animation-delay( $i*20ms );
-      }
-    }
   }
 
+  @for $i from 0 through 99 {
+    &.img-#{$i} {
+      @include animation-delay( $i*20ms );
+    }
+  }
 }
 
+@for $i from 1 through 5 {
+  @include mq($min: $i*$screen-width) {
+    .global-width {
+      // max-width: $i*$thumb-width;
+    }
+    .thumb {
+      @if $i < 5 {
+        width: 100%/($i + 1);
+      } @else {
+        width: 100%/($i);
+      }
+    }
+    .nav {
+      left: $thumb-width*nth($nav-offsets, $i);
+    }
+  }
+}
 
-.thumb__img {
+.thumb-img {
   display: none;
   width: 100%;
   height: 100%;
@@ -67,7 +95,7 @@
   }
 }
 
-.thumb__title {
+.thumb-title {
   position: absolute;
   display: block;
   display: -webkit-box;
@@ -102,12 +130,11 @@
   h2 {
     opacity: 0;
     font-size: 1.1em;
-    // @include transform(translateY(2em));
     @include transition(all 300ms $ease-in-quart 100ms);
   }
 }
 
-.thumb__link {
+.thumb-link {
   width: 100%;
   // height: 100%;
   position: relative;
@@ -118,17 +145,17 @@
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0,0,0);
   &:hover {
-    .thumb__title {
+    .thumb-title {
       opacity: 1;
       h2 {
         opacity: 1;
-        // @include transform(translateY(0));
+        @include transform(translateY(0));
       }
     }
   }
 }
 
-.thumbs__page {
+.thumbs-page {
   height: 100%;
   width: 100%;
   float: left;
@@ -139,7 +166,7 @@
   }
 }
 
-.thumbs__inner {
+.thumbs-inner {
   height: 100%;
   position: absolute;
   left: 0;
@@ -155,7 +182,7 @@
 }
 
 
-.thumbs__paging {
+.thumbs-paging {
   position: absolute;
   left: 0;
   right: 0;
@@ -172,7 +199,7 @@
   }
 }
 
-.thumbs__paging-btn {
+.thumbs-paging-btn {
   display: inline-block;
   width: 10px;
   height: 10px;
