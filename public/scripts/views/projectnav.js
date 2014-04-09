@@ -3,7 +3,7 @@
 	window.App = window.App || {};
 	App.Views = App.Views || {};
 
-	App.Views.JobNavView = Backbone.View.extend({
+	App.Views.ProjectNavView = Backbone.View.extend({
 
 		tagName: "div",
 
@@ -12,9 +12,8 @@
 		projects: [],
 
 		initialize: function (args) {
-			_.bindAll(this, "load", "onAjaxSuccess", "show", "onProjectImgsLoaded", "onSliderPrev", "onSliderNext", "onBtnClick");
+			_.bindAll(this, "loadProject", "onAjaxSuccess", "show", "onProjectImgsLoaded", "onMainSliderPrev", "onMainSliderNext", "onSlideChanged", "onBtnClick");
 			this.projectIDs = args.projectIDs;
-
 			this.render();
 		},
 
@@ -30,14 +29,13 @@
 
 			for (var i = 0; i < this.projectIDs.length; i++) {
 				var id = this.projectIDs[i];
-
 				var project = {
 					id: id,
 					el: document.createElement("div")
 				}
 
 				project.el.setAttribute("class", "project-view-item");
-				project.el.setAttribute("id", "project-" + id);
+				project.el.setAttribute("id", id);
 
 				this.projects.push(project);
 				this.innerEl.appendChild(project.el);
@@ -56,7 +54,7 @@
 		makeBtn: function (type) {
 			var btn = document.createElement("div");
 
-			btn.className = "bg-check btn  btn-" + type;
+			btn.className = "bg-check  btn  btn-" + type;
 			btn.innerHTML = type;
 			btn.addEventListener("click", this.onBtnClick);
 			this.el.appendChild(btn);
@@ -66,9 +64,9 @@
 
 		onBtnClick: function (e) {
 			if (e.target === this.nextBtn) {
-				this.currentJob.slider.next();
+				this.currentProject.slider.next();
 			} else if (e.target === this.prevBtn) {
-				this.currentJob.slider.prev();
+				this.currentProject.slider.prev();
 			}
 		},
 
@@ -80,52 +78,56 @@
 			this.el.classList.remove("is-visible");
 		},
 
-		load: function (id, slide) {
-			this.currentJob = _.find(this.projects, function (project) {
-				return project.id === id;
-			});
+		loadProject: function (id, slide) {
+			console.log("load :" + id, slide);
+
+			this.currentProject = this.getProjectByID(id);
 
 			Backbone.ajax({
 				url: '/project-ajax',
 				data: {
 					'id': id
 				},
-				success: this.onAjaxSuccess
+				success: _.bind(function(data, textStatus, jqXHR) {
+					this.onAjaxSuccess(data, slide);
+				}, this)
 			});
 
 		},
 
-		onAjaxSuccess: function (data, textStatus, jqXHR) {
-			this.currentJob.el.innerHTML = data;
+		onAjaxSuccess: function (data, slide) {
+			this.currentProject.el.innerHTML = data;
 
-			this.currentJob.imgLoader = new App.Views.ImageLoader({
-				imgs: this.currentJob.el.querySelectorAll(".gallery-item"),
+			this.currentProject.imgLoader = new App.Views.ImageLoader({
+				imgs: this.currentProject.el.querySelectorAll(".gallery-item"),
 				useBg: true
 			});
 
-			this.currentJob.imgLoader.on("progress:complete", this.onProjectImgsLoaded);
+			this.currentProject.imgLoader.on("progress:complete", _.bind(function(e) {
+				this.onProjectImgsLoaded(slide);
+			}, this));
 		},
 
-		onProjectImgsLoaded: function (e) {
-			this.initProjectSlider();
-			this.slider.navigateTo(this.projects.indexOf(this.currentJob), true);
+		onProjectImgsLoaded: function (slide) {
+			this.initProjectSlider(slide);
+			this.slider.navigateTo(this.projects.indexOf(this.currentProject), true);
 			this.trigger("loaded");
 		},
 
-		initProjectSlider: function () {
-			if (typeof(this.currentJob.slider) === 'undefined' ){
-				this.currentJob.slider = new App.Views.Slider({
+		initProjectSlider: function (slide) {
+			if (typeof(this.currentProject.slider) === 'undefined' ){
+				this.currentProject.slider = new App.Views.Slider({
 					animType: "fade",
-					el: this.currentJob.el.querySelector(".gallery"),
-					innerEl: this.currentJob.el.querySelector(".gallery-inner")
+					el: this.currentProject.el.querySelector(".gallery"),
+					innerEl: this.currentProject.el.querySelector(".gallery-inner")
 				});
 			} else {
-				this.currentJob.slider.navigateTo(0);
+				this.currentProject.slider.navigateTo(slide);
 			}
 
-			this.currentJob.slider.on("slidechanged", this.onSlideChanged);
-			this.currentJob.slider.on("navigate:next", this.onSliderNext);
-			this.currentJob.slider.on("navigate:prev", this.onSliderPrev);
+			this.currentProject.slider.on("slidechanged", this.onSlideChanged);
+			this.currentProject.slider.on("navigate:next", this.onMainSliderNext);
+			this.currentProject.slider.on("navigate:prev", this.onMainSliderPrev);
 
 			BackgroundCheck.init({
 				targets: '.bg-check',
@@ -134,39 +136,36 @@
 			});
 		},
 
-		onSliderPrev: function () {
-			this.unloadCurrentJob("prev");
+		onMainSliderPrev: function () {
+			this.unloadCurrentProject("prev");
 		},
 
-		onSliderNext: function () {
-			this.unloadCurrentJob("next");
+		onMainSliderNext: function () {
+			this.unloadCurrentProject("next");
 		},
 
-		unloadCurrentJob: function (dir) {
-			var currentJobIndex = this.projects.indexOf(this.currentJob);
+		unloadCurrentProject: function (dir) {
 			var newIndex = 0;
+			var currentProjectIndex = this.projects.indexOf(this.currentProject);
 
-			this.currentJob.imgLoader.off("progress:complete");
-			this.currentJob.slider.off("slidechanged");
-			this.currentJob.slider.off("navigate:next");
-			this.currentJob.slider.off("navigate:prev");
+			this.currentProject.imgLoader.off("progress:complete");
+			this.currentProject.slider.off("slidechanged");
+			this.currentProject.slider.off("navigate:next");
+			this.currentProject.slider.off("navigate:prev");
 
-			// if (dir === "next") {
-			// 	newIndex = currentJobIndex + 1;
-			// } else {
-			// 	newIndex = currentJobIndex - 1;
-			// }
-
-			newIndex = (dir === "next") ? currentJobIndex + 1 : currentJobIndex - 1;
+			newIndex = (dir === "next") ? currentProjectIndex + 1 : currentProjectIndex - 1;
 
 			this.trigger("route:project", this.projects[newIndex].id);
-
-			// this.load();
-
 		},
 
-		onSlideChanged: function (slide) {
-			
+		onSlideChanged: function (slide, i) {
+			this.trigger("route:project", this.currentProject.id, i);
+		},
+
+		getProjectByID: function(id) {
+			return _.find(this.projects, function (project) {
+				return project.id === id;
+			});
 		}
 
 	});

@@ -10,7 +10,7 @@ App.Views = App.Views || {};
 		initialize: function () {
 			var projectIDs = [];
 
-			_.bindAll(this, "projectRoute", "homeRoute", "rootRoute", "onJobLoaded");
+			_.bindAll(this, "projectRoute", "homeRoute", "rootRoute", "onProjectLoaded");
 
 			App.eventDispatcher = _.clone(Backbone.Events);
 
@@ -23,9 +23,7 @@ App.Views = App.Views || {};
 				projectIDs.push(this.thumbsView.thumbs[i].getAttribute("data-project-id"));
 			}
 
-			this.projectsNavView = new App.Views.JobNavView({
-				projectIDs: projectIDs
-			});
+			this.projectsNavView = new App.Views.ProjectNavView({	projectIDs: projectIDs });
 
 			App.eventDispatcher.on("progress:change", this.progress.update);
 			App.eventDispatcher.on("progress:complete", this.progress.complete);
@@ -36,31 +34,34 @@ App.Views = App.Views || {};
 		initRouter: function () {
 			var router = new App.Router();
 			this.router = router;
-			this.router.on('route:root', this.rootRoute);
-			this.router.on('route:home', this.homeRoute);
-			this.router.on('route:project', this.projectRoute);
+			this.router.on("route:root", this.rootRoute);
+			this.router.on("route:home", this.homeRoute);
+			this.router.on("route:project", this.projectRoute);
 
-			this.projectsNavView.on("route:project", function (id) {
-				router.navigate("#projects/" + id, { trigger: true });
+			this.projectsNavView.on("route:project", function (projectID, slide) {
+				console.log("route:project", projectID, slide);
+
+				router.navigate("#projects/" + projectID + "/" + slide, { trigger: true });
 			});
 
-			Backbone.history.start({
-				pushState: false
-			});
+			Backbone.history.start({ pushState: false	});
 		},
 
 		rootRoute: function () {
-			this.router.navigate("#home", {
-				trigger: true
-			});
+			this.router.navigate("#home", { trigger: true	});
 		},
 
-		projectRoute: function (id) {
-			this.projectsNavView.on("loaded", this.onJobLoaded);
-			this.projectsNavView.load(id);
+		projectRoute: function (id, slide) {
+			var currentProject = this.projectsNavView.currentProject;
+			if (typeof(currentProject) !== 'undefined' && currentProject.id === id){
+				this.projectsNavView.currentProject.slider.navigateTo(slide);
+			} else {
+				this.projectsNavView.on("loaded", this.onProjectLoaded);
+				this.projectsNavView.loadProject(id, slide);
+			}
 		},
 
-		onJobLoaded: function () {
+		onProjectLoaded: function () {
 			this.projectsNavView.off("loaded");
 			this.projectsNavView.show();
 			this.thumbsView.hide();

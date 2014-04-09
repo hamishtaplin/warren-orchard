@@ -86,9 +86,6 @@ App.Views = App.Views || {};
 		},
 
 		navigateTo: function (i, animate) {
-			console.log(this);
-			console.log("navigateTo: "+ i);
-			
 			var el = this.innerEl;
 
 			if (!animate) {
@@ -107,7 +104,7 @@ App.Views = App.Views || {};
 			if (!animate) {
 				_.delay(function (arguments) {
 					el.classList.add("will-animate");
-				}, 100)
+				}, 100);
 			} else {
 				// TODO: cross-browser implementation
 				el.addEventListener("webkitAnimationEnd", this.onSlideAnimationEnd);
@@ -118,7 +115,6 @@ App.Views = App.Views || {};
 			}
 
 			if (this.pageNav) {
-				
 				if (this.pageNav.querySelector(".is-current")) {
 					this.pageNav.querySelector(".is-current").classList.remove("is-current");
 				}
@@ -126,7 +122,7 @@ App.Views = App.Views || {};
 				this.pageNav.inner.children[i].classList.add("is-current");
 			}
 
-			this.trigger("slidechanged", this.currentSlide);			
+			this.trigger("slidechanged", this.currentSlide, i);
 		},
 
 		onSlideAnimationEnd: function() {

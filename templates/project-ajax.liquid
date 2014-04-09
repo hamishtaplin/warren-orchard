@@ -7,7 +7,7 @@
       {% if project.id == {{request.query.id}} %}
         {% for img in project.images %}
           <li class="gallery-item">
-            {% capture myimg %}/public/images/content/fullsize/job-{{project.id}}/{{img}}.jpg{% endcapture %}
+            {% capture myimg %}/public/images/content/fullsize/{{project.id}}/{{img}}.jpg{% endcapture %}
             {% if mixture.debug  %}
               <div data-src="{{ myimg }}" class="gallery-img  img" />
              {% else %}

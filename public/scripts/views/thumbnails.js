@@ -37,7 +37,6 @@ App.Views.Thumbnails = Backbone.View.extend({
 	},
 
 	show: function () {
-		console.log("show");
 		this.el.classList.remove("hide");
 
 		if (this.el.parentElement === null) {
