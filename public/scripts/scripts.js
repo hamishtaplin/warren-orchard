@@ -5581,7 +5581,8 @@ App.Router = Backbone.Router.extend({
 	routes: {
 		"": "root",
 		"home": "index",
-		"projects/:id": "project"
+		"projects/:id": "project",
+		"projects/:id/:slide": "project"
 	}
 
 });
@@ -5621,7 +5622,6 @@ App.Views.ImageView = Backbone.View.extend({
 		}
 
 		this.el.classList.add("is-loaded");
-
 		this.trigger("load", this);
 
 	},
@@ -5765,7 +5765,6 @@ App.Views.ProgressBar = Backbone.View.extend({
 	},
 
 	complete: function () {
-
 		this.update(100);
 		window.setTimeout(_.bind(function () {
 			this.el.classList.add("is-complete");
@@ -5782,7 +5781,7 @@ App.Views = App.Views || {};
 
 		initialize: function (args) {
 			var i = 0;
-			_.bindAll(this, "onPageNavClick");
+			_.bindAll(this, "onPageNavClick", "onSlideAnimationEnd");
 
 			this.animType = args.animType;
 			this.innerEl = args.innerEl;
@@ -5800,6 +5799,7 @@ App.Views = App.Views || {};
 				}
 				i++;
 			}
+
 			if (this.animType === "slide") {
 				this.innerEl.style.width = (this.numSlides * 100).toString() + "%";
 			} else {
@@ -5811,27 +5811,36 @@ App.Views = App.Views || {};
 
 		addUI: function () {
 			var i = 0;
-
+			var inner = document.createElement("div");
+			
+			inner.setAttribute("class", "slider-paging-inner bg-check");
+			inner.innerHTML = "";
+			
 			this.pageNav = document.createElement("div");
-			this.pageNav.className = "slider-paging  bg-check";
+			this.pageNav.setAttribute("class", "slider-paging");
 			this.pageNav.addEventListener("click", this.onPageNavClick);
-
 			this.pageNav.innerHTML = "";
 
 			while (i < this.numSlides) {
 				var btn = document.createElement("div");
 				btn.setAttribute("data-i", i.toString());
-				btn.className = "slider-paging-btn";
-				this.pageNav.appendChild(btn);
+				// btn.innerHTML = i.toString();
+				btn.setAttribute("class", "slider-paging-btn");
+				inner.appendChild(btn);
 				i++;
 			}
-
+			
+			this.pageNav.inner = inner;
+			this.pageNav.appendChild(inner);
 			this.el.appendChild(this.pageNav);
 
 		},
 
 		onPageNavClick: function (e) {
-			this.navigateTo(e.target.getAttribute("data-i"), true);
+			if (e.target.classList.contains("slider-paging-btn")) {
+				this.navigateTo(e.target.getAttribute("data-i"), true);
+			}
+			
 		},
 
 		next: function () {
@@ -5851,6 +5860,9 @@ App.Views = App.Views || {};
 		},
 
 		navigateTo: function (i, animate) {
+			console.log(this);
+			console.log("navigateTo: "+ i);
+			
 			var el = this.innerEl;
 
 			if (!animate) {
@@ -5866,15 +5878,18 @@ App.Views = App.Views || {};
 			this.currentSlide = this.slides[i];
 			this.currentSlide.classList.add("is-current");
 
-			if (this.animType === "slide") {
-				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numSlides)) + "%,0,0)";
-			}
-
 			if (!animate) {
 				_.delay(function (arguments) {
 					el.classList.add("will-animate");
 				}, 100)
+			} else {
+				// TODO: cross-browser implementation
+				el.addEventListener("webkitAnimationEnd", this.onSlideAnimationEnd);
 			};	
+
+			if (this.animType === "slide") {
+				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numSlides)) + "%,0,0)";
+			}
 
 			if (this.pageNav) {
 				
@@ -5882,10 +5897,14 @@ App.Views = App.Views || {};
 					this.pageNav.querySelector(".is-current").classList.remove("is-current");
 				}
 				
-				this.pageNav.children[i].classList.add("is-current");
+				this.pageNav.inner.children[i].classList.add("is-current");
 			}
 
-			this.trigger("slidechanged", this.currentSlide);
+			this.trigger("slidechanged", this.currentSlide);			
+		},
+
+		onSlideAnimationEnd: function() {
+			BackgroundCheck.refresh();
 		},
 
 		hide: function () {
@@ -6090,7 +6109,7 @@ App.Views.Grid = Backbone.View.extend({
 			this.el.classList.remove("is-visible");
 		},
 
-		load: function (id) {
+		load: function (id, slide) {
 			this.currentJob = _.find(this.projects, function (project) {
 				return project.id === id;
 			});
@@ -6117,29 +6136,31 @@ App.Views.Grid = Backbone.View.extend({
 		},
 
 		onProjectImgsLoaded: function (e) {
-			
-			BackgroundCheck.init({
-				targets: '.bg-check',
-				images: '.slider .img',
-				debug: true
-			});
-			
-
-			this.initSlider();
+			this.initProjectSlider();
 			this.slider.navigateTo(this.projects.indexOf(this.currentJob), true);
 			this.trigger("loaded");
 		},
 
-		initSlider: function () {
-			this.currentJob.slider = new App.Views.Slider({
-				animType: "fade",
-				el: this.currentJob.el.querySelector(".gallery"),
-				innerEl: this.currentJob.el.querySelector(".gallery-inner")
-			});
+		initProjectSlider: function () {
+			if (typeof(this.currentJob.slider) === 'undefined' ){
+				this.currentJob.slider = new App.Views.Slider({
+					animType: "fade",
+					el: this.currentJob.el.querySelector(".gallery"),
+					innerEl: this.currentJob.el.querySelector(".gallery-inner")
+				});
+			} else {
+				this.currentJob.slider.navigateTo(0);
+			}
 
 			this.currentJob.slider.on("slidechanged", this.onSlideChanged);
 			this.currentJob.slider.on("navigate:next", this.onSliderNext);
 			this.currentJob.slider.on("navigate:prev", this.onSliderPrev);
+
+			BackgroundCheck.init({
+				targets: '.bg-check',
+				images: '.slider .img',
+				debug: false
+			});
 		},
 
 		onSliderPrev: function () {
@@ -6159,11 +6180,13 @@ App.Views.Grid = Backbone.View.extend({
 			this.currentJob.slider.off("navigate:next");
 			this.currentJob.slider.off("navigate:prev");
 
-			if (dir === "next") {
-				newIndex = currentJobIndex + 1;
-			} else {
-				newIndex = currentJobIndex - 1;
-			}
+			// if (dir === "next") {
+			// 	newIndex = currentJobIndex + 1;
+			// } else {
+			// 	newIndex = currentJobIndex - 1;
+			// }
+
+			newIndex = (dir === "next") ? currentJobIndex + 1 : currentJobIndex - 1;
 
 			this.trigger("route:project", this.projects[newIndex].id);
 
@@ -6172,8 +6195,7 @@ App.Views.Grid = Backbone.View.extend({
 		},
 
 		onSlideChanged: function (slide) {
-			BackgroundCheck.set('targets', '.bg-check')
-			BackgroundCheck.refresh();
+			
 		}
 
 	});
@@ -6225,9 +6247,7 @@ App.Views = App.Views || {};
 			this.router.on('route:project', this.projectRoute);
 
 			this.projectsNavView.on("route:project", function (id) {
-				router.navigate("#projects/" + id, {
-					trigger: true
-				});
+				router.navigate("#projects/" + id, { trigger: true });
 			});
 
 			Backbone.history.start({

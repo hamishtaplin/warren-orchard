@@ -14,6 +14,12 @@
     // @include animation(fade-to-white 0.7s ease-in-out forwards);
     @include prefixer(filter, invert(100%), webkit mox o ms spec);
   }
+
+  .bg-check {
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0,0,0);
+    @include animation(fade-to-white 300ms $ease-in-out-quint forwards);
+  }
 }
 
 .info {

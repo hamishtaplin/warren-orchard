@@ -7,7 +7,7 @@ App.Views = App.Views || {};
 
 		initialize: function (args) {
 			var i = 0;
-			_.bindAll(this, "onPageNavClick");
+			_.bindAll(this, "onPageNavClick", "onSlideAnimationEnd");
 
 			this.animType = args.animType;
 			this.innerEl = args.innerEl;
@@ -25,6 +25,7 @@ App.Views = App.Views || {};
 				}
 				i++;
 			}
+
 			if (this.animType === "slide") {
 				this.innerEl.style.width = (this.numSlides * 100).toString() + "%";
 			} else {
@@ -36,27 +37,36 @@ App.Views = App.Views || {};
 
 		addUI: function () {
 			var i = 0;
-
+			var inner = document.createElement("div");
+			
+			inner.setAttribute("class", "slider-paging-inner bg-check");
+			inner.innerHTML = "";
+			
 			this.pageNav = document.createElement("div");
-			this.pageNav.className = "slider-paging  bg-check";
+			this.pageNav.setAttribute("class", "slider-paging");
 			this.pageNav.addEventListener("click", this.onPageNavClick);
-
 			this.pageNav.innerHTML = "";
 
 			while (i < this.numSlides) {
 				var btn = document.createElement("div");
 				btn.setAttribute("data-i", i.toString());
-				btn.className = "slider-paging-btn";
-				this.pageNav.appendChild(btn);
+				// btn.innerHTML = i.toString();
+				btn.setAttribute("class", "slider-paging-btn");
+				inner.appendChild(btn);
 				i++;
 			}
-
+			
+			this.pageNav.inner = inner;
+			this.pageNav.appendChild(inner);
 			this.el.appendChild(this.pageNav);
 
 		},
 
 		onPageNavClick: function (e) {
-			this.navigateTo(e.target.getAttribute("data-i"), true);
+			if (e.target.classList.contains("slider-paging-btn")) {
+				this.navigateTo(e.target.getAttribute("data-i"), true);
+			}
+			
 		},
 
 		next: function () {
@@ -76,6 +86,9 @@ App.Views = App.Views || {};
 		},
 
 		navigateTo: function (i, animate) {
+			console.log(this);
+			console.log("navigateTo: "+ i);
+			
 			var el = this.innerEl;
 
 			if (!animate) {
@@ -91,15 +104,18 @@ App.Views = App.Views || {};
 			this.currentSlide = this.slides[i];
 			this.currentSlide.classList.add("is-current");
 
-			if (this.animType === "slide") {
-				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numSlides)) + "%,0,0)";
-			}
-
 			if (!animate) {
 				_.delay(function (arguments) {
 					el.classList.add("will-animate");
 				}, 100)
+			} else {
+				// TODO: cross-browser implementation
+				el.addEventListener("webkitAnimationEnd", this.onSlideAnimationEnd);
 			};	
+
+			if (this.animType === "slide") {
+				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numSlides)) + "%,0,0)";
+			}
 
 			if (this.pageNav) {
 				
@@ -107,10 +123,14 @@ App.Views = App.Views || {};
 					this.pageNav.querySelector(".is-current").classList.remove("is-current");
 				}
 				
-				this.pageNav.children[i].classList.add("is-current");
+				this.pageNav.inner.children[i].classList.add("is-current");
 			}
 
-			this.trigger("slidechanged", this.currentSlide);
+			this.trigger("slidechanged", this.currentSlide);			
+		},
+
+		onSlideAnimationEnd: function() {
+			BackgroundCheck.refresh();
 		},
 
 		hide: function () {

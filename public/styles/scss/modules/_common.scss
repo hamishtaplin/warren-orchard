@@ -46,15 +46,17 @@
   display: block;
 }
 
-.bg-check {
-  &.background--dark {
-    @include animation(fade-to-white 300ms $ease-in-out-quint forwards);
-  }
+// .bg-check {
+//   -webkit-transform-style: preserve-3d;
+//   -webkit-transform: translate3d(0,0,0);
+//   &.background--dark {
+//     @include animation(fade-to-white 300ms $ease-in-out-quint forwards);
+//   }
 
-  &.background--light {
-    @include animation(fade-to-black 300ms $ease-in-out-quint forwards);
-  }
-}
+//   &.background--light {
+//     @include animation(fade-to-black 300ms $ease-in-out-quint forwards);
+//   }
+// }
 
 .site-footer {
   
@@ -81,3 +83,17 @@
   width: 0;
   @include transition(all 100ms ease-in-out);
 }
+
+.background--light {
+  path, stroke, g, polygon {
+    @include transition(fill 500ms $ease-in-out-quint);
+    fill: $color-black !important;
+  }
+}
+
+.background--dark {
+  path, stroke, g, polygon {
+    @include transition(fill 500ms $ease-in-out-quint);
+    fill: $color-white !important;
+  }
+} 

@@ -31,7 +31,6 @@ App.Views.ProgressBar = Backbone.View.extend({
 	},
 
 	complete: function () {
-
 		this.update(100);
 		window.setTimeout(_.bind(function () {
 			this.el.classList.add("is-complete");

@@ -3,7 +3,7 @@
 
   <div class="gallery" id="gallery-{{request.query.id}}">
     <ul class="gallery-inner" id="gallery-inner-{{request.query.id}}">
-    {% for project in global.projects  %}
+    {% for project in global.projects %}
       {% if project.id == {{request.query.id}} %}
         {% for img in project.images %}
           <li class="gallery-item">

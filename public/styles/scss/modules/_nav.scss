@@ -1,12 +1,23 @@
-
 .nav {
   letter-spacing: -0.31em;
   width: 100%;
   height: $header-height;
   position: absolute;
   top: 0;
-  @include lap {
-    
+
+  @include mq($min: 1*$screen-width) {
+    margin-left: -3.3em;
+    width: 6.6em;
+  }
+}
+
+$nav-offsets:0,25,25,20,25,25,25,25,25;
+
+@for $i from 1 through 5 {
+  @include mq($min: $i*$screen-width) {
+    .nav {
+      left: percentage(nth($nav-offsets, $i)/100);
+    }
   }
 }
 
@@ -33,6 +44,10 @@
 
   @include lap {
     margin: auto;
+  }
+
+  path, g {
+    fill: $color-black;
   }
 }
 

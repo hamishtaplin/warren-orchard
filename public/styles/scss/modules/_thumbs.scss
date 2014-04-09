@@ -67,18 +67,12 @@
 
 @for $i from 1 through 5 {
   @include mq($min: $i*$screen-width) {
-    .global-width {
-      // max-width: $i*$thumb-width;
-    }
     .thumb {
       @if $i < 5 {
         width: 100%/($i + 1);
       } @else {
         width: 100%/($i);
       }
-    }
-    .nav {
-      left: $thumb-width*nth($nav-offsets, $i);
     }
   }
 }

@@ -46,7 +46,27 @@
 
  
   {% block scripts %}{% endblock %}
-  {{ "scripts.js" | asset_url | script_tag }}
+  <!-- {{ "scripts.js" | asset_url | script_tag }} -->
+
+  {{ "utils.js" | asset_url | script_tag }}
+  {{ "vendor/underscore.js" | asset_url | script_tag }}
+  {{ "vendor/zepto.js" | asset_url | script_tag }}
+  {{ "vendor/backbone.js" | asset_url | script_tag }}
+  {{ "vendor/background-check.min.js" | asset_url | script_tag }}
+
+  {{ "routers/app-router.js" | asset_url | script_tag }}
+
+  {{ "views/img.js" | asset_url | script_tag }}
+  {{ "views/img-loader.js" | asset_url | script_tag }}
+  {{ "views/thumbnails.js" | asset_url | script_tag }}
+  {{ "views/progress-bar.js" | asset_url | script_tag }}
+  {{ "views/slider.js" | asset_url | script_tag }}
+  {{ "views/grid.js" | asset_url | script_tag }}
+  {{ "views/projectnav.js" | asset_url | script_tag }}
+  {{ "views/project.js" | asset_url | script_tag }}
+
+  {{ "views/app.js" | asset_url | script_tag }}
+
 
 </body>
 </html>

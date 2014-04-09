@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"naviga",
+				"navigateTo"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"text",
+				"text-indent:   (property)"
+			],
+			[
+				"cre",
+				"createElement  (function)"
+			],
+			[
+				"bp",
+				"bgp	background-position"
+			],
+			[
+				"slider-pa",
+				"slider-paging-btn"
+			],
+			[
+				"webkit-trans",
+				"-webkit-transform-style:   (property)"
+			],
+			[
+				"ease",
+				"ease-in-out-quint"
+			],
+			[
 				"flo",
 				"float"
 			],
@@ -208,10 +240,6 @@
 				"inline-block"
 			],
 			[
-				"text",
-				"text-decoration"
-			],
-			[
 				"inline",
 				"inline-block"
 			],
@@ -243,6 +271,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "public/scripts/views/slider.js",
+			"settings":
+			{
+				"buffer_size": 3482,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/scripts/routers/app-router.js",
+			"settings":
+			{
+				"buffer_size": 157,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/scripts/views/app.js",
+			"settings":
+			{
+				"buffer_size": 1922,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/scripts/views/projectnav.js",
+			"settings":
+			{
+				"buffer_size": 4018,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -404,25 +464,59 @@
 	},
 	"file_history":
 	[
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img-loader.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/projectnav.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/project.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/project-ajax.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/project.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/index.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/mixture.json",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/info.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/_imports.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/slider.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/app.js",
+		"/Users/hamishtaplin/Sites/010_ceidiog/public_html/wp-content/themes/ceidiog/functions.php",
+		"/Users/hamishtaplin/Library/Application Support/Steam/SteamApps/common/Football Manager 2014/data/db/1430/lnc/all/italian awards.lnc",
+		"/Users/hamishtaplin/Library/Application Support/Steam/SteamApps/common/Football Manager 2014/data/db/1430/lnc/all/turkish name change.lnc",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/progress-bar.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.mix.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/projectnav.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/includes/header.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/layout.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/project.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.mix.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-left-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-right-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-right-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icon-grid-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icon-grid-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icon-info-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icon-info-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/logo-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/logo-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-left-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/slider.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-left.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/index.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_linear-positions-parser.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_size.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_variables.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/info.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/converted-html/project-ajax.php",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/project-ajax.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_radial-positions-parser.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/mixture.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/_imports.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_grid-width.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/app.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-right.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/base64.txt",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_position.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_prefixer.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img-loader.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/project.liquid",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive (dit08090801.bluegg's conflicted copy 2014-03-11).css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/gruntfile.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/jobnav.min.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/job.min.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.min.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/routers/app-router.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/routers/app-router.min.js",
@@ -431,23 +525,15 @@
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job.liquid",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job-ajax.liquid",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.css",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/jobnav.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive (iMac's conflicted copy 2014-03-11 (1)).css",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/responsive.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/css/responsive.css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/css/responsive.min.css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_responsive.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/job.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed (dit08090801.bluegg's conflicted copy 2014-03-10 (1)).css",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/includes/header.liquid",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/layout.liquid",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/img.js",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnails.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/wo.sublime-project",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/package.json",
@@ -474,9 +560,6 @@
 		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/Console API Snippets (JavaScript).sublime-package",
 		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/JavaScript Snippets.sublime-package",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/icon-dots.svg",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_variables.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.min.css",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_timing-functions.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_transition.scss",
@@ -484,10 +567,7 @@
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_shape-size-stripper.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_animation.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_retina-image.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_position.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_linear-positions-parser.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_html5-input-types.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_size.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/backbone.js",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/bower.json",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/icon-info.svg",
@@ -503,35 +583,15 @@
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/vectors_logo.svg",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/models/.gitignore",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_px-to-em.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_prefixer.scss",
 		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Sass Snippets/if-statement.sublime-snippet",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_grid-width.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/base64.txt",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/preview.html",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/fixed.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_font-face.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/grunticon.loader.txt",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/_icons-svg.scss",
 		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_tables.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_print.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_navs.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_navigation.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/webfonts/century_gothic_bold-webfont.svg",
-		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/_icons-png.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_ctas.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.min.css",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/_icons-png.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/_icons-svg.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/_bourbon.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_font-family.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_forms.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_buttons.scss",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/index.html",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/app/public/styles/base.css",
-		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/app/public/styles/scss/responsive.scss",
-		"/Users/hamishtaplin/Dropbox/Work/027_arwydd/www/wp/wp-admin/post.php"
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_print.scss"
 	],
 	"find":
 	{
@@ -542,6 +602,9 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"*.js",
+			"*.liquid",
+			"*.scss",
 			"*.js",
 			"*.scss",
 			"*.liquid",
@@ -559,6 +622,28 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"is-curr",
+			"initProjectSlider",
+			"initProectSlider",
+			"initSlider",
+			"1s",
+			"thisOnSlideAnimationEnd",
+			"animationend",
+			"transition",
+			"transitionend",
+			"BackgroundCheck",
+			"{ {",
+			"&.background",
+			"makeBtn",
+			"bg-check",
+			"path, stroke, g",
+			"black",
+			"Click",
+			"info_page",
+			"nav__item",
+			"pageNavItems",
+			"1em",
+			"fixed",
 			"imgLoader",
 			"navigate",
 			"trigger",
@@ -664,29 +749,7 @@
 			"1,1",
 			"100px",
 			"loadImg",
-			"\";",
-			"Thumnails",
-			"\";",
-			"this.numThumbs",
-			"this.thumbs",
-			"args",
-			"div",
-			".jpg",
-			"\"id\": ",
-			": {",
-			"job-",
-			"\"job-",
-			"\"images\": [",
-			"\"job-",
-			"resp",
-			"],",
-			": [",
-			"],\n\n",
-			"\n\n\n",
-			"\n\n",
-			"\", \"",
-			"\n\n\n\n\n    ",
-			"\",\n    ],"
+			"\";"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -710,8 +773,436 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "public/scripts/views/slider.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2223,
+								2223
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1073.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/scripts/routers/app-router.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/scripts/views/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/scripts/views/projectnav.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 353.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -762,12 +1253,84 @@
 		"selected_items":
 		[
 			[
-				"project",
+				"comm",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"_gallery",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"projects",
 				"public/scripts/views/projectnav.js"
+			],
+			[
+				"slider",
+				"public/scripts/views/slider.js"
+			],
+			[
+				"_gall",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"_co",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"_nav",
+				"public/styles/scss/modules/_nav.scss"
+			],
+			[
+				"header",
+				"templates/includes/header.liquid"
+			],
+			[
+				"_comm",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"slider.js",
+				"public/scripts/views/slider.js"
+			],
+			[
+				"project-aj",
+				"templates/project-ajax.liquid"
+			],
+			[
+				"_inf",
+				"public/styles/scss/modules/_info.scss"
+			],
+			[
+				"_var",
+				"public/styles/scss/base/_variables.scss"
+			],
+			[
+				"_thumbs",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"_lay",
+				"public/styles/scss/base/_layout.scss"
+			],
+			[
+				"_com",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"btn-right",
+				"public/images/btn-right.svg"
 			],
 			[
 				"index",
 				"templates/index.liquid"
+			],
+			[
+				"_ga",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"project",
+				"public/scripts/views/projectnav.js"
 			],
 			[
 				"app",
@@ -776,10 +1339,6 @@
 			[
 				"proj",
 				"public/scripts/views/projectnav.js"
-			],
-			[
-				"slider",
-				"public/scripts/views/slider.js"
 			],
 			[
 				"ajax",
@@ -806,32 +1365,12 @@
 				"public/styles/scss/responsive.scss"
 			],
 			[
-				"_ga",
-				"public/styles/scss/modules/_gallery.scss"
-			],
-			[
 				"script",
 				"public/scripts/scripts.mix.js"
 			],
 			[
-				"_co",
-				"public/styles/scss/modules/_common.scss"
-			],
-			[
 				"job",
 				"public/scripts/views/job.js"
-			],
-			[
-				"_gallery",
-				"public/styles/scss/modules/_gallery.scss"
-			],
-			[
-				"_thumbs",
-				"public/styles/scss/modules/_thumbs.scss"
-			],
-			[
-				"_lay",
-				"public/styles/scss/base/_layout.scss"
 			],
 			[
 				"mixt",
@@ -890,14 +1429,6 @@
 				"public/images/icons/icon-dots.svg"
 			],
 			[
-				"comm",
-				"public/styles/scss/modules/_common.scss"
-			],
-			[
-				"_var",
-				"public/styles/scss/base/_variables.scss"
-			],
-			[
 				"app.js",
 				"public/scripts/app.js"
 			],
@@ -922,24 +1453,8 @@
 				"public/styles/scss/_imports.scss"
 			],
 			[
-				"_inf",
-				"public/styles/scss/modules/_info.scss"
-			],
-			[
-				"_nav",
-				"public/styles/scss/modules/_nav.scss"
-			],
-			[
-				"_comm",
-				"public/styles/scss/modules/_common.scss"
-			],
-			[
 				"_res",
 				"public/styles/scss/helpers/_responsive.scss"
-			],
-			[
-				"header",
-				"templates/includes/header.liquid"
 			],
 			[
 				"thumb",
@@ -1146,11 +1661,11 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -1167,7 +1682,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 313.0,
+	"side_bar_width": 283.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

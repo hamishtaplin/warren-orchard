@@ -73,6 +73,7 @@
   @include animation(fade-out 0 $ease-in-out-quint both);
   .img {
     background-size: cover;
+    background-position: top center;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -121,6 +122,7 @@
   cursor: pointer;
   -webkit-transform-style: preserve3d;
   vertical-align: middle;
+  // text-indent: -999em;
   &:hover {
     opacity:1;
   }
@@ -133,40 +135,85 @@
   }
 }
 
+.slider-paging-inner {
+  &.background--dark {
+    .slider-paging-btn {
+      background: rgba($color-white, 1);
+    }
+  }
+
+  &.background--light {
+    .slider-paging-btn {
+      background: rgba($color-black, 1);
+    }
+  }
+}
+
 .btn {
   padding: 1em;
-  width: 2.5em;
-  height: 2.5em;
+  width: 7%;
+  height: 100%;
   display: none;
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  text-indent: -999em;
-  opacity:0.9;
   z-index: 10;
+  text-indent: -999em;
   @include transition(all 100ms $ease-in-out-quint);
   @include user-select(none);
   -webkit-transform-style: preserve3d;
+  color: transparent;
+  &:before {
+    content: " ";
+    display: block;
+    width: 2.5em;
+    height: 2.5em;
+    text-indent: -999em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-indent: -999em;
+    opacity:0.9;
+    color: transparent;
+  }
   &:hover {
-    opacity:1;
+    background: rgba($color-black, 0);
+    &:before {
+      opacity: 1;
+    }
   }
-  &:active {
-    @include transform(scale(0.9));
-  }
+  // &:active {
+  //   @include transform(scale(0.9));
+  // }
   @include lap {
     display: block;
   }
 }
 
 .btn-next {
-  right: 2em;
-  background-image: url(/public/images/btn-right.svg);
+  right: 0;
+
+  &.background--dark:before {
+    background-image: url(/public/images/btn-right-white.svg);
+  }
+  &.background--light:before {
+    background-image: url(/public/images/btn-right-black.svg);
+  }
+
+  
 }
 
 .btn-prev {
-  left: 2em;
-  background-image: url(/public/images/btn-left.svg);
+  left: 0;
+ 
+  &.background--dark:before {
+    background-image: url(/public/images/btn-left-white.svg);
+  }
+  &.background--light:before {
+    background-image: url(/public/images/btn-left-black.svg);
+  }
 }
 
 @include mq($max: 500px) {

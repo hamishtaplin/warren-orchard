@@ -33,7 +33,6 @@ App.Views.ImageView = Backbone.View.extend({
 		}
 
 		this.el.classList.add("is-loaded");
-
 		this.trigger("load", this);
 
 	},

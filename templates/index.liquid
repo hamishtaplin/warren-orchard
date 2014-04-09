@@ -7,8 +7,7 @@
 		{% for project in global.projects limit:24  %}
 		<li class="thumb" data-project-id="{{project.id}}">
 			<a href="#projects/{{project.id}}" class="thumb-link">
-				<span class="thumb-title">
-					<h2 class="">Lorem Ipsum</h2>
+				<span class="thumb-title"><h2 class="">Lorem Ipsum</h2>
 				</span>
 				{% capture myimg %}/public/images/content/thumbs/job-{{project.id}}/{{project.images[0]}}-436x436.jpg{% endcapture %}
 				{% if mixture.debug  %}

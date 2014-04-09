@@ -41,9 +41,7 @@ App.Views = App.Views || {};
 			this.router.on('route:project', this.projectRoute);
 
 			this.projectsNavView.on("route:project", function (id) {
-				router.navigate("#projects/" + id, {
-					trigger: true
-				});
+				router.navigate("#projects/" + id, { trigger: true });
 			});
 
 			Backbone.history.start({

@@ -80,7 +80,7 @@
 			this.el.classList.remove("is-visible");
 		},
 
-		load: function (id) {
+		load: function (id, slide) {
 			this.currentJob = _.find(this.projects, function (project) {
 				return project.id === id;
 			});
@@ -107,29 +107,31 @@
 		},
 
 		onProjectImgsLoaded: function (e) {
-			
-			BackgroundCheck.init({
-				targets: '.bg-check',
-				images: '.slider .img',
-				debug: true
-			});
-			
-
-			this.initSlider();
+			this.initProjectSlider();
 			this.slider.navigateTo(this.projects.indexOf(this.currentJob), true);
 			this.trigger("loaded");
 		},
 
-		initSlider: function () {
-			this.currentJob.slider = new App.Views.Slider({
-				animType: "fade",
-				el: this.currentJob.el.querySelector(".gallery"),
-				innerEl: this.currentJob.el.querySelector(".gallery-inner")
-			});
+		initProjectSlider: function () {
+			if (typeof(this.currentJob.slider) === 'undefined' ){
+				this.currentJob.slider = new App.Views.Slider({
+					animType: "fade",
+					el: this.currentJob.el.querySelector(".gallery"),
+					innerEl: this.currentJob.el.querySelector(".gallery-inner")
+				});
+			} else {
+				this.currentJob.slider.navigateTo(0);
+			}
 
 			this.currentJob.slider.on("slidechanged", this.onSlideChanged);
 			this.currentJob.slider.on("navigate:next", this.onSliderNext);
 			this.currentJob.slider.on("navigate:prev", this.onSliderPrev);
+
+			BackgroundCheck.init({
+				targets: '.bg-check',
+				images: '.slider .img',
+				debug: false
+			});
 		},
 
 		onSliderPrev: function () {
@@ -149,11 +151,13 @@
 			this.currentJob.slider.off("navigate:next");
 			this.currentJob.slider.off("navigate:prev");
 
-			if (dir === "next") {
-				newIndex = currentJobIndex + 1;
-			} else {
-				newIndex = currentJobIndex - 1;
-			}
+			// if (dir === "next") {
+			// 	newIndex = currentJobIndex + 1;
+			// } else {
+			// 	newIndex = currentJobIndex - 1;
+			// }
+
+			newIndex = (dir === "next") ? currentJobIndex + 1 : currentJobIndex - 1;
 
 			this.trigger("route:project", this.projects[newIndex].id);
 
@@ -162,8 +166,7 @@
 		},
 
 		onSlideChanged: function (slide) {
-			BackgroundCheck.set('targets', '.bg-check')
-			BackgroundCheck.refresh();
+			
 		}
 
 	});
