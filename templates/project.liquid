@@ -1,19 +1,15 @@
-{% block body_class %}project_page {% endblock %}
 {% block content %} 
-	{% include "header" %}
 
-<div class="global-width">
-	<ul class="gallery">
-		{% for project in global.projects  %}
-			{% if project.id == {{request.query.id}} %}
-				{% for img in project.images %}
-					<li class="gallery-item">
-						<img src="/public/images/content/fullsize/{{project.id}}/{{img}}.jpg" alt="" class="gallery-img  img">
-					</li>
-				{% endfor %}
-			{% endif %}
-		{% endfor %}
-	</ul>
+{% include "header"  %}
+
+<div class="global-width" id="thumbs-container">
+	
+	<div class="gallery" id="gallery-{{ mixture.route.project }}">
+    <ul class="gallery-inner" id="gallery-inner-{{ mixture.route.project }}">
+    	{{ mixture.route.project }}
+    </ul>
+  </div>    	
+	
 </div>
-
 {% endblock %}
+

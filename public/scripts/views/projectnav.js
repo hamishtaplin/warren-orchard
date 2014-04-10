@@ -12,7 +12,7 @@
 		projects: [],
 
 		initialize: function (args) {
-			_.bindAll(this, "loadProject", "onAjaxSuccess", "show", "onProjectImgsLoaded", "onMainSliderPrev", "onMainSliderNext", "onSlideChanged", "onBtnClick");
+			_.bindAll(this, "loadProject", "onAjaxSuccess", "show", "onProjectImgsLoaded");
 			this.projectIDs = args.projectIDs;
 			this.render();
 		},
@@ -63,11 +63,7 @@
 		},
 
 		onBtnClick: function (e) {
-			if (e.target === this.nextBtn) {
-				this.currentProject.slider.next();
-			} else if (e.target === this.prevBtn) {
-				this.currentProject.slider.prev();
-			}
+			
 		},
 
 		show: function () {
@@ -110,7 +106,7 @@
 
 		onProjectImgsLoaded: function (slide) {
 			this.initProjectSlider(slide);
-			this.slider.navigateTo(this.projects.indexOf(this.currentProject), true);
+			
 			this.trigger("loaded");
 		},
 
@@ -125,10 +121,6 @@
 				this.currentProject.slider.navigateTo(slide);
 			}
 
-			this.currentProject.slider.on("slidechanged", this.onSlideChanged);
-			this.currentProject.slider.on("navigate:next", this.onMainSliderNext);
-			this.currentProject.slider.on("navigate:prev", this.onMainSliderPrev);
-
 			BackgroundCheck.init({
 				targets: '.bg-check',
 				images: '.slider .img',
@@ -136,30 +128,11 @@
 			});
 		},
 
-		onMainSliderPrev: function () {
-			this.unloadCurrentProject("prev");
-		},
-
-		onMainSliderNext: function () {
-			this.unloadCurrentProject("next");
-		},
-
 		unloadCurrentProject: function (dir) {
-			var newIndex = 0;
-			var currentProjectIndex = this.projects.indexOf(this.currentProject);
-
 			this.currentProject.imgLoader.off("progress:complete");
 			this.currentProject.slider.off("slidechanged");
 			this.currentProject.slider.off("navigate:next");
 			this.currentProject.slider.off("navigate:prev");
-
-			newIndex = (dir === "next") ? currentProjectIndex + 1 : currentProjectIndex - 1;
-
-			this.trigger("route:project", this.projects[newIndex].id);
-		},
-
-		onSlideChanged: function (slide, i) {
-			this.trigger("route:project", this.currentProject.id, i);
 		},
 
 		getProjectByID: function(id) {

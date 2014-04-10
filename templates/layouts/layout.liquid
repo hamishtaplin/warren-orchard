@@ -40,13 +40,9 @@
 
   <div class="global-wrapper" id="global-wrapper">
    
-   {% block content %}<!-- Content block -->{% endblock %}
+   {% block content %}{% endblock %}
     
   </div>
-
- 
-  {% block scripts %}{% endblock %}
-  <!-- {{ "scripts.js" | asset_url | script_tag }} -->
 
   {{ "utils.js" | asset_url | script_tag }}
   {{ "vendor/underscore.js" | asset_url | script_tag }}

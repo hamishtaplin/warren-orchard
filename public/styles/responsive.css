@@ -22,7 +22,7 @@
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
-/* line 20, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 20, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 article,
 aside,
 details,
@@ -40,7 +40,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 39, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 39, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 audio,
 canvas,
 video {
@@ -50,7 +50,7 @@ video {
  * Prevents modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 54, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 54, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -58,7 +58,7 @@ audio:not([controls]) {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 63, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 63, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 [hidden] {
   display: none; }
 
@@ -71,7 +71,7 @@ audio:not([controls]) {
  * 3.Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *    `em` units.
  */
-/* line 78, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 78, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -83,7 +83,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 91, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 91, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 body {
   margin: 0; }
 
@@ -96,10 +96,10 @@ body {
 /**
  * Improves readability when focused and also mouse hovered in all browsers.
  */
-/* line 108, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 108, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 a:focus {
   outline: thin dotted; }
-/* line 111, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 111, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 a:active, a:hover {
   outline: 0; }
 
@@ -111,7 +111,7 @@ a:active, a:hover {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 127, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 127, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -119,14 +119,14 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-/* line 166, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 166, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 174, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 174, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 b,
 strong {
   font-weight: bold; }
@@ -134,14 +134,14 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 189, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 189, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 dfn {
   font-style: italic; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 197, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 197, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -150,7 +150,7 @@ hr {
 /**
  * Addresses styling not present in IE 8/9.
  */
-/* line 207, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 207, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
@@ -161,7 +161,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-/* line 227, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 227, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 code,
 kbd,
 pre,
@@ -172,28 +172,28 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 242, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 242, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 pre {
   white-space: pre-wrap; }
 
 /**
  *  Set consistent quote types.
  */
-/* line 250, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 250, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 278, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 278, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 small {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 286, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 286, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -201,11 +201,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 294, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 294, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 298, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 298, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
@@ -216,14 +216,14 @@ sub {
  * 1. Remove border when inside `a` element in IE 8/9.
  * 2. Improves image quality when scaled in IE 7.
  */
-/* line 354, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 354, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 img {
   border: 0; }
 
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 365, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 365, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -233,7 +233,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-/* line 377, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 377, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 figure {
   margin: 0; }
 
@@ -243,7 +243,7 @@ figure {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 389, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 389, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -255,7 +255,7 @@ fieldset {
  * 3. Corrects text not wrapping in Firefox 3.
  * 4. Corrects alignment displayed oddly in IE 6/7.
  */
-/* line 402, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 402, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -268,7 +268,7 @@ legend {
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  * 4. Improves appearance and consistency in all browsers.
  */
-/* line 418, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 418, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 button,
 input,
 select,
@@ -284,7 +284,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 436, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 436, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 button,
 input {
   line-height: normal; }
@@ -295,7 +295,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 448, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 448, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 button,
 select {
   text-transform: none; }
@@ -309,7 +309,7 @@ select {
  * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 463, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 463, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -322,7 +322,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 478, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 478, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -333,7 +333,7 @@ html input[disabled] {
  * 3. Removes excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 490, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 490, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -346,7 +346,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 506, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 506, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -359,7 +359,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 518, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 518, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -367,7 +367,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 527, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 527, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -377,7 +377,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 538, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 538, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -390,170 +390,170 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 551, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
+/* line 551, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/normalize-scss/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
 @-webkit-keyframes fade-to-white {
-  /* line 2, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 2, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     -webkit-filter: invert(0%); }
 
-  /* line 5, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 5, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     -webkit-filter: invert(100%); } }
 @-moz-keyframes fade-to-white {}
 @-o-keyframes fade-to-white {
-  /* line 2, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 2, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     -o-filter: invert(0%); }
 
-  /* line 5, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 5, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     -o-filter: invert(100%); } }
 @keyframes fade-to-white {
-  /* line 2, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 2, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     filter: invert(0%); }
 
-  /* line 5, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 5, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     filter: invert(100%); } }
 @-webkit-keyframes fade-to-black {
-  /* line 12, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 12, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     -webkit-filter: invert(100%); }
 
-  /* line 15, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 15, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     -webkit-filter: invert(0%); } }
 @-moz-keyframes fade-to-black {}
 @-o-keyframes fade-to-black {
-  /* line 12, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 12, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     -o-filter: invert(100%); }
 
-  /* line 15, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 15, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     -o-filter: invert(0%); } }
 @keyframes fade-to-black {
-  /* line 12, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 12, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     filter: invert(100%); }
 
-  /* line 15, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 15, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     filter: invert(0%); } }
 @-webkit-keyframes fade-out {
-  /* line 23, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 23, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     opacity: 1;
     -webkit-filter: brightness(1) contrast(1) saturate(1); }
 
-  /* line 27, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 27, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   25% {
     opacity: 1; }
 
-  /* line 30, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 30, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     opacity: 0;
     -webkit-filter: brightness(0) contrast(5) saturate(0.5); } }
 @-moz-keyframes fade-out {
-  /* line 23, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 23, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     opacity: 1;
     -webkit-filter: brightness(1) contrast(1) saturate(1); }
 
-  /* line 27, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 27, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   25% {
     opacity: 1; }
 
-  /* line 30, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 30, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     opacity: 0;
     -webkit-filter: brightness(0) contrast(5) saturate(0.5); } }
 @-o-keyframes fade-out {
-  /* line 23, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 23, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     opacity: 1;
     -webkit-filter: brightness(1) contrast(1) saturate(1); }
 
-  /* line 27, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 27, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   25% {
     opacity: 1; }
 
-  /* line 30, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 30, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     opacity: 0;
     -webkit-filter: brightness(0) contrast(5) saturate(0.5); } }
 @keyframes fade-out {
-  /* line 23, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 23, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     opacity: 1;
     -webkit-filter: brightness(1) contrast(1) saturate(1); }
 
-  /* line 27, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 27, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   25% {
     opacity: 1; }
 
-  /* line 30, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 30, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     opacity: 0;
     -webkit-filter: brightness(0) contrast(5) saturate(0.5); } }
 @-webkit-keyframes fade-in {
-  /* line 38, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 38, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     opacity: 0;
     -webkit-filter: brightness(0) contrast(5) saturate(0.5); }
 
-  /* line 43, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 43, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   25% {
     opacity: 1; }
 
-  /* line 46, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 46, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     opacity: 1;
     -webkit-filter: brightness(1) contrast(1) saturate(1); } }
 @-moz-keyframes fade-in {
-  /* line 38, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 38, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     opacity: 0;
     -webkit-filter: brightness(0) contrast(5) saturate(0.5); }
 
-  /* line 43, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 43, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   25% {
     opacity: 1; }
 
-  /* line 46, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 46, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     opacity: 1;
     -webkit-filter: brightness(1) contrast(1) saturate(1); } }
 @-o-keyframes fade-in {
-  /* line 38, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 38, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     opacity: 0;
     -webkit-filter: brightness(0) contrast(5) saturate(0.5); }
 
-  /* line 43, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 43, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   25% {
     opacity: 1; }
 
-  /* line 46, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 46, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     opacity: 1;
     -webkit-filter: brightness(1) contrast(1) saturate(1); } }
 @keyframes fade-in {
-  /* line 38, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 38, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   0% {
     opacity: 0;
     -webkit-filter: brightness(0) contrast(5) saturate(0.5); }
 
-  /* line 43, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 43, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   25% {
     opacity: 1; }
 
-  /* line 46, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
+  /* line 46, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss */
   100% {
     opacity: 1;
     -webkit-filter: brightness(1) contrast(1) saturate(1); } }
@@ -566,43 +566,43 @@ table {
   font-style: normal;
   src: url("/public/webfonts/century_gothic_bold-webfont.eot");
   src: url("/public/webfonts/century_gothic_bold-webfont.eot?#iefix") format("embedded-opentype"), url("/public/webfonts/century_gothic_bold-webfont.woff") format("woff"), url("/public/webfonts/century_gothic_bold-webfont.ttf") format("truetype"), url("/public/webfonts/century_gothic_bold-webfont.svg#CenturyGothicBold") format("svg"); }
-/* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
+/* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 6, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
+/* line 6, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
 html {
   width: 100%;
   height: 100%;
   -webkit-font-smoothing: antialiased;
   font-family: CenturyGothicBold, "Helvetica Neue", Arial, sans-serif; }
 
-/* line 14, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
+/* line 14, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
 body {
   background: white;
   color: #111111;
   height: 100%; }
 
-/* line 20, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
+/* line 20, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
 ::-moz-selection {
   background: #bee1e6;
   color: #111111;
   text-shadow: none; }
 
-/* line 26, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
+/* line 26, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
 ::selection {
   background: #bee1e6;
   color: #111111;
   text-shadow: none; }
 
-/* line 40, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
+/* line 40, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0; }
-  /* line 44, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
+  /* line 44, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss */
   ul li {
     margin: 0; }
 
@@ -611,53 +611,53 @@ ul {
  *
  * This contains all basic typography rules and any @font-face imports.
  */
-/* line 8, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss */
+/* line 8, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss */
 body {
   font-family: CenturyGothicBold, "Helvetica Neue", Arial, sans-serif;
   font-size: 17px;
   line-height: 1.2em;
   color: #111111; }
 
-/* line 16, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss */
+/* line 16, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss */
 p, h1, h2 {
   font-weight: normal;
   font-size: 1em;
   line-height: 1.2em;
   margin: 0 0 1.2em; }
   @media only screen and (min-width: 767px) {
-    /* line 16, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss */
+    /* line 16, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss */
     p, h1, h2 {
       font-size: 1.4em; } }
 
-/* line 31, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss */
+/* line 31, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss */
 h2 {
   margin: 0; }
 
-/* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss */
+/* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss */
 .global-width {
   max-width: 90em; }
 
 /**
  * Modules are the site content, organised into individual files.
  */
-/* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+/* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .global-wrapper {
   width: 100%;
   height: 100%; }
 
-/* line 6, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+/* line 6, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .global-width {
   margin: 0 auto;
   *zoom: 1; }
-  /* line 17, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_clearfix.scss */
+  /* line 17, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_clearfix.scss */
   .global-width:before, .global-width:after {
     content: " ";
     display: table; }
-  /* line 23, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_clearfix.scss */
+  /* line 23, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_clearfix.scss */
   .global-width:after {
     clear: both; }
 
-/* line 21, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+/* line 21, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .header {
   height: 6em;
   width: 100%;
@@ -671,35 +671,35 @@ h2 {
   opacity: 1; }
 
 @media only screen and (max-width: 500px) and (orientation: landscape) {
-  /* line 35, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+  /* line 35, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
   .header {
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
     -ms-transform: scale(0.5);
     -o-transform: scale(0.5);
     transform: scale(0.5); } }
-/* line 42, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+/* line 42, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .brand {
   width: 78px;
   height: 75px;
   margin: auto;
   display: block; }
 
-/* line 65, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+/* line 65, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .progress {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10; }
-  /* line 72, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+  /* line 72, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
   .progress.is-complete .progress-bar {
     -webkit-transition-duration: 500ms;
     -moz-transition-duration: 500ms;
     transition-duration: 500ms;
     height: 0; }
 
-/* line 80, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+/* line 80, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .progress-bar {
   background: rgba(17, 17, 17, 0.9);
   height: 5px;
@@ -708,21 +708,21 @@ h2 {
   -moz-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out; }
 
-/* line 88, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+/* line 88, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .background--light path, .background--light stroke, .background--light g, .background--light polygon {
   -webkit-transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   fill: #111111 !important; }
 
-/* line 95, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+/* line 95, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .background--dark path, .background--dark stroke, .background--dark g, .background--dark polygon {
   -webkit-transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   fill: white !important; }
 
-/* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+/* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
 .nav {
   letter-spacing: -0.31em;
   width: 100%;
@@ -730,32 +730,32 @@ h2 {
   position: absolute;
   top: 0; }
   @media only screen and (min-width: 21em) {
-    /* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+    /* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
     .nav {
       margin-left: -3.3em;
       width: 6.6em; } }
 
 @media only screen and (min-width: 21em) {
-  /* line 18, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+  /* line 18, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
   .nav {
     left: 0%; } }
 @media only screen and (min-width: 42em) {
-  /* line 18, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+  /* line 18, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
   .nav {
     left: 25%; } }
 @media only screen and (min-width: 63em) {
-  /* line 18, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+  /* line 18, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
   .nav {
     left: 25%; } }
 @media only screen and (min-width: 84em) {
-  /* line 18, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+  /* line 18, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
   .nav {
     left: 20%; } }
 @media only screen and (min-width: 105em) {
-  /* line 18, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+  /* line 18, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
   .nav {
     left: 25%; } }
-/* line 24, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+/* line 24, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
 .nav-item {
   overflow: hidden;
   display: inline-block;
@@ -770,7 +770,7 @@ h2 {
   margin: auto 0;
   top: 0;
   bottom: 0; }
-  /* line 35, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+  /* line 35, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
   .nav-item img, .nav-item svg {
     position: absolute;
     top: 0;
@@ -780,34 +780,34 @@ h2 {
     margin: auto;
     display: block; }
   @media only screen and (min-width: 767px) {
-    /* line 24, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+    /* line 24, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
     .nav-item {
       margin: auto; } }
-  /* line 49, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+  /* line 49, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
   .nav-item path, .nav-item g {
     fill: #111111; }
 
-/* line 54, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+/* line 54, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
 .nav-item--grid {
   left: 2em; }
   @media only screen and (min-width: 767px) {
-    /* line 54, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+    /* line 54, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
     .nav-item--grid {
       left: 0; } }
 
-/* line 65, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+/* line 65, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
 .nav-item--info {
   right: 2em; }
   @media only screen and (min-width: 767px) {
-    /* line 65, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
+    /* line 65, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss */
     .nav-item--info {
       right: 0; } }
 
-/* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
+/* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
 .info-page {
   background: #111111;
   color: white; }
-  /* line 5, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
+  /* line 5, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
   .info-page .brand {
     -webkit-transform-style: preserve-3d;
     -webkit-transform: translate3d(0, 0, 0);
@@ -815,7 +815,7 @@ h2 {
     -o-filter: invert(100%);
     -ms-filter: invert(100%);
     filter: invert(100%); }
-  /* line 11, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
+  /* line 11, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
   .info-page .nav__item svg {
     -webkit-transform-style: preserve-3d;
     -webkit-transform: translate3d(0, 0, 0);
@@ -823,7 +823,7 @@ h2 {
     -o-filter: invert(100%);
     -ms-filter: invert(100%);
     filter: invert(100%); }
-  /* line 18, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
+  /* line 18, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
   .info-page .bg-check {
     -webkit-transform-style: preserve-3d;
     -webkit-transform: translate3d(0, 0, 0);
@@ -831,13 +831,13 @@ h2 {
     -moz-animation: fade-to-white 300ms cubic-bezier(0.86, 0, 0.07, 1) forwards;
     animation: fade-to-white 300ms cubic-bezier(0.86, 0, 0.07, 1) forwards; }
 
-/* line 25, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
+/* line 25, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
 .info {
   width: 100%;
   padding: 2em;
   text-align: center;
   margin: 0 auto 0; }
-  /* line 33, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
+  /* line 33, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss */
   .info a {
     color: white;
     text-decoration: none;
@@ -846,7 +846,7 @@ h2 {
     -moz-transition: color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out; }
 
-/* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+/* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
 .thumbs {
   letter-spacing: -0.31em;
   margin: 0 auto;
@@ -865,16 +865,16 @@ h2 {
   -moz-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%; }
   @media only screen and (min-width: 767px) {
-    /* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+    /* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
     .thumbs {
       padding: 0.4em; } }
-  /* line 15, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 15, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumbs ul {
     height: 100%; }
-  /* line 19, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 19, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumbs.hide {
     opacity: 0; }
-  /* line 23, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 23, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumbs.is-off-screen {
     pointer-events: none;
     -webkit-transform: translate3d(0, 0, 0);
@@ -882,13 +882,13 @@ h2 {
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
-    /* line 26, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+    /* line 26, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
     .thumbs.is-off-screen .thumb {
       -webkit-animation: fade-out 500ms cubic-bezier(0.86, 0, 0.07, 1);
       -moz-animation: fade-out 500ms cubic-bezier(0.86, 0, 0.07, 1);
       animation: fade-out 500ms cubic-bezier(0.86, 0, 0.07, 1); }
 
-/* line 32, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+/* line 32, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
 .thumb {
   letter-spacing: 0;
   display: inline-block;
@@ -900,10 +900,10 @@ h2 {
   opacity: 0;
   padding: 0.2em; }
   @media only screen and (min-width: 767px) {
-    /* line 32, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+    /* line 32, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
     .thumb {
       padding: 0.4em; } }
-  /* line 51, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 51, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.is-loaded {
     -webkit-animation: fade-in 500ms cubic-bezier(0.86, 0, 0.07, 1) both;
     -moz-animation: fade-in 500ms cubic-bezier(0.86, 0, 0.07, 1) both;
@@ -911,528 +911,528 @@ h2 {
     -webkit-animation-direction: normal;
     -moz-animation-direction: normal;
     animation-direction: normal; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-0 {
     -webkit-animation-delay: 0ms;
     -moz-animation-delay: 0ms;
     animation-delay: 0ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-1 {
     -webkit-animation-delay: 20ms;
     -moz-animation-delay: 20ms;
     animation-delay: 20ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-2 {
     -webkit-animation-delay: 40ms;
     -moz-animation-delay: 40ms;
     animation-delay: 40ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-3 {
     -webkit-animation-delay: 60ms;
     -moz-animation-delay: 60ms;
     animation-delay: 60ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-4 {
     -webkit-animation-delay: 80ms;
     -moz-animation-delay: 80ms;
     animation-delay: 80ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-5 {
     -webkit-animation-delay: 100ms;
     -moz-animation-delay: 100ms;
     animation-delay: 100ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-6 {
     -webkit-animation-delay: 120ms;
     -moz-animation-delay: 120ms;
     animation-delay: 120ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-7 {
     -webkit-animation-delay: 140ms;
     -moz-animation-delay: 140ms;
     animation-delay: 140ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-8 {
     -webkit-animation-delay: 160ms;
     -moz-animation-delay: 160ms;
     animation-delay: 160ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-9 {
     -webkit-animation-delay: 180ms;
     -moz-animation-delay: 180ms;
     animation-delay: 180ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-10 {
     -webkit-animation-delay: 200ms;
     -moz-animation-delay: 200ms;
     animation-delay: 200ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-11 {
     -webkit-animation-delay: 220ms;
     -moz-animation-delay: 220ms;
     animation-delay: 220ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-12 {
     -webkit-animation-delay: 240ms;
     -moz-animation-delay: 240ms;
     animation-delay: 240ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-13 {
     -webkit-animation-delay: 260ms;
     -moz-animation-delay: 260ms;
     animation-delay: 260ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-14 {
     -webkit-animation-delay: 280ms;
     -moz-animation-delay: 280ms;
     animation-delay: 280ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-15 {
     -webkit-animation-delay: 300ms;
     -moz-animation-delay: 300ms;
     animation-delay: 300ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-16 {
     -webkit-animation-delay: 320ms;
     -moz-animation-delay: 320ms;
     animation-delay: 320ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-17 {
     -webkit-animation-delay: 340ms;
     -moz-animation-delay: 340ms;
     animation-delay: 340ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-18 {
     -webkit-animation-delay: 360ms;
     -moz-animation-delay: 360ms;
     animation-delay: 360ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-19 {
     -webkit-animation-delay: 380ms;
     -moz-animation-delay: 380ms;
     animation-delay: 380ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-20 {
     -webkit-animation-delay: 400ms;
     -moz-animation-delay: 400ms;
     animation-delay: 400ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-21 {
     -webkit-animation-delay: 420ms;
     -moz-animation-delay: 420ms;
     animation-delay: 420ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-22 {
     -webkit-animation-delay: 440ms;
     -moz-animation-delay: 440ms;
     animation-delay: 440ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-23 {
     -webkit-animation-delay: 460ms;
     -moz-animation-delay: 460ms;
     animation-delay: 460ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-24 {
     -webkit-animation-delay: 480ms;
     -moz-animation-delay: 480ms;
     animation-delay: 480ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-25 {
     -webkit-animation-delay: 500ms;
     -moz-animation-delay: 500ms;
     animation-delay: 500ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-26 {
     -webkit-animation-delay: 520ms;
     -moz-animation-delay: 520ms;
     animation-delay: 520ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-27 {
     -webkit-animation-delay: 540ms;
     -moz-animation-delay: 540ms;
     animation-delay: 540ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-28 {
     -webkit-animation-delay: 560ms;
     -moz-animation-delay: 560ms;
     animation-delay: 560ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-29 {
     -webkit-animation-delay: 580ms;
     -moz-animation-delay: 580ms;
     animation-delay: 580ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-30 {
     -webkit-animation-delay: 600ms;
     -moz-animation-delay: 600ms;
     animation-delay: 600ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-31 {
     -webkit-animation-delay: 620ms;
     -moz-animation-delay: 620ms;
     animation-delay: 620ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-32 {
     -webkit-animation-delay: 640ms;
     -moz-animation-delay: 640ms;
     animation-delay: 640ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-33 {
     -webkit-animation-delay: 660ms;
     -moz-animation-delay: 660ms;
     animation-delay: 660ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-34 {
     -webkit-animation-delay: 680ms;
     -moz-animation-delay: 680ms;
     animation-delay: 680ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-35 {
     -webkit-animation-delay: 700ms;
     -moz-animation-delay: 700ms;
     animation-delay: 700ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-36 {
     -webkit-animation-delay: 720ms;
     -moz-animation-delay: 720ms;
     animation-delay: 720ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-37 {
     -webkit-animation-delay: 740ms;
     -moz-animation-delay: 740ms;
     animation-delay: 740ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-38 {
     -webkit-animation-delay: 760ms;
     -moz-animation-delay: 760ms;
     animation-delay: 760ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-39 {
     -webkit-animation-delay: 780ms;
     -moz-animation-delay: 780ms;
     animation-delay: 780ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-40 {
     -webkit-animation-delay: 800ms;
     -moz-animation-delay: 800ms;
     animation-delay: 800ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-41 {
     -webkit-animation-delay: 820ms;
     -moz-animation-delay: 820ms;
     animation-delay: 820ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-42 {
     -webkit-animation-delay: 840ms;
     -moz-animation-delay: 840ms;
     animation-delay: 840ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-43 {
     -webkit-animation-delay: 860ms;
     -moz-animation-delay: 860ms;
     animation-delay: 860ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-44 {
     -webkit-animation-delay: 880ms;
     -moz-animation-delay: 880ms;
     animation-delay: 880ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-45 {
     -webkit-animation-delay: 900ms;
     -moz-animation-delay: 900ms;
     animation-delay: 900ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-46 {
     -webkit-animation-delay: 920ms;
     -moz-animation-delay: 920ms;
     animation-delay: 920ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-47 {
     -webkit-animation-delay: 940ms;
     -moz-animation-delay: 940ms;
     animation-delay: 940ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-48 {
     -webkit-animation-delay: 960ms;
     -moz-animation-delay: 960ms;
     animation-delay: 960ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-49 {
     -webkit-animation-delay: 980ms;
     -moz-animation-delay: 980ms;
     animation-delay: 980ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-50 {
     -webkit-animation-delay: 1000ms;
     -moz-animation-delay: 1000ms;
     animation-delay: 1000ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-51 {
     -webkit-animation-delay: 1020ms;
     -moz-animation-delay: 1020ms;
     animation-delay: 1020ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-52 {
     -webkit-animation-delay: 1040ms;
     -moz-animation-delay: 1040ms;
     animation-delay: 1040ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-53 {
     -webkit-animation-delay: 1060ms;
     -moz-animation-delay: 1060ms;
     animation-delay: 1060ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-54 {
     -webkit-animation-delay: 1080ms;
     -moz-animation-delay: 1080ms;
     animation-delay: 1080ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-55 {
     -webkit-animation-delay: 1100ms;
     -moz-animation-delay: 1100ms;
     animation-delay: 1100ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-56 {
     -webkit-animation-delay: 1120ms;
     -moz-animation-delay: 1120ms;
     animation-delay: 1120ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-57 {
     -webkit-animation-delay: 1140ms;
     -moz-animation-delay: 1140ms;
     animation-delay: 1140ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-58 {
     -webkit-animation-delay: 1160ms;
     -moz-animation-delay: 1160ms;
     animation-delay: 1160ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-59 {
     -webkit-animation-delay: 1180ms;
     -moz-animation-delay: 1180ms;
     animation-delay: 1180ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-60 {
     -webkit-animation-delay: 1200ms;
     -moz-animation-delay: 1200ms;
     animation-delay: 1200ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-61 {
     -webkit-animation-delay: 1220ms;
     -moz-animation-delay: 1220ms;
     animation-delay: 1220ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-62 {
     -webkit-animation-delay: 1240ms;
     -moz-animation-delay: 1240ms;
     animation-delay: 1240ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-63 {
     -webkit-animation-delay: 1260ms;
     -moz-animation-delay: 1260ms;
     animation-delay: 1260ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-64 {
     -webkit-animation-delay: 1280ms;
     -moz-animation-delay: 1280ms;
     animation-delay: 1280ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-65 {
     -webkit-animation-delay: 1300ms;
     -moz-animation-delay: 1300ms;
     animation-delay: 1300ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-66 {
     -webkit-animation-delay: 1320ms;
     -moz-animation-delay: 1320ms;
     animation-delay: 1320ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-67 {
     -webkit-animation-delay: 1340ms;
     -moz-animation-delay: 1340ms;
     animation-delay: 1340ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-68 {
     -webkit-animation-delay: 1360ms;
     -moz-animation-delay: 1360ms;
     animation-delay: 1360ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-69 {
     -webkit-animation-delay: 1380ms;
     -moz-animation-delay: 1380ms;
     animation-delay: 1380ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-70 {
     -webkit-animation-delay: 1400ms;
     -moz-animation-delay: 1400ms;
     animation-delay: 1400ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-71 {
     -webkit-animation-delay: 1420ms;
     -moz-animation-delay: 1420ms;
     animation-delay: 1420ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-72 {
     -webkit-animation-delay: 1440ms;
     -moz-animation-delay: 1440ms;
     animation-delay: 1440ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-73 {
     -webkit-animation-delay: 1460ms;
     -moz-animation-delay: 1460ms;
     animation-delay: 1460ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-74 {
     -webkit-animation-delay: 1480ms;
     -moz-animation-delay: 1480ms;
     animation-delay: 1480ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-75 {
     -webkit-animation-delay: 1500ms;
     -moz-animation-delay: 1500ms;
     animation-delay: 1500ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-76 {
     -webkit-animation-delay: 1520ms;
     -moz-animation-delay: 1520ms;
     animation-delay: 1520ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-77 {
     -webkit-animation-delay: 1540ms;
     -moz-animation-delay: 1540ms;
     animation-delay: 1540ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-78 {
     -webkit-animation-delay: 1560ms;
     -moz-animation-delay: 1560ms;
     animation-delay: 1560ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-79 {
     -webkit-animation-delay: 1580ms;
     -moz-animation-delay: 1580ms;
     animation-delay: 1580ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-80 {
     -webkit-animation-delay: 1600ms;
     -moz-animation-delay: 1600ms;
     animation-delay: 1600ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-81 {
     -webkit-animation-delay: 1620ms;
     -moz-animation-delay: 1620ms;
     animation-delay: 1620ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-82 {
     -webkit-animation-delay: 1640ms;
     -moz-animation-delay: 1640ms;
     animation-delay: 1640ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-83 {
     -webkit-animation-delay: 1660ms;
     -moz-animation-delay: 1660ms;
     animation-delay: 1660ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-84 {
     -webkit-animation-delay: 1680ms;
     -moz-animation-delay: 1680ms;
     animation-delay: 1680ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-85 {
     -webkit-animation-delay: 1700ms;
     -moz-animation-delay: 1700ms;
     animation-delay: 1700ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-86 {
     -webkit-animation-delay: 1720ms;
     -moz-animation-delay: 1720ms;
     animation-delay: 1720ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-87 {
     -webkit-animation-delay: 1740ms;
     -moz-animation-delay: 1740ms;
     animation-delay: 1740ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-88 {
     -webkit-animation-delay: 1760ms;
     -moz-animation-delay: 1760ms;
     animation-delay: 1760ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-89 {
     -webkit-animation-delay: 1780ms;
     -moz-animation-delay: 1780ms;
     animation-delay: 1780ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-90 {
     -webkit-animation-delay: 1800ms;
     -moz-animation-delay: 1800ms;
     animation-delay: 1800ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-91 {
     -webkit-animation-delay: 1820ms;
     -moz-animation-delay: 1820ms;
     animation-delay: 1820ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-92 {
     -webkit-animation-delay: 1840ms;
     -moz-animation-delay: 1840ms;
     animation-delay: 1840ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-93 {
     -webkit-animation-delay: 1860ms;
     -moz-animation-delay: 1860ms;
     animation-delay: 1860ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-94 {
     -webkit-animation-delay: 1880ms;
     -moz-animation-delay: 1880ms;
     animation-delay: 1880ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-95 {
     -webkit-animation-delay: 1900ms;
     -moz-animation-delay: 1900ms;
     animation-delay: 1900ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-96 {
     -webkit-animation-delay: 1920ms;
     -moz-animation-delay: 1920ms;
     animation-delay: 1920ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-97 {
     -webkit-animation-delay: 1940ms;
     -moz-animation-delay: 1940ms;
     animation-delay: 1940ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-98 {
     -webkit-animation-delay: 1960ms;
     -moz-animation-delay: 1960ms;
     animation-delay: 1960ms; }
-  /* line 62, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 62, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb.img-99 {
     -webkit-animation-delay: 1980ms;
     -moz-animation-delay: 1980ms;
     animation-delay: 1980ms; }
 
 @media only screen and (min-width: 21em) {
-  /* line 70, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 70, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb {
     width: 50%; } }
 @media only screen and (min-width: 42em) {
-  /* line 70, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 70, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb {
     width: 33.33333%; } }
 @media only screen and (min-width: 63em) {
-  /* line 70, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 70, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb {
     width: 25%; } }
 @media only screen and (min-width: 84em) {
-  /* line 70, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 70, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb {
     width: 20%; } }
 @media only screen and (min-width: 105em) {
-  /* line 70, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 70, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb {
     width: 20%; } }
-/* line 80, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+/* line 80, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
 .thumb-img {
   display: none;
   width: 100%;
@@ -1440,11 +1440,11 @@ h2 {
   background-repeat: none;
   background-size: cover;
   background-position: center center; }
-  /* line 87, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 87, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb-img:first-of-type {
     display: block; }
 
-/* line 92, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+/* line 92, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
 .thumb-title {
   position: absolute;
   display: block;
@@ -1479,7 +1479,7 @@ h2 {
   -webkit-transition: all 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
   -moz-transition: all 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
   transition: all 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22); }
-  /* line 124, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 124, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb-title h2 {
     opacity: 0;
     font-size: 1.1em;
@@ -1487,7 +1487,7 @@ h2 {
     -moz-transition: all 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 100ms;
     transition: all 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 100ms; }
 
-/* line 131, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+/* line 131, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
 .thumb-link {
   width: 100%;
   position: relative;
@@ -1497,10 +1497,10 @@ h2 {
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0); }
-  /* line 142, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 142, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumb-link:hover .thumb-title {
     opacity: 1; }
-    /* line 144, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+    /* line 144, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
     .thumb-link:hover .thumb-title h2 {
       opacity: 1;
       -webkit-transform: translateY(0);
@@ -1509,18 +1509,18 @@ h2 {
       -o-transform: translateY(0);
       transform: translateY(0); }
 
-/* line 152, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+/* line 152, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
 .thumbs-page {
   height: 100%;
   width: 100%;
   float: left;
   opacity: 1;
   padding: 0; }
-  /* line 158, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumbs-page:nth-of-type(1) {
     opacity: 1; }
 
-/* line 163, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+/* line 163, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
 .thumbs-inner {
   height: 100%;
   position: absolute;
@@ -1529,13 +1529,13 @@ h2 {
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0); }
-  /* line 173, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 173, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumbs-inner.will-animate {
     -webkit-transition: all 300ms cubic-bezier(0.86, 0, 0.07, 1);
     -moz-transition: all 300ms cubic-bezier(0.86, 0, 0.07, 1);
     transition: all 300ms cubic-bezier(0.86, 0, 0.07, 1); }
 
-/* line 179, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+/* line 179, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
 .thumbs-paging {
   position: absolute;
   left: 0;
@@ -1548,7 +1548,7 @@ h2 {
   -webkit-transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
   transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1); }
-  /* line 191, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+  /* line 191, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
   .thumbs-paging.is-off-screen {
     -webkit-transform: translate3d(0, 10em, 0);
     -moz-transform: translate3d(0, 10em, 0);
@@ -1556,7 +1556,7 @@ h2 {
     -o-transform: translate3d(0, 10em, 0);
     transform: translate3d(0, 10em, 0); }
 
-/* line 196, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
+/* line 196, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss */
 .thumbs-paging-btn {
   display: inline-block;
   width: 10px;
@@ -1566,7 +1566,7 @@ h2 {
   margin: 0.2em;
   cursor: pointer; }
 
-/* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .project-view {
   width: 100%;
   height: 100%;
@@ -1578,48 +1578,48 @@ h2 {
   -webkit-transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
   transition: all 1s cubic-bezier(0.86, 0, 0.07, 1); }
-  /* line 11, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 11, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .project-view.is-visible {
     opacity: 1; }
   @media only screen and (min-width: 767px) {
-    /* line 1, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+    /* line 1, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
     .project-view {
       position: absolute; } }
 
-/* line 21, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 21, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .project-view-item-inner.will-animate {
   -webkit-transition: all 500ms cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition: all 500ms cubic-bezier(0.86, 0, 0.07, 1);
   transition: all 500ms cubic-bezier(0.86, 0, 0.07, 1); }
-/* line 24, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 24, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .project-view-item-inner.slider-inner {
   height: 100%; }
 
-/* line 29, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 29, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .project-view-item {
   width: 100%;
   height: 100%; }
-  /* line 33, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 33, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .project-view-item.slider-slide {
     float: left; }
 
-/* line 45, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 45, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .gallery {
   width: 100%;
   height: 100%; }
-  /* line 50, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 50, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .gallery img, .gallery .img {
     max-width: 100%;
     width: 100%;
     padding: 0; }
 
-/* line 58, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 58, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .gallery-inner {
   width: 100%;
   height: 100%;
   position: relative; }
 
-/* line 64, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 64, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .gallery-item {
   width: 100%;
   height: 100%;
@@ -1631,38 +1631,38 @@ h2 {
   -webkit-animation: fade-out 0 cubic-bezier(0.86, 0, 0.07, 1) both;
   -moz-animation: fade-out 0 cubic-bezier(0.86, 0, 0.07, 1) both;
   animation: fade-out 0 cubic-bezier(0.86, 0, 0.07, 1) both; }
-  /* line 74, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 74, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .gallery-item .img {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%; }
-  /* line 81, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 81, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .gallery-item.portrait {
     background-color: #E8E8E8; }
-    /* line 83, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+    /* line 83, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
     .gallery-item.portrait .gallery-img {
       height: 100%;
       background-position: center;
       background-size: auto 100%; }
-  /* line 89, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 89, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .gallery-item.is-current {
     z-index: 2;
     -webkit-animation: fade-in 400ms cubic-bezier(0.86, 0, 0.07, 1) both;
     -moz-animation: fade-in 400ms cubic-bezier(0.86, 0, 0.07, 1) both;
     animation: fade-in 400ms cubic-bezier(0.86, 0, 0.07, 1) both; }
 
-/* line 95, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 95, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .gallery-img {
   display: inherit;
   margin: 0 auto; }
 
-/* line 100, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 100, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .gallery.slider {
   position: relative; }
 
-/* line 104, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 104, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .slider-paging {
   position: absolute;
   top: auto;
@@ -1673,7 +1673,7 @@ h2 {
   z-index: 10;
   text-align: center; }
 
-/* line 115, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 115, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .slider-paging-btn {
   width: 0.8em;
   height: 0.8em;
@@ -1684,29 +1684,29 @@ h2 {
   cursor: pointer;
   -webkit-transform-style: preserve3d;
   vertical-align: middle; }
-  /* line 126, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 126, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .slider-paging-btn:hover {
     opacity: 1; }
-  /* line 129, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 129, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .slider-paging-btn:active {
     -webkit-transform: scale(0.9);
     -moz-transform: scale(0.9);
     -ms-transform: scale(0.9);
     -o-transform: scale(0.9);
     transform: scale(0.9); }
-  /* line 132, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 132, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .slider-paging-btn.is-current {
     width: 1.1em;
     height: 1.1em; }
 
-/* line 140, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 140, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .slider-paging-inner.background--dark .slider-paging-btn {
   background: white; }
-/* line 146, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 146, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .slider-paging-inner.background--light .slider-paging-btn {
   background: #111111; }
 
-/* line 152, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 152, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .btn {
   padding: 1em;
   width: 7%;
@@ -1725,7 +1725,7 @@ h2 {
   user-select: none;
   -webkit-transform-style: preserve3d;
   color: transparent; }
-  /* line 165, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 165, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .btn:before {
     content: " ";
     display: block;
@@ -1741,54 +1741,54 @@ h2 {
     text-indent: -999em;
     opacity: 0.9;
     color: transparent; }
-  /* line 181, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 181, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .btn:hover {
     background: rgba(17, 17, 17, 0); }
-    /* line 183, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+    /* line 183, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
     .btn:hover:before {
       opacity: 1; }
   @media only screen and (min-width: 767px) {
-    /* line 152, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+    /* line 152, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
     .btn {
       display: block; } }
 
-/* line 195, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 195, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .btn-next {
   right: 0; }
-  /* line 198, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 198, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .btn-next.background--dark:before {
     background-image: url(/public/images/btn-right-white.svg); }
-  /* line 201, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 201, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .btn-next.background--light:before {
     background-image: url(/public/images/btn-right-black.svg); }
 
-/* line 208, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+/* line 208, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
 .btn-prev {
   left: 0; }
-  /* line 211, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 211, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .btn-prev.background--dark:before {
     background-image: url(/public/images/btn-left-white.svg); }
-  /* line 214, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 214, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .btn-prev.background--light:before {
     background-image: url(/public/images/btn-left-black.svg); }
 
 @media only screen and (max-width: 500px) {
-  /* line 221, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 221, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .project-page {
     -webkit-transition: all 100ms ease-in-out;
     -moz-transition: all 100ms ease-in-out;
     transition: all 100ms ease-in-out; } }
 @media only screen and (max-width: 500px) and (orientation: landscape) {
-  /* line 227, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+  /* line 227, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
   .project_page {
     background: #000; }
-    /* line 229, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+    /* line 229, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
     .project_page .wrapper {
       -webkit-transition: all 300ms ease-in-out;
       -moz-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out;
       padding: 0; }
-    /* line 233, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+    /* line 233, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
     .project_page .header {
       -webkit-transform: scale(0.5);
       -moz-transform: scale(0.5);
@@ -1796,11 +1796,11 @@ h2 {
       -o-transform: scale(0.5);
       transform: scale(0.5);
       opacity: 0; }
-    /* line 238, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+    /* line 238, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
     .project_page .gallery {
       margin: 0;
       width: 100%; }
-      /* line 241, /Users/IMac/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
+      /* line 241, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss */
       .project_page .gallery img {
         margin: 0;
         padding: 0; } }

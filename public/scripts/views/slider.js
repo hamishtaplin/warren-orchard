@@ -7,7 +7,7 @@ App.Views = App.Views || {};
 
 		initialize: function (args) {
 			var i = 0;
-			_.bindAll(this, "onPageNavClick", "onSlideAnimationEnd");
+			_.bindAll(this, "onSlideAnimationEnd");
 
 			this.animType = args.animType;
 			this.innerEl = args.innerEl;
@@ -44,7 +44,7 @@ App.Views = App.Views || {};
 			
 			this.pageNav = document.createElement("div");
 			this.pageNav.setAttribute("class", "slider-paging");
-			this.pageNav.addEventListener("click", this.onPageNavClick);
+			// this.pageNav.addEventListener("click", this.onPageNavClick);
 			this.pageNav.innerHTML = "";
 
 			while (i < this.numSlides) {
@@ -60,29 +60,6 @@ App.Views = App.Views || {};
 			this.pageNav.appendChild(inner);
 			this.el.appendChild(this.pageNav);
 
-		},
-
-		onPageNavClick: function (e) {
-			if (e.target.classList.contains("slider-paging-btn")) {
-				this.navigateTo(e.target.getAttribute("data-i"), true);
-			}
-			
-		},
-
-		next: function () {
-			if ((this.currentPageIndex + 1) < this.numSlides) {
-				this.navigateTo(this.currentPageIndex + 1);
-			} else {
-				this.trigger("navigate:next");
-			}
-		},
-
-		prev: function () {
-			if (this.currentPageIndex - 1 >= 0) {
-				this.navigateTo(this.currentPageIndex - 1);
-			} else {
-				this.trigger("navigate:prev");
-			}
 		},
 
 		navigateTo: function (i, animate) {
@@ -122,7 +99,6 @@ App.Views = App.Views || {};
 				this.pageNav.inner.children[i].classList.add("is-current");
 			}
 
-			this.trigger("slidechanged", this.currentSlide, i);
 		},
 
 		onSlideAnimationEnd: function() {

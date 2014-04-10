@@ -38,27 +38,34 @@ App.Views = App.Views || {};
 			this.router.on("route:home", this.homeRoute);
 			this.router.on("route:project", this.projectRoute);
 
-			this.projectsNavView.on("route:project", function (projectID, slide) {
-				console.log("route:project", projectID, slide);
+			Backbone.history.start({ pushState: true	});
 
-				router.navigate("#projects/" + projectID + "/" + slide, { trigger: true });
+			$(document).on("click", "a[href^='/']", function(e) {
+			  if (!e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+			    e.preventDefault();
+			    href = $(e.currentTarget).attr('href');
+			    // Remove leading slashes and hash bangs (backward compatablility)
+    			url = href.replace(/^\//,'').replace('\#\!\/','');
+			    router.navigate(url, { trigger: true });
+
+			    return false;
+			  }
 			});
-
-			Backbone.history.start({ pushState: false	});
 		},
 
 		rootRoute: function () {
-			this.router.navigate("#home", { trigger: true	});
+			this.router.navigate("home", { trigger: true	});
 		},
 
 		projectRoute: function (id, slide) {
-			var currentProject = this.projectsNavView.currentProject;
-			if (typeof(currentProject) !== 'undefined' && currentProject.id === id){
-				this.projectsNavView.currentProject.slider.navigateTo(slide);
-			} else {
-				this.projectsNavView.on("loaded", this.onProjectLoaded);
-				this.projectsNavView.loadProject(id, slide);
-			}
+			console.log(id, slide);
+			// var currentProject = this.projectsNavView.currentProject;
+			// if (typeof(currentProject) !== 'undefined' && currentProject.id === id){
+			// 	this.projectsNavView.currentProject.slider.navigateTo(slide);
+			// } else {
+			// 	this.projectsNavView.on("loaded", this.onProjectLoaded);
+			// 	this.projectsNavView.loadProject(id, slide);
+			// }
 		},
 
 		onProjectLoaded: function () {
