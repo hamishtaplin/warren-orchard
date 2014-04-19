@@ -13,7 +13,7 @@
         "vendor/bourbon/bourbon";
 
 @import "helpers/functions",
-		"helpers/animations";
+				"helpers/animations";
 
 /**
  * Base styling
@@ -31,5 +31,5 @@
 @import "modules/common",
  		"modules/nav",
 		"modules/info",
-		"modules/thumbs",
-		"modules/gallery";
+		"modules/projects",
+		"modules/thumbs";

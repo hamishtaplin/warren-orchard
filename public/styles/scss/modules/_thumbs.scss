@@ -8,6 +8,7 @@
   padding: 0.2em;
   @include lap {
     padding: 0.4em;
+    margin-top: -0.8em;
   }
   @include transition(opacity 500ms $ease-in-out-quint 300ms);
   @include perspective(1000px);

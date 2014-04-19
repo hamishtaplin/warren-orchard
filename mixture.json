@@ -20,6 +20,15 @@
   "templateDirectory": "templates",
   "type": "mixture",
   "useCompass": false,
+  "sass": {
+    "outputStyle": "nested",
+    "sourceMap": true,
+    "cache": true,
+    "lineNumbers": false,
+    "debugInfo": false,
+    "globbing": false,
+    "useLibSass": false
+  },
   "routes": [
     {
       "route": "projects/:project/:slide",
@@ -34,6 +43,11 @@
       "route": "projects",
       "template": "index",
       "redirect": null
+    },
+    {
+      "route": "/",
+      "template": null,
+      "redirect": "/projects"
     }
   ]
 }

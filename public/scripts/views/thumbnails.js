@@ -7,6 +7,11 @@ App.Views.Thumbnails = Backbone.View.extend({
 
 	initialize: function () {
 		_.bindAll(this, "hide", "show", "onHideAnimationEnd");
+
+		if (typeof(this.el) === 'undefined') {
+			return;
+		} 
+
 		this.thumbs = document.querySelectorAll(".thumb");
 		this.numThumbs = this.thumbs.length;
 		this.thumbsParent = this.el.parentElement;

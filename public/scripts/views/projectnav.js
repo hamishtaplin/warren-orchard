@@ -12,9 +12,11 @@
 		projects: [],
 
 		initialize: function (args) {
-			_.bindAll(this, "loadProject", "onAjaxSuccess", "show", "onProjectImgsLoaded");
+			_.bindAll(this, "onClick", "loadProject", "onAjaxSuccess", "show", "onProjectLoaded");
 			this.projectIDs = args.projectIDs;
 			this.render();
+
+			this.el.addEventListener("click", this.onClick);
 		},
 
 		render: function () {
@@ -28,14 +30,13 @@
 			this.el.appendChild(this.innerEl);
 
 			for (var i = 0; i < this.projectIDs.length; i++) {
-				var id = this.projectIDs[i];
-				var project = {
-					id: id,
-					el: document.createElement("div")
-				}
 
-				project.el.setAttribute("class", "project-view-item");
-				project.el.setAttribute("id", id);
+				var project = new App.Views.ProjectView({
+					id: this.projectIDs[i],
+					el: document.createElement("div")
+				});		
+
+				project.on("loaded", this.onProjectLoaded);
 
 				this.projects.push(project);
 				this.innerEl.appendChild(project.el);
@@ -51,19 +52,45 @@
 
 		},
 
+		addUI: function () {
+			var i = 0;
+			var inner = document.createElement("div");
+			
+			inner.setAttribute("class", "slider-paging-inner bg-check");
+			inner.innerHTML = "";
+			
+			this.pageNav = document.createElement("div");
+			this.pageNav.setAttribute("class", "slider-paging");
+			this.pageNav.innerHTML = "";
+
+			while (i < this.numSlides) {
+				var btn = document.createElement("div");
+				btn.setAttribute("data-i", i.toString());
+				// btn.innerHTML = i.toString();
+				btn.setAttribute("class", "slider-paging-btn");
+				inner.appendChild(btn);
+				i++;
+			}
+			
+			this.pageNav.inner = inner;
+			this.pageNav.appendChild(inner);
+			this.el.appendChild(this.pageNav);
+
+		},
+
 		makeBtn: function (type) {
 			var btn = document.createElement("div");
 
 			btn.className = "bg-check  btn  btn-" + type;
 			btn.innerHTML = type;
-			btn.addEventListener("click", this.onBtnClick);
+			
 			this.el.appendChild(btn);
 
 			return btn;
 		},
 
-		onBtnClick: function (e) {
-			
+		onClick: function (e) {
+			console.log(e.target);
 		},
 
 		show: function () {
@@ -71,7 +98,33 @@
 		},
 
 		hide: function () {
+			this.currentProject = undefined;
+			console.log("hide");
 			this.el.classList.remove("is-visible");
+		},
+
+		navigateTo: function(id, slide) {
+			
+			console.log("navigateTo: " + id, slide);
+
+			if (this.isCurrentProject(id)) {
+				console.log("project already current, navigating to slide: " + slide);
+				this.currentProject.navigateTo(slide);
+			} else {
+				var project = this.getProjectByID(id);
+				if (project.loaded) {
+					console.log("project already loaded but not current, navigating to project and slide: " + slide);
+					this.currentProject = project;
+					project.navigateTo(slide);
+					this.goToProject(project);
+					
+					this.trigger("loaded");
+				} else {
+					console.log("project not loaded, loading: ");
+					this.loadProject(id, slide);
+				}	
+			}
+
 		},
 
 		loadProject: function (id, slide) {
@@ -92,53 +145,30 @@
 		},
 
 		onAjaxSuccess: function (data, slide) {
-			this.currentProject.el.innerHTML = data;
-
-			this.currentProject.imgLoader = new App.Views.ImageLoader({
-				imgs: this.currentProject.el.querySelectorAll(".gallery-item"),
-				useBg: true
-			});
-
-			this.currentProject.imgLoader.on("progress:complete", _.bind(function(e) {
-				this.onProjectImgsLoaded(slide);
-			}, this));
+			this.currentProject.render(data, slide);
 		},
 
-		onProjectImgsLoaded: function (slide) {
-			this.initProjectSlider(slide);
-			
+		onProjectLoaded: function(e) {
+			console.log("onProjectLoaded");
+			this.goToProject(this.currentProject);
 			this.trigger("loaded");
-		},
-
-		initProjectSlider: function (slide) {
-			if (typeof(this.currentProject.slider) === 'undefined' ){
-				this.currentProject.slider = new App.Views.Slider({
-					animType: "fade",
-					el: this.currentProject.el.querySelector(".gallery"),
-					innerEl: this.currentProject.el.querySelector(".gallery-inner")
-				});
-			} else {
-				this.currentProject.slider.navigateTo(slide);
-			}
-
-			BackgroundCheck.init({
-				targets: '.bg-check',
-				images: '.slider .img',
-				debug: false
-			});
-		},
-
-		unloadCurrentProject: function (dir) {
-			this.currentProject.imgLoader.off("progress:complete");
-			this.currentProject.slider.off("slidechanged");
-			this.currentProject.slider.off("navigate:next");
-			this.currentProject.slider.off("navigate:prev");
 		},
 
 		getProjectByID: function(id) {
 			return _.find(this.projects, function (project) {
 				return project.id === id;
 			});
+		},
+
+		goToProject: function(project) {
+			console.log(project);
+
+			this.slider.navigateTo(this.projects.indexOf(project));
+
+		},
+
+		isCurrentProject: function(id) {
+			return (typeof(this.currentProject) !== 'undefined' && this.currentProject.id === id);
 		}
 
 	});

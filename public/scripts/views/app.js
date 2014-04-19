@@ -10,65 +10,70 @@ App.Views = App.Views || {};
 		initialize: function () {
 			var projectIDs = [];
 
-			_.bindAll(this, "projectRoute", "homeRoute", "rootRoute", "onProjectLoaded");
+			_.bindAll(this, "onClick", "infoRoute", "projectRoute", "homeRoute", "onProjectLoaded");
 
 			App.eventDispatcher = _.clone(Backbone.Events);
 
 			window.onload = _.bind(this.onWindowLoad, this);
 
-			this.progress = new App.Views.ProgressBar();
+			this.progressView = new App.Views.ProgressBar();
 			this.thumbsView = new App.Views.Thumbnails();
 
-			for (var i = 0; i < this.thumbsView.thumbs.length; i++) {
-				projectIDs.push(this.thumbsView.thumbs[i].getAttribute("data-project-id"));
+			if (typeof(this.thumbsView.thumbs) !== 'undefined') {
+				for (var i = 0; i < this.thumbsView.thumbs.length; i++) {
+					projectIDs.push(this.thumbsView.thumbs[i].getAttribute("data-project-id"));
+				}
 			}
 
 			this.projectsNavView = new App.Views.ProjectNavView({	projectIDs: projectIDs });
 
-			App.eventDispatcher.on("progress:change", this.progress.update);
-			App.eventDispatcher.on("progress:complete", this.progress.complete);
+			App.eventDispatcher.on("progress:change", this.progressView.update);
+			App.eventDispatcher.on("progress:complete", this.progressView.complete);
 
 			this.initRouter();
 		},
 
 		initRouter: function () {
-			var router = new App.Router();
-			this.router = router;
-			this.router.on("route:root", this.rootRoute);
-			this.router.on("route:home", this.homeRoute);
+			this.router = new App.Router();
+
+			this.router.on("route:projects", this.homeRoute);
+			this.router.on("route:info", this.infoRoute);
 			this.router.on("route:project", this.projectRoute);
 
-			Backbone.history.start({ pushState: true	});
+			Backbone.history.start({ pushState: true });
 
-			$(document).on("click", "a[href^='/']", function(e) {
-			  if (!e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
-			    e.preventDefault();
-			    href = $(e.currentTarget).attr('href');
-			    // Remove leading slashes and hash bangs (backward compatablility)
-    			url = href.replace(/^\//,'').replace('\#\!\/','');
-			    router.navigate(url, { trigger: true });
-
-			    return false;
-			  }
-			});
+			$(document).on("click", "a[href^='/']", this.onClick);
 		},
 
-		rootRoute: function () {
+		onClick: function(e) {
+			if (!e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+		    e.preventDefault();
+		    href = $(e.currentTarget).attr('href');
+		    // Remove leading slashes and hash bangs (backward compatablility)
+  			url = href.replace(/^\//,'').replace('\#\!\/','');
+		    console.log("url: ", url);
+		    this.router.navigate(url, { trigger: true });
+
+		    return false;
+		  }
+		},
+
+		homeRoute: function () {
+			console.log("home");
 			this.router.navigate("home", { trigger: true	});
 		},
 
 		projectRoute: function (id, slide) {
-			console.log(id, slide);
-			// var currentProject = this.projectsNavView.currentProject;
-			// if (typeof(currentProject) !== 'undefined' && currentProject.id === id){
-			// 	this.projectsNavView.currentProject.slider.navigateTo(slide);
-			// } else {
-			// 	this.projectsNavView.on("loaded", this.onProjectLoaded);
-			// 	this.projectsNavView.loadProject(id, slide);
-			// }
+			this.projectsNavView.on("loaded", this.onProjectLoaded);
+			this.projectsNavView.navigateTo(id, slide);
+		},
+
+		infoRoute: function() {
+			console.log("info");
 		},
 
 		onProjectLoaded: function () {
+			console.log("project loaded");
 			this.projectsNavView.off("loaded");
 			this.projectsNavView.show();
 			this.thumbsView.hide();

@@ -32,6 +32,8 @@ App.Views.ImageView = Backbone.View.extend({
 			this.imgEl.setAttribute("src", img.getAttribute("src"));
 		}
 
+		this.imgEl.removeAttribute("data-src");
+
 		this.el.classList.add("is-loaded");
 		this.trigger("load", this);
 
