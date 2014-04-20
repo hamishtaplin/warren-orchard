@@ -80,7 +80,7 @@
 .progress-bar {
   background: rgba($color-black, 0.9);
   height: 5px;
-  width: 0;
+  width: 10%;
   @include transition(all 100ms ease-in-out);
 }
 

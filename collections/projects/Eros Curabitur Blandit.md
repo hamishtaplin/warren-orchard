@@ -1,6 +1,6 @@
 ---
 id: 24
-title: project-24
+title: Eros Curabitur Blandit
 published: true
 images:
 - image-298

@@ -12,35 +12,37 @@ App.Views = App.Views || {};
 			this.animType = args.animType;
 			this.innerEl = args.innerEl;
 			this.slides = this.innerEl.children;
-			this.numSlides = this.innerEl.childElementCount;
-			this.currentPageIndex = 0;
+			this.length = this.innerEl.childElementCount;
+			this.index = 0;
 			this.el.classList.add("slider");
 			this.innerEl.classList.add("slider-inner");
 
-			while (i < this.numSlides) {
+			while (i < this.length) {
 				var slide = this.slides[i];
 				slide.classList.add("slider-slide");
 				if (this.animType === "slide") {
-					slide.style.width = (100 / this.numSlides).toString() + "%";
+					slide.style.width = (100 / this.length).toString() + "%";
 				}
 				i++;
 			}
 
 			if (this.animType === "slide") {
-				this.innerEl.style.width = (this.numSlides * 100).toString() + "%";
+				this.innerEl.style.width = (this.length * 100).toString() + "%";
 			} 
 			
-			this.navigateTo(0);
+			this.navigateTo(0, false);
 		},
 
 		navigateTo: function (i, animate) {
+
+			var animate = animate || true;
 			var el = this.innerEl;
 
 			if (!animate) {
 				el.classList.remove("will-animate");
 			}
 
-			this.currentPageIndex = i;
+			this.index = parseInt(i, 10);
 
 			if (this.currentSlide) {
 				this.currentSlide.classList.remove("is-current");
@@ -62,14 +64,13 @@ App.Views = App.Views || {};
 			};	
 
 			if (this.animType === "slide") {
-				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.numSlides)) + "%,0,0)";
+				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.length)) + "%,0,0)";
 			}
 
-	
 		},
 
 		onSlideAnimationEnd: function() {
-			BackgroundCheck.refresh();
+			if (DEBUG) BackgroundCheck.refresh();
 		}
 
 	});

@@ -8,7 +8,7 @@ App.Views.Thumbnails = Backbone.View.extend({
 	initialize: function () {
 		_.bindAll(this, "hide", "show", "onHideAnimationEnd");
 
-		if (typeof(this.el) === 'undefined') {
+		if (_.isUndefined(this.el)) {
 			return;
 		} 
 

@@ -1,6 +1,6 @@
 ---
 id: 11
-title: project-11
+title: Ipsum Mollis Commodo Consectetur
 published: true
 images:
 - image-352

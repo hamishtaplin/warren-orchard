@@ -19,7 +19,7 @@ App.Views = App.Views || {};
 			this.progressView = new App.Views.ProgressBar();
 			this.thumbsView = new App.Views.Thumbnails();
 
-			if (typeof(this.thumbsView.thumbs) !== 'undefined') {
+			if (!_.isUndefined(this.thumbsView.thumbs)) {
 				for (var i = 0; i < this.thumbsView.thumbs.length; i++) {
 					projectIDs.push(this.thumbsView.thumbs[i].getAttribute("data-project-id"));
 				}
@@ -34,11 +34,11 @@ App.Views = App.Views || {};
 		},
 
 		initRouter: function () {
-			this.router = new App.Router();
+			App.router = new App.Router();
 
-			this.router.on("route:projects", this.homeRoute);
-			this.router.on("route:info", this.infoRoute);
-			this.router.on("route:project", this.projectRoute);
+			App.router.on("route:projects", this.homeRoute);
+			App.router.on("route:info", this.infoRoute);
+			App.router.on("route:project", this.projectRoute);
 
 			Backbone.history.start({ pushState: true });
 
@@ -52,7 +52,7 @@ App.Views = App.Views || {};
 		    // Remove leading slashes and hash bangs (backward compatablility)
   			url = href.replace(/^\//,'').replace('\#\!\/','');
 		    console.log("url: ", url);
-		    this.router.navigate(url, { trigger: true });
+		    App.router.navigate(url, { trigger: true });
 
 		    return false;
 		  }
@@ -60,7 +60,7 @@ App.Views = App.Views || {};
 
 		homeRoute: function () {
 			console.log("home");
-			this.router.navigate("home", { trigger: true	});
+			App.router.navigate("home", { trigger: true	});
 		},
 
 		projectRoute: function (id, slide) {

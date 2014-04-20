@@ -1,6 +1,6 @@
 ---
 id: 1
-title: project-1
+title: Magna Vel Scelerisque
 published: true
 images:
 - image-398

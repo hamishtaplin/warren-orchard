@@ -1,6 +1,6 @@
 ---
 id: 22
-title: project-22
+title: Justo Odio
 published: true
 images:
 - image-306

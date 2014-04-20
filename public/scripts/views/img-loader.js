@@ -32,7 +32,6 @@ App.Views.ImageLoader = Backbone.View.extend({
 		if (this.numLoaded === this.numImages) {
 			App.eventDispatcher.trigger("progress:complete");
 			this.trigger("progress:complete");
-
 		} else {
 			App.eventDispatcher.trigger("progress:change", (this.numLoaded / this.numImages) * 100);
 			this.trigger("progress:change", (this.numLoaded / this.numImages) * 100);

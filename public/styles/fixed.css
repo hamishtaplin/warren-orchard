@@ -710,7 +710,7 @@ h2 {
 .progress-bar {
   background: rgba(17, 17, 17, 0.9);
   height: 5px;
-  width: 0;
+  width: 10%;
   -webkit-transition: all 100ms ease-in-out;
   -moz-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out; }

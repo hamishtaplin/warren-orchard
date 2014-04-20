@@ -1,6 +1,6 @@
 ---
 id: 2
-title: project-2
+title: Mollis Est Non Commodo
 published: true
 images:
 - image-402

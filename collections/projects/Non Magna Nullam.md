@@ -1,6 +1,6 @@
 ---
 id: 12
-title: project-12
+title: Non Magna Nullam
 published: true
 images:
 - image-348

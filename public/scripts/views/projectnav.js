@@ -26,7 +26,7 @@
 			this.prevBtn = this.makeBtn("prev");
 
 			this.innerEl = document.createElement("div");
-			this.innerEl.setAttribute("class", "project-view-item-inner");
+			this.innerEl.setAttribute("class", "project-view-item-inner  will-animate");
 			this.el.appendChild(this.innerEl);
 
 			for (var i = 0; i < this.projectIDs.length; i++) {
@@ -79,7 +79,7 @@
 		},
 
 		makeBtn: function (type) {
-			var btn = document.createElement("div");
+			var btn = document.createElement("a");
 
 			btn.className = "bg-check  btn  btn-" + type;
 			btn.innerHTML = type;
@@ -90,7 +90,37 @@
 		},
 
 		onClick: function (e) {
-			console.log(e.target);
+			var target = e.target;
+			if (target === this.nextBtn) {
+				this.next();
+			} else if (target === this.prevBtn) {
+				this.prev();
+			}
+		},
+
+		next: function() {
+			var next = this.currentProject.getNext();
+
+			if (next === false) {
+				this.setRoute(this.getNextProject().id, 0);
+			} else {
+				this.setRoute(this.currentProject.id, next);
+			}
+
+		},
+
+		prev: function() {
+			var prev = this.currentProject.getPrev();
+			
+			if (prev === false) {
+				this.setRoute(this.getPrevProject().id, 0);
+			} else {
+				this.setRoute(this.currentProject.id, prev);
+			}
+		},
+
+		setRoute: function(id, slide) {
+			App.router.navigate("projects/" + id + "/" + slide, {trigger:true});
 		},
 
 		show: function () {
@@ -104,9 +134,6 @@
 		},
 
 		navigateTo: function(id, slide) {
-			
-			console.log("navigateTo: " + id, slide);
-
 			if (this.isCurrentProject(id)) {
 				console.log("project already current, navigating to slide: " + slide);
 				this.currentProject.navigateTo(slide);
@@ -117,20 +144,18 @@
 					this.currentProject = project;
 					project.navigateTo(slide);
 					this.goToProject(project);
-					
 					this.trigger("loaded");
 				} else {
 					console.log("project not loaded, loading: ");
 					this.loadProject(id, slide);
 				}	
 			}
-
 		},
 
 		loadProject: function (id, slide) {
-			console.log("load :" + id, slide);
-
 			this.currentProject = this.getProjectByID(id);
+
+			App.eventDispatcher.trigger("progress:change", 10);
 
 			Backbone.ajax({
 				url: '/project-ajax',
@@ -149,7 +174,6 @@
 		},
 
 		onProjectLoaded: function(e) {
-			console.log("onProjectLoaded");
 			this.goToProject(this.currentProject);
 			this.trigger("loaded");
 		},
@@ -161,14 +185,24 @@
 		},
 
 		goToProject: function(project) {
-			console.log(project);
+			this.slider.navigateTo(this.getProjectSlideIndex(project));
+		},
 
-			this.slider.navigateTo(this.projects.indexOf(project));
+		getProjectSlideIndex: function(project) {
+			return this.projects.indexOf(project || this.currentProject);
+		},
 
+		getNextProject: function() {
+			console.log(this.projects[this.getProjectSlideIndex() + 1]);
+			return this.projects[this.getProjectSlideIndex() + 1] || this.projects[0];
+		},
+
+		getPrevProject: function() {
+			return this.projects[this.getProjectSlideIndex() - 1] || this.projects[this.projects.length-1];
 		},
 
 		isCurrentProject: function(id) {
-			return (typeof(this.currentProject) !== 'undefined' && this.currentProject.id === id);
+			return (!_.isUndefined(this.currentProject) && this.currentProject.id === id);
 		}
 
 	});

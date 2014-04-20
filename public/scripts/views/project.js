@@ -26,7 +26,7 @@
 		},
 
 		onProjectImgsLoaded: function (slide) {
-			if (typeof(this.slider) === 'undefined' ){			
+			if (_.isUndefined(this.slider)){			
 				this.slider = new App.Views.Slider({
 					animType: "fade",
 					el: this.el.querySelector(".gallery"),
@@ -36,11 +36,13 @@
 				this.navigateTo(slide);
 			}
 
-			BackgroundCheck.init({
-				targets: '.bg-check',
-				images: '.slider .img',
-				debug: false
-			});
+			if (DEBUG) {
+				BackgroundCheck.init({
+					targets: '.bg-check',
+					images: '.slider .img',
+					debug: false
+				});
+			};
 
 			this.loaded = true;
 			
@@ -49,6 +51,22 @@
 
 		navigateTo: function(slide) {
 			this.slider.navigateTo(slide);
+		},
+
+		getNext: function() {
+			if (this.slider.index + 1 < this.slider.length) {
+				return this.slider.index + 1;
+			} else {
+				return false;
+			}
+		},
+
+		getPrev: function() {
+			if (this.slider.index > 0) {
+				return this.slider.index - 1;
+			} else {
+				return false;
+			}
 		}
 
 				

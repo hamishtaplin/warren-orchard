@@ -3,7 +3,8 @@
 
   <div class="gallery" id="gallery-{{request.query.id}}">
     <ul class="gallery-inner" id="gallery-inner-{{request.query.id}}">
-    {% collection "projects" query 'id={{ request.query.id }}' %}
+    
+    {% collection "projects" query 'slug=/projects/{{ request.query.id }}' %}
         
         {% for image in collection.items[0].images %}
           

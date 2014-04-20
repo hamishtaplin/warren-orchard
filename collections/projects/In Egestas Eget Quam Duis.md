@@ -1,6 +1,6 @@
 ---
 id: 20
-title: project-20
+title: In Egestas Eget Quam Duis
 published: true
 images:
 - image-316

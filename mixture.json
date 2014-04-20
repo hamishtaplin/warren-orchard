@@ -12,6 +12,37 @@
   "projectDescription": "Warren Orchard, 2014",
   "projectName": "warren-orchard",
   "publishedId": "12390",
+  "routes": [
+    {
+      "redirect": null,
+      "route": "projects/:project/:slide",
+      "template": "project"
+    },
+    {
+      "redirect": null,
+      "route": "projects/:project",
+      "template": "project"
+    },
+    {
+      "redirect": null,
+      "route": "projects",
+      "template": "index"
+    },
+    {
+      "redirect": "/projects",
+      "route": "/",
+      "template": null
+    }
+  ],
+  "sass": {
+    "cache": true,
+    "debugInfo": false,
+    "globbing": false,
+    "lineNumbers": false,
+    "outputStyle": "nested",
+    "sourceMap": true,
+    "useLibSass": false
+  },
   "serverHostname": null,
   "serverPort": null,
   "simpleModePartnerServer": null,
@@ -19,35 +50,5 @@
   "templateDefaultPage": "index",
   "templateDirectory": "templates",
   "type": "mixture",
-  "useCompass": false,
-  "sass": {
-    "outputStyle": "nested",
-    "sourceMap": true,
-    "cache": true,
-    "lineNumbers": false,
-    "debugInfo": false,
-    "globbing": false,
-    "useLibSass": false
-  },
-  "routes": [
-    {
-      "route": "projects/:project/:slide",
-      "template": "project",
-      "redirect": null
-    },    {
-      "route": "projects/:project",
-      "template": "project",
-      "redirect": null
-    },
-    {
-      "route": "projects",
-      "template": "index",
-      "redirect": null
-    },
-    {
-      "route": "/",
-      "template": null,
-      "redirect": "/projects"
-    }
-  ]
+  "useCompass": false
 }

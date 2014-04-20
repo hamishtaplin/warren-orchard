@@ -1,6 +1,6 @@
 ---
 id: 14
-title: project-14
+title: Varius Blandit Sit Amet
 published: true
 images:
 - image-339
