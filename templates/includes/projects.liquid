@@ -1,0 +1,44 @@
+<div class="project-view slider" id="project-view"> 
+  <a class="bg-check  btn  btn-next" id="btn-next">next</a>
+  <a class="bg-check  btn  btn-prev" id="btn-prev">prev</a>
+  <div class="slider-paging is-hidden" id="slider-paging">
+    <div class="slider-paging-inner bg-check" id="slider-paging-inner"></div>
+  </div>
+  <div class="project-view-item-inner slider-inner will-animate" id="project-view-slider-inner">
+  
+    {% collection "projects" %}
+        
+      {% for project in collection.items %}
+        
+        {% assign project_id = project.slug | replace: '/projects/', '' %}  
+
+        <div class="project-view-item slider-slide" id="{{project_id}}">
+
+          <div class="gallery" id="gallery-{{project_id}}">
+            <ul class="gallery-inner" id="gallery-inner-{{project_id}}">
+
+            {% for image in project.images %}
+              
+              <li class="gallery-item">
+                {% capture myimg %}/public/images/content/fullsize/project-{{project.id}}/{{image}}.jpg{% endcapture %}
+                {% if mixture.debug  %}
+                  <div data-src="{{ myimg }}" class="gallery-img  img" />
+                 {% else %}
+                  <div data-src="{{ myimg | asset_url }}" class="gallery-img  img" />
+                {% endif %}   
+              </li>
+
+            {% endfor %}
+
+            </ul>
+          </div>
+
+        </div>
+
+      {% endfor %}
+    
+    {% endcollection %}
+    
+    
+  </div>
+</div>

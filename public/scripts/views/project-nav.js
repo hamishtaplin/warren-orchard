@@ -5,70 +5,40 @@
 
 	App.Views.ProjectNav = Backbone.View.extend({
 
-		tagName: "div",
-
-		className: "project-view",
+		el: document.getElementById("project-view"),
 
 		projects: [],
 
 		initialize: function (args) {
-			_.bindAll(this, "onClick", "loadProject", "onAjaxSuccess", "show", "onProjectLoaded", "onSliderAnimationComplete");
-			this.projectIDs = args.projectIDs;
-			this.render();
-
-			this.el.addEventListener("click", this.onClick);
-		},
-
-		render: function () {
-			var header = document.getElementById("header");
-
+			_.bindAll(this, "onClick", "show", "loadProject", "onProjectLoaded", "onSliderAnimationComplete");
+			
 			this.pagenav = new App.Views.PageNav();
 
-			this.nextBtn = this.makeBtn("next");
-			this.prevBtn = this.makeBtn("prev");
-
-			this.innerEl = document.createElement("div");
-			this.innerEl.setAttribute("class", "project-view-item-inner  will-animate");
-			this.el.appendChild(this.innerEl);
-
-			for (var i = 0; i < this.projectIDs.length; i++) {
-
+			this.projects = _.map(this.el.querySelectorAll(".project-view-item"), function(item, key) {
+				
 				var project = new App.Views.ProjectView({
-					id: this.projectIDs[i],
-					el: document.createElement("div")
-				});		
+					id: item.id,
+					el: item
+				});
 
-				project.on("loaded", this.onProjectLoaded);
-
-				this.projects.push(project);
-				this.innerEl.appendChild(project.el);
-			}
-
-			header.parentNode.insertBefore(this.el, header.nextSibling);
+				return project;
+			});
 
 			this.slider = new App.Views.Slider({
 				animType: "slide",
 				el: this.el,
-				innerEl: this.innerEl
+				innerEl: document.getElementById("project-view-slider-inner")
 			});
 
-			this.el.insertBefore(this.pagenav.el, this.innerEl);
+			this.nextBtn = document.getElementById("btn-next");
+			this.prevBtn = document.getElementById("btn-prev");
 
-		},
-
-
-		makeBtn: function (type) {
-			var btn = document.createElement("a");
-
-			btn.className = "bg-check  btn  btn-" + type;
-			btn.innerHTML = type;
-			
-			this.el.appendChild(btn);
-
-			return btn;
+			this.el.addEventListener("click", this.onClick);
 		},
 
 		onClick: function (e) {
+
+			console.log(e);
 			var target = e.target;
 
 			if (target === this.nextBtn) {
@@ -110,6 +80,7 @@
 			// this.pagenav.show();
 			this.el.classList.add("is-visible");
 			this.animate = true;
+			window.scrollTo(0,0);
 		},
 
 		hide: function () {
@@ -141,25 +112,14 @@
 
 		loadProject: function (id, slide) {
 			this.currentProject = this.getProjectByID(id);
-
+			this.currentProject.on("loaded", this.onProjectLoaded);
+			this.currentProject.load(slide);
 			App.eventDispatcher.trigger("progress:change", 10);
-
-			Backbone.ajax({
-				url: '/project-ajax',
-				data: {
-					'id': id
-				},
-				success: _.bind(function(data, textStatus, jqXHR) {
-					this.onAjaxSuccess(data, slide);
-				}, this)
-			});
-		},
-
-		onAjaxSuccess: function (data, slide) {
-			this.currentProject.render(data, slide);
 		},
 
 		onProjectLoaded: function() {
+			this.currentProject.off("loaded");
+
 			this.goToProject(this.currentProject, this.animate);
 			this.trigger("loaded");
 		},

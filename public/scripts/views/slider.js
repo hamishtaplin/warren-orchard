@@ -11,6 +11,7 @@ App.Views = App.Views || {};
 
 			this.animType = args.animType;
 			this.innerEl = args.innerEl;
+			
 			this.slides = this.innerEl.children;
 			this.length = this.innerEl.childElementCount;
 			this.index = 0;
@@ -78,7 +79,7 @@ App.Views = App.Views || {};
 			this.trigger("animationComplete");
 			e.target.removeEventListener("webkitAnimationEnd", this.onSlideAnimationEnd);
 			if (DEBUG) {
-				_.delay(BackgroundCheck.refresh, 500);
+				// _.delay(BackgroundCheck.refresh, 500);
 			}
 		}
 

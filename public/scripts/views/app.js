@@ -18,14 +18,7 @@ App.Views = App.Views || {};
 
 			this.progressView = new App.Views.ProgressBar();
 			this.thumbsView = new App.Views.Thumbnails();
-
-			if (!_.isUndefined(this.thumbsView.thumbs)) {
-				for (var i = 0; i < this.thumbsView.thumbs.length; i++) {
-					projectIDs.push(this.thumbsView.thumbs[i].getAttribute("data-project-id"));
-				}
-			}
-
-			this.projectsNavView = new App.Views.ProjectNav({	projectIDs: projectIDs });
+			this.projectsNavView = new App.Views.ProjectNav();
 
 			App.eventDispatcher.on("progress:change", this.progressView.update);
 			App.eventDispatcher.on("progress:complete", this.progressView.complete);

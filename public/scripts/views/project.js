@@ -12,9 +12,8 @@
 			this.loaded = false;
 		},
 
-		render: function(data, slide) {
-			this.el.innerHTML = data;
-
+		load: function(slide) {
+		
 			this.imgLoader = new App.Views.ImageLoader({
 				imgs: this.el.querySelectorAll(".gallery-item"),
 				useBg: true
@@ -37,11 +36,11 @@
 			}
 
 			if (DEBUG) {
-				BackgroundCheck.init({
-					targets: '.bg-check',
-					images: '.slider .img',
-					debug: false
-				});
+				// BackgroundCheck.init({
+				// 	targets: '.bg-check',
+				// 	images: '.slider .img',
+				// 	debug: false
+				// });
 			};
 
 			this.loaded = true;

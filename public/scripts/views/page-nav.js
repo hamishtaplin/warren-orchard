@@ -3,18 +3,14 @@ App.Views = App.Views || {};
 
 App.Views.PageNav = Backbone.View.extend({
 
-	tagName: "div",
+	el: document.getElementById("slider-paging"),
+
+	inner: document.getElementById("slider-paging-inner"),
+
+	btns: [],
 
 	initialize: function () {
 		_.bindAll(this, "show", "hide", "go");
-		this.btns = [];
-		this.inner = document.createElement("div");
-		this.inner.setAttribute("class", "slider-paging-inner bg-check");
-		this.inner.innerHTML = "";
-
-		this.el.setAttribute("class", "slider-paging");
-		this.el.appendChild(this.inner);
-
 		this.hide();
 	},
 
@@ -39,7 +35,6 @@ App.Views.PageNav = Backbone.View.extend({
 	},
 
 	go: function(i) {
-		console.log("go " + i);
 		if (!_.isUndefined(this.curr)) {
 			this.curr.classList.remove("is-current");
 		};
