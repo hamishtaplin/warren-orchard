@@ -46,13 +46,13 @@ App.Views.PageNav = Backbone.View.extend({
 	},
 
 	show: function() {
-		console.log(this, this.el);
+		// console.log(this, this.el);
 		this.el.classList.remove("is-hidden");
-		console.log("pageNav show");
+		// console.log("pageNav show");
 	},
 
 	hide: function() {
-		console.log("pageNav hide");
+		// console.log("pageNav hide");
 		this.el.classList.add("is-hidden");
 	},
 

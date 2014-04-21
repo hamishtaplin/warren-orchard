@@ -36,11 +36,11 @@
 			}
 
 			if (DEBUG) {
-				// BackgroundCheck.init({
-				// 	targets: '.bg-check',
-				// 	images: '.slider .img',
-				// 	debug: false
-				// });
+				BackgroundCheck.init({
+					targets: '.bg-check',
+					images: this.el.querySelectorAll(".img"),
+					debug: false
+				});
 			};
 
 			this.loaded = true;

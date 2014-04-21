@@ -35,16 +35,22 @@ App.Views = App.Views || {};
 
 			Backbone.history.start({ pushState: true });
 
-			$(document).on("click", "a[href^='/']", this.onClick);
+			document.addEventListener("click", this.onClick, false);
 		},
 
 		onClick: function(e) {
-			if (!e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+
+			var el = e.target;
+		  while (el && el.tagName !== 'A'){
+		     el = el.parentNode
+		  }
+		 
+			if (el!== null && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
 		    e.preventDefault();
-		    href = $(e.currentTarget).attr('href');
+		    href = el.getAttribute("href");
 		    // Remove leading slashes and hash bangs (backward compatablility)
   			url = href.replace(/^\//,'').replace('\#\!\/','');
-		    console.log("url: ", url);
+		    // console.log("url: ", url);
 		    App.router.navigate(url, { trigger: true });
 
 		    return false;
@@ -52,7 +58,7 @@ App.Views = App.Views || {};
 		},
 
 		homeRoute: function () {
-			console.log("home");
+			// console.log("home");
 			App.router.navigate("home", { trigger: true	});
 		},
 
@@ -62,11 +68,11 @@ App.Views = App.Views || {};
 		},
 
 		infoRoute: function() {
-			console.log("info");
+			// console.log("info");
 		},
 
 		onProjectLoaded: function () {
-			console.log("project loaded");
+			// console.log("project loaded");
 			this.projectsNavView.off("loaded");
 			this.projectsNavView.show();
 			this.thumbsView.hide();

@@ -28,6 +28,7 @@ App.Views.Thumbnails = Backbone.View.extend({
 	},
 
 	hide: function () {
+		// console.log("thumbs hide");
 		this.eventCount = 0;
 		this.el.classList.add("is-off-screen");
 		this.el.addEventListener("webkitAnimationEnd", this.onHideAnimationEnd, false);

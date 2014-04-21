@@ -1,0 +1,1690 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"naviga",
+				"navigateTo"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"text",
+				"text-indent:   (property)"
+			],
+			[
+				"cre",
+				"createElement  (function)"
+			],
+			[
+				"bp",
+				"bgp	background-position"
+			],
+			[
+				"slider-pa",
+				"slider-paging-btn"
+			],
+			[
+				"webkit-trans",
+				"-webkit-transform-style:   (property)"
+			],
+			[
+				"ease",
+				"ease-in-out-quint"
+			],
+			[
+				"flo",
+				"float"
+			],
+			[
+				"inn",
+				"innerEl"
+			],
+			[
+				"an",
+				"animType"
+			],
+			[
+				"sli",
+				"slides"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"cr",
+				"createElement  (function)"
+			],
+			[
+				"curr",
+				"currentJob"
+			],
+			[
+				"pro",
+				"project"
+			],
+			[
+				"new",
+				"newIndex"
+			],
+			[
+				"cur",
+				"currentJobIDIndex"
+			],
+			[
+				"if",
+				"ife	if … else"
+			],
+			[
+				"job",
+				"jobIDs"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"abs",
+				"absolute"
+			],
+			[
+				"cla",
+				"classList"
+			],
+			[
+				"num",
+				"numLoaded"
+			],
+			[
+				"eas",
+				"ease-in-out-quint"
+			],
+			[
+				"trans",
+				"translate3d"
+			],
+			[
+				"ini",
+				"initRouter"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"g",
+				"grid"
+			],
+			[
+				"ce",
+				"ceil"
+			],
+			[
+				"App",
+				"AppView"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"MAX",
+				"MAX_COLS"
+			],
+			[
+				"bind",
+				"bindAll"
+			],
+			[
+				"pah",
+				"pageWidth"
+			],
+			[
+				"thumbsP",
+				"thumbsPagingNav"
+			],
+			[
+				"creat",
+				"createElement"
+			],
+			[
+				"fo",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"thumbs",
+				"thumbsInnerEl"
+			],
+			[
+				"thum",
+				"thumbPages"
+			],
+			[
+				"getA",
+				"getAvailableWidth"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"win",
+				"winHeight"
+			],
+			[
+				"load",
+				"loadThumb"
+			],
+			[
+				"on",
+				"onThumbLoaded"
+			],
+			[
+				"get",
+				"getAttribute"
+			],
+			[
+				"fn",
+				"fun	Function"
+			],
+			[
+				"Thum",
+				"Thumnails"
+			],
+			[
+				"cl",
+				"console	console.log()"
+			],
+			[
+				"tra",
+				"translate3d"
+			],
+			[
+				"webkit-tran",
+				"webkit-transform"
+			],
+			[
+				"webkit-tra",
+				"webkit-transform"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"webkit-tr",
+				"webkit-transform-style"
+			],
+			[
+				"color-",
+				"color-black"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"ss",
+				"ssif	if-statement"
+			],
+			[
+				"ine",
+				"inline-block"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"ma",
+				"margin"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/scripts/views/slider.js",
+			"settings":
+			{
+				"buffer_size": 3482,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/scripts/routers/app-router.js",
+			"settings":
+			{
+				"buffer_size": 157,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/scripts/views/app.js",
+			"settings":
+			{
+				"buffer_size": 1922,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/scripts/views/projectnav.js",
+			"settings":
+			{
+				"buffer_size": 4018,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: console.log()"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"extend",
+				"Snippet: Backbone.js view extend"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"bb view",
+				"Snippet: Backbone.js view el"
+			],
+			[
+				"backbone view",
+				"Snippet: Backbone.js view constructor"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"bb",
+				"Snippet: Backbone.js collection clone"
+			],
+			[
+				"jav",
+				"Javascript Beautify"
+			],
+			[
+				"cons",
+				"Snippet: console.log()"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"constr",
+				"Snippet: JS constructor pattern"
+			],
+			[
+				"module",
+				"Snippet: JS module pattern"
+			],
+			[
+				"revealing",
+				"Snippet: JS revealing module pattern"
+			],
+			[
+				"con",
+				"consolewrap"
+			],
+			[
+				"module		",
+				"Snippet: JS module pattern"
+			],
+			[
+				"patt",
+				"Snippet: JS singleton pattern"
+			],
+			[
+				"patter",
+				"Snippet: JS revealing module pattern"
+			],
+			[
+				"json",
+				"Indent JSON"
+			],
+			[
+				"inde",
+				"Indent XML"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"include",
+				"Snippet: include"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"liqu",
+				"Set Syntax: HTML (Liquid)"
+			],
+			[
+				"liquid",
+				"Set Syntax: HTML (Liquid)"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 629.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/hamishtaplin/Sites/010_ceidiog/public_html/wp-content/themes/ceidiog/functions.php",
+		"/Users/hamishtaplin/Library/Application Support/Steam/SteamApps/common/Football Manager 2014/data/db/1430/lnc/all/italian awards.lnc",
+		"/Users/hamishtaplin/Library/Application Support/Steam/SteamApps/common/Football Manager 2014/data/db/1430/lnc/all/turkish name change.lnc",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/progress-bar.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/projectnav.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_gallery.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_typography.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/includes/header.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_nav.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/layout.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/project.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.mix.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-left-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-right-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-right-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icon-grid-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icon-grid-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icon-info-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icon-info-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/logo-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/logo-white.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-left-black.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/slider.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-left.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/index.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_linear-positions-parser.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_layout.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_size.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_variables.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/info.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_info.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/converted-html/project-ajax.php",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/project-ajax.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_radial-positions-parser.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/mixture.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/_imports.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_thumbs.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_grid-width.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/app.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/btn-right.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/base64.txt",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_position.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_prefixer.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/img-loader.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/project.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive (dit08090801.bluegg's conflicted copy 2014-03-11).css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/gruntfile.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/jobnav.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/job.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/routers/app-router.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/routers/app-router.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/projectnav.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/models/_global.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/job-ajax.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/jobnav.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive (iMac's conflicted copy 2014-03-11 (1)).css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/responsive.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/css/responsive.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/css/responsive.min.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_responsive.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/job.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/fixed (dit08090801.bluegg's conflicted copy 2014-03-10 (1)).css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/img.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnails.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/wo.sublime-project",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/package.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/vendor/backbone.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/grid.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/scripts.min (MacBook-Air's conflicted copy 2014-02-23).min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/image-loader.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/helpers/_animations.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/templates/layouts/blank.liquid",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/src",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_radial-arg-parser.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_background.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/_bourbon-deprecated-upcoming.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_modular-scale.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/img.min.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/app.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/views/thumbnail",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_elements.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_fonts.scss",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/Underscorejs snippets.sublime-package",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/Console API Snippets (JavaScript).sublime-package",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Installed Packages/JavaScript Snippets.sublime-package",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/icon-dots.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/responsive.min.css",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_timing-functions.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_transition.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_transition-property-name.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/helpers/_shape-size-stripper.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_animation.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_retina-image.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/addons/_html5-input-types.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/backbone.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/bower.json",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/icon-info.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_image-rendering.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/zepto.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/utils.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/nav.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/scripts/underscore.js",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/images.txt",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/logo.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/vectors.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/icon-grid.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/vectors_logo.svg",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/models/.gitignore",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/functions/_px-to-em.scss",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/hamishtaplin/Library/Application Support/Sublime Text 3/Packages/User/Sass Snippets/if-statement.sublime-snippet",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/preview.html",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/fixed.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/vendor/bourbon/css3/_font-face.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/grunticon.loader.txt",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/images/icons/_icons-svg.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_tables.scss",
+		"/Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/base/_print.scss"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*.js",
+			"*.liquid",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.liquid",
+			"*.js",
+			"*.liquid",
+			"*.scss",
+			"*.php",
+			"*.scss",
+			"*.php",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"is-curr",
+			"initProjectSlider",
+			"initProectSlider",
+			"initSlider",
+			"1s",
+			"thisOnSlideAnimationEnd",
+			"animationend",
+			"transition",
+			"transitionend",
+			"BackgroundCheck",
+			"{ {",
+			"&.background",
+			"makeBtn",
+			"bg-check",
+			"path, stroke, g",
+			"black",
+			"Click",
+			"info_page",
+			"nav__item",
+			"pageNavItems",
+			"1em",
+			"fixed",
+			"imgLoader",
+			"navigate",
+			"trigger",
+			"currentPage",
+			"initSlider",
+			"gallery-inner",
+			"projectDictionary",
+			"onAjaxLoaded",
+			".el.",
+			"slider.on",
+			".on",
+			"console.log",
+			".trigger",
+			"currentJobIDIndex",
+			"projectsDict",
+			"job",
+			".job-view-item ",
+			".job-view-item",
+			"this.jobsView",
+			"this.slider",
+			"his.imgLoader",
+			"this.",
+			"jobEl",
+			"jobElements",
+			"JobsView",
+			"nextBtn",
+			"this.previousJobID",
+			"load",
+			"onSliderNext",
+			"referenceNode",
+			"wrapper",
+			"value",
+			"render",
+			"thumb",
+			"numThumbs",
+			"onThumbLoaded",
+			"onLoaded",
+			"this.thumbs",
+			"this.thumbs[0]",
+			"this.thumbs",
+			"this.q",
+			"this.queue",
+			" Backbone.View",
+			"thumb",
+			"Thumbs",
+			"thumbs",
+			"el",
+			"job-",
+			"this.thumbsInnerEl",
+			"this. ",
+			"thumbs__inner",
+			"link",
+			"thumbsPagingNav",
+			"this.thumbsInnerEl",
+			"thumbs__",
+			"thumbs__inner",
+			"grid__",
+			"console.log",
+			"thumbPages",
+			"numPerPage",
+			"numThumbs",
+			"thumbs__",
+			"numThumbs",
+			"queue",
+			"Thumbs",
+			"thumbs",
+			"this.queue",
+			"fontSize",
+			"this.MAX_THUMB_SIZE",
+			"ceil",
+			"height",
+			"width",
+			"MAX_THUMB_SIZE",
+			"onWindowResize",
+			"MAX_COLS",
+			"MAX_THUMB_SIZE",
+			"this.el",
+			"this.thumbPages[i]",
+			"pages[i]",
+			"thumbs[i]",
+			"thumbs[i].el",
+			"var ",
+			"this.el.style",
+			"ceil",
+			"initGrid",
+			"winHeight",
+			"class=\"wrapper\"",
+			"width",
+			"300",
+			"$header-height",
+			"$ease-out-back",
+			"100%",
+			"\"load\"",
+			"console.log",
+			"this.numLoaded",
+			"update",
+			"numThumbs",
+			"render",
+			"this.queue[i]",
+			"change",
+			"blah",
+			"0%",
+			"1,1",
+			"100px",
+			"loadImg",
+			"\";"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"project",
+			"img",
+			"class=\"global-width\"",
+			"image",
+			"class=\"global-width\"",
+			"$color-white"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/scripts/views/slider.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2223,
+								2223
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1073.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/scripts/routers/app-router.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/scripts/views/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/scripts/views/projectnav.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Better JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 353.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "wo.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"comm",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"_gallery",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"projects",
+				"public/scripts/views/projectnav.js"
+			],
+			[
+				"slider",
+				"public/scripts/views/slider.js"
+			],
+			[
+				"_gall",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"_co",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"_nav",
+				"public/styles/scss/modules/_nav.scss"
+			],
+			[
+				"header",
+				"templates/includes/header.liquid"
+			],
+			[
+				"_comm",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"slider.js",
+				"public/scripts/views/slider.js"
+			],
+			[
+				"project-aj",
+				"templates/project-ajax.liquid"
+			],
+			[
+				"_inf",
+				"public/styles/scss/modules/_info.scss"
+			],
+			[
+				"_var",
+				"public/styles/scss/base/_variables.scss"
+			],
+			[
+				"_thumbs",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"_lay",
+				"public/styles/scss/base/_layout.scss"
+			],
+			[
+				"_com",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"btn-right",
+				"public/images/btn-right.svg"
+			],
+			[
+				"index",
+				"templates/index.liquid"
+			],
+			[
+				"_ga",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"project",
+				"public/scripts/views/projectnav.js"
+			],
+			[
+				"app",
+				"public/scripts/views/app.js"
+			],
+			[
+				"proj",
+				"public/scripts/views/projectnav.js"
+			],
+			[
+				"ajax",
+				"templates/project-ajax.liquid"
+			],
+			[
+				"gallery",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"aja",
+				"templates/project-ajax.liquid"
+			],
+			[
+				"res",
+				"public/styles/responsive.css"
+			],
+			[
+				"resp",
+				"public/styles/responsive.css"
+			],
+			[
+				"respo",
+				"public/styles/scss/responsive.scss"
+			],
+			[
+				"script",
+				"public/scripts/scripts.mix.js"
+			],
+			[
+				"job",
+				"public/scripts/views/job.js"
+			],
+			[
+				"mixt",
+				"mixture.json"
+			],
+			[
+				"layout",
+				"templates/layouts/layout.liquid"
+			],
+			[
+				"progr",
+				"public/scripts/views/progress-bar.js"
+			],
+			[
+				"thumbs",
+				"public/scripts/views/thumbnails.js"
+			],
+			[
+				"jobs",
+				"public/scripts/views/job.js"
+			],
+			[
+				"grid",
+				"public/scripts/views/grid.js"
+			],
+			[
+				"scripts",
+				"public/scripts/scripts.mix.js"
+			],
+			[
+				"_anim",
+				"public/styles/scss/helpers/_animations.scss"
+			],
+			[
+				"ap",
+				"public/scripts/views/app.js"
+			],
+			[
+				"thumbs.js",
+				"public/scripts/views/thumbnails.js"
+			],
+			[
+				"_thu",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"scrip",
+				"public/scripts/scripts.mix.js"
+			],
+			[
+				"_th",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"icon-do",
+				"public/images/icons/icon-dots.svg"
+			],
+			[
+				"app.js",
+				"public/scripts/app.js"
+			],
+			[
+				"hea",
+				"templates/includes/header.liquid"
+			],
+			[
+				"ele",
+				"public/styles/scss/base/_elements.scss"
+			],
+			[
+				"common",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"var",
+				"public/styles/scss/base/_variables.scss"
+			],
+			[
+				"_impo",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"_res",
+				"public/styles/scss/helpers/_responsive.scss"
+			],
+			[
+				"thumb",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"la",
+				"templates/layouts/layout.liquid"
+			],
+			[
+				"thum",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"grunt",
+				"gruntfile.js"
+			],
+			[
+				"_thumb",
+				"public/styles/scss/modules/_thumbs.scss"
+			],
+			[
+				"gallery.sc",
+				"public/styles/scss/modules/_gallery.scss"
+			],
+			[
+				"gruntf",
+				"gruntfile.js"
+			],
+			[
+				"_navs",
+				"public/styles/scss/modules/_nav.scss"
+			],
+			[
+				"_ty",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"_im",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"typ",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"impo",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"head",
+				"templates/includes/header.liquid"
+			],
+			[
+				"_typo",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"index.",
+				"templates/index.liquid"
+			],
+			[
+				"info",
+				"templates/info.liquid"
+			],
+			[
+				"_typ",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"gruntfile",
+				"gruntfile.js"
+			],
+			[
+				"_t",
+				"public/styles/scss/base/_typography.scss"
+			],
+			[
+				"_ele",
+				"public/styles/scss/base/_elements.scss"
+			],
+			[
+				"lay",
+				"templates/layouts/layout.liquid"
+			],
+			[
+				"fixed",
+				"public/styles/scss/fixed.scss"
+			],
+			[
+				"_respo",
+				"public/styles/scss/helpers/_responsive.scss"
+			],
+			[
+				"imports",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"co",
+				"public/styles/scss/modules/_common.scss"
+			],
+			[
+				"gru",
+				"gruntfile.js"
+			],
+			[
+				"_import",
+				"public/styles/scss/_imports.scss"
+			],
+			[
+				"_fo",
+				"public/styles/scss/vendor/bourbon/css3/_font-face.scss"
+			],
+			[
+				"font",
+				"public/styles/scss/vendor/bourbon/css3/_font-face.scss"
+			],
+			[
+				"_bour",
+				"public/styles/scss/vendor/bourbon/_bourbon.scss"
+			],
+			[
+				"varia",
+				"public/styles/scss/base/_variables.scss"
+			],
+			[
+				"post",
+				"wp/wp-admin/post.php"
+			],
+			[
+				"heade",
+				"content/themes/arwydd/header.php"
+			],
+			[
+				"gruntfil",
+				"Gruntfile.js"
+			],
+			[
+				"old-ie",
+				"old-ie.css"
+			],
+			[
+				"old",
+				"old-ie.css"
+			],
+			[
+				"scss",
+				".sass-cache/0fd7197eda63ee7d71be76432538cf8dafaadece/_classes.scssc"
+			],
+			[
+				"contact",
+				"content/themes/arwydd/contact.php"
+			],
+			[
+				"video",
+				"inc/VideoList.php"
+			],
+			[
+				"_shar",
+				"wp-content/themes/ceidiog/_shared.scss"
+			],
+			[
+				"wp-seo-me",
+				"wp-content/plugins/wordpress-seo/js/wp-seo-metabox.js"
+			],
+			[
+				"dev",
+				"config/deploy/dev.rb"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"videolist",
+				"inc/VideoList.php"
+			],
+			[
+				"foo",
+				"content/themes/ceidiog/footer.php"
+			],
+			[
+				"style.scss",
+				"content/themes/ceidiog-pr/style.scss"
+			],
+			[
+				"style.",
+				"style.css"
+			],
+			[
+				"style",
+				"content/themes/css/style.css"
+			],
+			[
+				"functions",
+				"content/themes/ceidiog-pr/functions.php"
+			],
+			[
+				"videol",
+				"inc/VideoList.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -38,7 +38,7 @@
 
 		onClick: function (e) {
 
-			console.log(e);
+			// console.log(e);
 			var target = e.target;
 
 			if (target === this.nextBtn) {
@@ -93,18 +93,18 @@
 		navigateTo: function(id, slide) {
 			this.pagenav.go(slide);
 			if (this.isCurrentProject(id)) {
-				console.log("project already current, navigating to slide: " + slide);
+				// console.log("project already current, navigating to slide: " + slide);
 				this.currentProject.navigateTo(slide, true);
 			} else {
 				var project = this.getProjectByID(id);
 				if (project.loaded) {
-					console.log("project already loaded but not current, navigating to project and slide: " + slide);
+					// console.log("project already loaded but not current, navigating to project and slide: " + slide);
 					this.currentProject = project;
 					project.navigateTo(slide);
 					this.goToProject(project, true);
 					this.trigger("loaded");
 				} else {
-					console.log("project not loaded, loading: ");
+					// console.log("project not loaded, loading: ");
 					this.loadProject(id, slide);
 				}	
 			}

@@ -2,6 +2,10 @@
   "debug": true,
   "domain": null,
   "followLeader": false,
+  "gitHubPages": {
+    "guid": "F303434A-E21E-4ECF-9BC2-1B1FFA04DC34",
+    "repoUrl": "https://github.com/hamishtaplin/warren-orchard.git"
+  },
   "ignoreDir": "node_modules",
   "lintScripts": false,
   "minify": false,
