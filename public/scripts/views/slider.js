@@ -79,7 +79,7 @@ App.Views = App.Views || {};
 			this.trigger("animationComplete");
 			e.target.removeEventListener("webkitAnimationEnd", this.onSlideAnimationEnd);
 			if (DEBUG) {
-				// _.delay(BackgroundCheck.refresh, 500);
+				_.delay(BackgroundCheck.refresh, 500);
 			}
 		}
 
