@@ -110,28 +110,54 @@
   margin: 0 auto;
   z-index: 10;
   text-align: center;
+  
+  &.is-hidden {
+    .slider-paging-btn {
+      @include transition-delay(0ms);
+      @include transform(translateY(500%));
+    }
+  }
 }
 
 .slider-paging-btn {
-  width: 0.9em;
-  height: 0.9em;
+  width: 1.2em;
+  height: 1.2em;
   background: rgba($color-white, 1);
   display: inline-block;
-  border-radius: 1em;
-  margin: 0 0.5em;
+  border-radius: 1.2em;
+  margin: 0 0.7em;
   cursor: pointer;
   -webkit-transform-style: preserve3d;
   vertical-align: middle;
-  // text-indent: -999em;
-  &:hover {
-    opacity:1;
+  position: relative;
+  @include transform(scale(0.8));
+  @include transition(-webkit-transform 300ms $ease-in-out-quint);
+  &:before {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0);
+    display: block;
+    position: absolute;
+    left: -50%;
+    right: 0;
+    top: -50%;
+    bottom: 0;
   }
-  &:active {
-    @include transform(scale(0.9));
-  }
+
   &.is-current {
-    width: 1.1em;
-    height: 1.1em;
+    @include transform(scale(1));
+    @for $i from 0 through 20 {
+    &:nth-of-type(#{$i}) {
+        @include transition-delay(0ms);
+      }
+    }
+  }
+
+  @for $i from 0 through 20 {
+    &:nth-of-type(#{$i}) {
+      @include transition-delay(#{$i * 50}ms);
+    }
   }
 }
 
@@ -194,20 +220,22 @@
 
 .btn-next {
   right: 0;
-
+  &:before {
+    background-image: url(/public/images/btn-right-black.svg);
+  }
   &.background--dark:before {
     background-image: url(/public/images/btn-right-white.svg);
   }
   &.background--light:before {
     background-image: url(/public/images/btn-right-black.svg);
   }
-
-  
 }
 
 .btn-prev {
   left: 0;
- 
+  &:before {
+    background-image: url(/public/images/btn-left-black.svg);
+  }
   &.background--dark:before {
     background-image: url(/public/images/btn-left-white.svg);
   }

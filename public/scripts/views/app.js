@@ -25,7 +25,7 @@ App.Views = App.Views || {};
 				}
 			}
 
-			this.projectsNavView = new App.Views.ProjectNavView({	projectIDs: projectIDs });
+			this.projectsNavView = new App.Views.ProjectNav({	projectIDs: projectIDs });
 
 			App.eventDispatcher.on("progress:change", this.progressView.update);
 			App.eventDispatcher.on("progress:complete", this.progressView.complete);

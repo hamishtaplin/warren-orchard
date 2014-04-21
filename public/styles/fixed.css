@@ -716,13 +716,19 @@ h2 {
   transition: all 100ms ease-in-out; }
 
 /* line 88, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+.bg-check {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms; }
+
+/* line 93, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .background--light path, .background--light stroke, .background--light g, .background--light polygon {
   -webkit-transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   fill: #111111 !important; }
 
-/* line 95, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
+/* line 100, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_common.scss */
 .background--dark path, .background--dark stroke, .background--dark g, .background--dark polygon {
   -webkit-transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition: fill 500ms cubic-bezier(0.86, 0, 0.07, 1);
@@ -944,41 +950,275 @@ h2 {
   margin: 0 auto;
   z-index: 10;
   text-align: center; }
+  /* line 115, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging.is-hidden .slider-paging-btn {
+    -webkit-transition-delay: 0ms;
+    -moz-transition-delay: 0ms;
+    transition-delay: 0ms;
+    -webkit-transform: translateY(500%);
+    -moz-transform: translateY(500%);
+    -ms-transform: translateY(500%);
+    -o-transform: translateY(500%);
+    transform: translateY(500%); }
 
-/* line 115, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+/* line 122, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
 .slider-paging-btn {
-  width: 0.9em;
-  height: 0.9em;
+  width: 1.2em;
+  height: 1.2em;
   background: white;
   display: inline-block;
-  border-radius: 1em;
-  margin: 0 0.5em;
+  border-radius: 1.2em;
+  margin: 0 0.7em;
   cursor: pointer;
   -webkit-transform-style: preserve3d;
-  vertical-align: middle; }
-  /* line 126, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
-  .slider-paging-btn:hover {
-    opacity: 1; }
-  /* line 129, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
-  .slider-paging-btn:active {
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    transform: scale(0.9); }
-  /* line 132, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  vertical-align: middle;
+  position: relative;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1); }
+  /* line 135, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:before {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    background: transparent;
+    display: block;
+    position: absolute;
+    left: -50%;
+    right: 0;
+    top: -50%;
+    bottom: 0; }
+  /* line 148, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
   .slider-paging-btn.is-current {
-    width: 1.1em;
-    height: 1.1em; }
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(0) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(1) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(2) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(3) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(4) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(5) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(6) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(7) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(8) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(9) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(10) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(11) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(12) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(13) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(14) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(15) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(16) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(17) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(18) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(19) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+    /* line 151, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    .slider-paging-btn.is-current:nth-of-type(20) {
+      -webkit-transition-delay: 0ms;
+      -moz-transition-delay: 0ms;
+      transition-delay: 0ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(0) {
+    -webkit-transition-delay: 0ms;
+    -moz-transition-delay: 0ms;
+    transition-delay: 0ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(1) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    transition-delay: 50ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(2) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    transition-delay: 100ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(3) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    transition-delay: 150ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(4) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    transition-delay: 200ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(5) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    transition-delay: 250ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(6) {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    transition-delay: 300ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(7) {
+    -webkit-transition-delay: 350ms;
+    -moz-transition-delay: 350ms;
+    transition-delay: 350ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(8) {
+    -webkit-transition-delay: 400ms;
+    -moz-transition-delay: 400ms;
+    transition-delay: 400ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(9) {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    transition-delay: 450ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(10) {
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    transition-delay: 500ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(11) {
+    -webkit-transition-delay: 550ms;
+    -moz-transition-delay: 550ms;
+    transition-delay: 550ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(12) {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    transition-delay: 600ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(13) {
+    -webkit-transition-delay: 650ms;
+    -moz-transition-delay: 650ms;
+    transition-delay: 650ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(14) {
+    -webkit-transition-delay: 700ms;
+    -moz-transition-delay: 700ms;
+    transition-delay: 700ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(15) {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    transition-delay: 750ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(16) {
+    -webkit-transition-delay: 800ms;
+    -moz-transition-delay: 800ms;
+    transition-delay: 800ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(17) {
+    -webkit-transition-delay: 850ms;
+    -moz-transition-delay: 850ms;
+    transition-delay: 850ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(18) {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    transition-delay: 900ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(19) {
+    -webkit-transition-delay: 950ms;
+    -moz-transition-delay: 950ms;
+    transition-delay: 950ms; }
+  /* line 158, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .slider-paging-btn:nth-of-type(20) {
+    -webkit-transition-delay: 1000ms;
+    -moz-transition-delay: 1000ms;
+    transition-delay: 1000ms; }
 
-/* line 140, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+/* line 166, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
 .slider-paging-inner.background--dark .slider-paging-btn {
   background: white; }
-/* line 146, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+/* line 172, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
 .slider-paging-inner.background--light .slider-paging-btn {
   background: #111111; }
 
-/* line 152, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+/* line 178, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
 .btn {
   padding: 1em;
   width: 7%;
@@ -998,7 +1238,7 @@ h2 {
   -webkit-transform-style: preserve3d;
   color: transparent;
   display: block; }
-  /* line 165, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  /* line 191, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
   .btn:before {
     content: " ";
     display: block;
@@ -1014,50 +1254,56 @@ h2 {
     text-indent: -999em;
     opacity: 0.9;
     color: transparent; }
-  /* line 181, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  /* line 207, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
   .btn:hover {
     background: rgba(17, 17, 17, 0); }
-    /* line 183, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    /* line 209, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
     .btn:hover:before {
       opacity: 1; }
 
-/* line 195, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+/* line 221, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
 .btn-next {
   right: 0; }
-  /* line 198, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  /* line 223, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .btn-next:before {
+    background-image: url(/public/images/btn-right-black.svg); }
+  /* line 226, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
   .btn-next.background--dark:before {
     background-image: url(/public/images/btn-right-white.svg); }
-  /* line 201, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  /* line 229, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
   .btn-next.background--light:before {
     background-image: url(/public/images/btn-right-black.svg); }
 
-/* line 208, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+/* line 234, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
 .btn-prev {
   left: 0; }
-  /* line 211, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  /* line 236, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  .btn-prev:before {
+    background-image: url(/public/images/btn-left-black.svg); }
+  /* line 239, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
   .btn-prev.background--dark:before {
     background-image: url(/public/images/btn-left-white.svg); }
-  /* line 214, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  /* line 242, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
   .btn-prev.background--light:before {
     background-image: url(/public/images/btn-left-black.svg); }
 
-/* line 221, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+/* line 249, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
 .project-page {
   -webkit-transition: all 100ms ease-in-out;
   -moz-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out; }
 
 @media screen and (orientation: landscape) {
-  /* line 227, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+  /* line 255, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
   .project_page {
     background: #000; }
-    /* line 229, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    /* line 257, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
     .project_page .wrapper {
       -webkit-transition: all 300ms ease-in-out;
       -moz-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out;
       padding: 0; }
-    /* line 233, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    /* line 261, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
     .project_page .header {
       -webkit-transform: scale(0.5);
       -moz-transform: scale(0.5);
@@ -1065,11 +1311,11 @@ h2 {
       -o-transform: scale(0.5);
       transform: scale(0.5);
       opacity: 0; }
-    /* line 238, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+    /* line 266, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
     .project_page .gallery {
       margin: 0;
       width: 100%; }
-      /* line 241, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
+      /* line 269, /Users/hamishtaplin/Dropbox/Work/028_warren_orchard/www/public/styles/scss/modules/_projects.scss */
       .project_page .gallery img {
         margin: 0;
         padding: 0; } }

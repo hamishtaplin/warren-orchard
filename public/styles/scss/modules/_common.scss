@@ -84,6 +84,11 @@
   @include transition(all 100ms ease-in-out);
 }
 
+
+.bg-check {
+  @include transition(all 500ms);
+}
+
 .background--light {
   path, stroke, g, polygon {
     @include transition(fill 500ms $ease-in-out-quint);

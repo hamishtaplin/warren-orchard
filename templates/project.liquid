@@ -2,29 +2,9 @@
 
 {% include "header"  %}
 
-<div class="global-width" id="thumbs-container">
-	
-	<div class="gallery" id="gallery-{{ mixture.route.project }}">
-    <ul class="gallery-inner" id="gallery-inner-{{ mixture.route.project }}">
-    	{% collection "projects" query 'id={{ mixture.route.project }}' %}
-				
-				{% for image in collection.items[0].images %}
-					
-					<li class="">
-            {% capture myimg %}/public/images/content/fullsize/project-{{collection.items[0].id}}/{{image}}.jpg{% endcapture %}
-            {% if mixture.debug  %}
-              <img src="{{ myimg }}" class="" />
-             {% else %}
-              <img src="{{ myimg | asset_url }}" class="" />
-            {% endif %}   
-          </li>
+{% include "thumbs"  %}
 
-				{% endfor %}
-			
-    	{% endcollection %}
-    </ul>
-  </div>    	
-	
-</div>
+{% include "project" with mixture.route.project %}
+
 {% endblock %}
 

@@ -67,6 +67,10 @@
 			} else {
 				return false;
 			}
+		},
+
+		getLength: function() {
+			return this.slider.length;
 		}
 
 				

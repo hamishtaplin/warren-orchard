@@ -9,9 +9,6 @@ App.Views.ProgressBar = Backbone.View.extend({
 		_.bindAll(this, "update", "complete", "onTransitionEnd");
 		this.render();
 
-
-		// this.total = attributes.total;
-
 		App.eventDispatcher.on("progress:change", this.update);
 		App.eventDispatcher.on("progress:complete", this.complete);
 
@@ -23,13 +20,10 @@ App.Views.ProgressBar = Backbone.View.extend({
 		this.innerEl = document.createElement("div");
 		this.el.classList.add("progress");
 		this.innerEl.classList.add("progress-bar");
-		
 		this.el.appendChild(this.innerEl);
-
 	},
 
 	update: function (perc) {
-		console.log(perc);
 		this.el.classList.remove("is-complete");
 		this.innerEl.style.width = perc.toString() + "%";
 	},

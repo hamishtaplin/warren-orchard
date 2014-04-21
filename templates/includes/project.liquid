@@ -1,0 +1,22 @@
+<div class="gallery" id="gallery-{{project}}">
+  <ul class="gallery-inner" id="gallery-inner-{{project}}">
+  
+  {% collection "projects" query 'slug=/projects/{{ project }}' %}
+      
+      {% for image in collection.items[0].images %}
+        
+        <li class="gallery-item">
+          {% capture myimg %}/public/images/content/fullsize/project-{{collection.items[0].id}}/{{image}}.jpg{% endcapture %}
+          {% if mixture.debug  %}
+            <div data-src="{{ myimg }}" class="gallery-img  img" />
+           {% else %}
+            <div data-src="{{ myimg | asset_url }}" class="gallery-img  img" />
+          {% endif %}   
+        </li>
+
+      {% endfor %}
+    
+    {% endcollection %}
+
+  </ul>
+</div>

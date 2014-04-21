@@ -3,7 +3,7 @@
 	window.App = window.App || {};
 	App.Views = App.Views || {};
 
-	App.Views.ProjectNavView = Backbone.View.extend({
+	App.Views.ProjectNav = Backbone.View.extend({
 
 		tagName: "div",
 
@@ -12,7 +12,7 @@
 		projects: [],
 
 		initialize: function (args) {
-			_.bindAll(this, "onClick", "loadProject", "onAjaxSuccess", "show", "onProjectLoaded");
+			_.bindAll(this, "onClick", "loadProject", "onAjaxSuccess", "show", "onProjectLoaded", "onSliderAnimationComplete");
 			this.projectIDs = args.projectIDs;
 			this.render();
 
@@ -21,6 +21,8 @@
 
 		render: function () {
 			var header = document.getElementById("header");
+
+			this.pagenav = new App.Views.PageNav();
 
 			this.nextBtn = this.makeBtn("next");
 			this.prevBtn = this.makeBtn("prev");
@@ -50,33 +52,10 @@
 				innerEl: this.innerEl
 			});
 
-		},
-
-		addUI: function () {
-			var i = 0;
-			var inner = document.createElement("div");
-			
-			inner.setAttribute("class", "slider-paging-inner bg-check");
-			inner.innerHTML = "";
-			
-			this.pageNav = document.createElement("div");
-			this.pageNav.setAttribute("class", "slider-paging");
-			this.pageNav.innerHTML = "";
-
-			while (i < this.numSlides) {
-				var btn = document.createElement("div");
-				btn.setAttribute("data-i", i.toString());
-				// btn.innerHTML = i.toString();
-				btn.setAttribute("class", "slider-paging-btn");
-				inner.appendChild(btn);
-				i++;
-			}
-			
-			this.pageNav.inner = inner;
-			this.pageNav.appendChild(inner);
-			this.el.appendChild(this.pageNav);
+			this.el.insertBefore(this.pagenav.el, this.innerEl);
 
 		},
+
 
 		makeBtn: function (type) {
 			var btn = document.createElement("a");
@@ -91,10 +70,13 @@
 
 		onClick: function (e) {
 			var target = e.target;
+
 			if (target === this.nextBtn) {
 				this.next();
 			} else if (target === this.prevBtn) {
 				this.prev();
+			} else if (this.pagenav.contains(target) > -1){
+				this.setRoute(this.currentProject.id, this.pagenav.contains(target));
 			}
 		},
 
@@ -113,7 +95,8 @@
 			var prev = this.currentProject.getPrev();
 			
 			if (prev === false) {
-				this.setRoute(this.getPrevProject().id, 0);
+				var prevProject = this.getPrevProject();
+				this.setRoute(prevProject.id, prevProject.getLength() - 1);
 			} else {
 				this.setRoute(this.currentProject.id, prev);
 			}
@@ -124,26 +107,30 @@
 		},
 
 		show: function () {
+			// this.pagenav.show();
 			this.el.classList.add("is-visible");
+			this.animate = true;
 		},
 
 		hide: function () {
+			this.pagenav.hide();
 			this.currentProject = undefined;
-			console.log("hide");
+			this.animate = false;
 			this.el.classList.remove("is-visible");
 		},
 
 		navigateTo: function(id, slide) {
+			this.pagenav.go(slide);
 			if (this.isCurrentProject(id)) {
 				console.log("project already current, navigating to slide: " + slide);
-				this.currentProject.navigateTo(slide);
+				this.currentProject.navigateTo(slide, true);
 			} else {
 				var project = this.getProjectByID(id);
 				if (project.loaded) {
 					console.log("project already loaded but not current, navigating to project and slide: " + slide);
 					this.currentProject = project;
 					project.navigateTo(slide);
-					this.goToProject(project);
+					this.goToProject(project, true);
 					this.trigger("loaded");
 				} else {
 					console.log("project not loaded, loading: ");
@@ -166,15 +153,14 @@
 					this.onAjaxSuccess(data, slide);
 				}, this)
 			});
-
 		},
 
 		onAjaxSuccess: function (data, slide) {
 			this.currentProject.render(data, slide);
 		},
 
-		onProjectLoaded: function(e) {
-			this.goToProject(this.currentProject);
+		onProjectLoaded: function() {
+			this.goToProject(this.currentProject, this.animate);
 			this.trigger("loaded");
 		},
 
@@ -184,8 +170,21 @@
 			});
 		},
 
-		goToProject: function(project) {
-			this.slider.navigateTo(this.getProjectSlideIndex(project));
+		goToProject: function(project, animate) {
+			this.slider.navigateTo(this.getProjectSlideIndex(project), animate);
+			if (animate) {
+				this.pagenav.hide();
+				this.slider.on("animationComplete", this.onSliderAnimationComplete);
+			} else {
+				this.pagenav.render(this.currentProject.slider.length);
+				_.delay(this.pagenav.show, 1000);
+			}
+		},
+
+		onSliderAnimationComplete: function() {
+			this.pagenav.render(this.currentProject.slider.length);
+			this.slider.off("animationComplete", this.onSliderAnimationComplete);
+			_.delay(this.pagenav.show, 1000);
 		},
 
 		getProjectSlideIndex: function(project) {
@@ -193,7 +192,6 @@
 		},
 
 		getNextProject: function() {
-			console.log(this.projects[this.getProjectSlideIndex() + 1]);
 			return this.projects[this.getProjectSlideIndex() + 1] || this.projects[0];
 		},
 

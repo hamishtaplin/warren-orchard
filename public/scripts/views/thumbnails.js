@@ -10,7 +10,7 @@ App.Views.Thumbnails = Backbone.View.extend({
 
 		if (_.isUndefined(this.el)) {
 			return;
-		} 
+		}
 
 		this.thumbs = document.querySelectorAll(".thumb");
 		this.numThumbs = this.thumbs.length;

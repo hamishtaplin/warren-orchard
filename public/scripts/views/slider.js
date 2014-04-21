@@ -34,8 +34,7 @@ App.Views = App.Views || {};
 		},
 
 		navigateTo: function (i, animate) {
-
-			var animate = animate || true;
+			var animate = animate;
 			var el = this.innerEl;
 
 			if (!animate) {
@@ -61,16 +60,26 @@ App.Views = App.Views || {};
 			} else {
 				// TODO: cross-browser implementation
 				el.addEventListener("webkitAnimationEnd", this.onSlideAnimationEnd);
-			};	
+			};
 
 			if (this.animType === "slide") {
-				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.length)) + "%,0,0)";
+
+				el.style.webkitTransform = "translate3d(-" + i * (100 / (this.length)) + "%,0,0) rotateY(0deg)";
+			
+				// el.style.webkitTransform = "translateX(-" + i * (100 / (this.length)) + "%)";
+				
+				// el.style.position = "absolute";
+				// el.style.left = 0 - (i * (100 / (this.length))) + "%";
 			}
 
 		},
 
-		onSlideAnimationEnd: function() {
-			if (DEBUG) BackgroundCheck.refresh();
+		onSlideAnimationEnd: function(e) {
+			this.trigger("animationComplete");
+			e.target.removeEventListener("webkitAnimationEnd", this.onSlideAnimationEnd);
+			if (DEBUG) {
+				_.delay(BackgroundCheck.refresh, 500);
+			}
 		}
 
 	});
