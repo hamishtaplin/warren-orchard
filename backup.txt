@@ -1,0 +1,258 @@
+<ul class="thumbs  grid  hide" id="thumbs">
+		{% for project in global.projects limit:24  %}
+		<li class="thumb" data-project-id="{{project.id}}">
+			<a href="#projects/{{project.id}}/0" class="thumb-link">
+				<span class="thumb-title"><h2 class="">Lorem Ipsum</h2>
+				</span>
+				{% capture myimg %}/public/images/content/thumbs/{{project.id}}/{{project.images[0]}}-436x436.jpg{% endcapture %}
+				{% if mixture.debug  %}
+					<img data-src="{{ myimg }}" class="thumb-img  img" width="436" height="436" />
+				 {% else %}
+					<img data-src="{{ myimg | asset_url }}" class="thumb-img  img" width="436" height="436" />
+				{% endif %}    
+			</a>
+		</li>
+		{% endfor %}		
+	</ul>
+
+
+	{
+    "projects": [
+
+        {
+            "id": "project-24",
+            "images": [
+                "image-298",
+                "image-297",
+                "image-296",
+                "image-295",
+                "image-294"
+
+            ]
+        }, {
+            "id": "project-23",
+            "images": [
+                "image-302",
+                "image-301",
+                "image-300",
+                "image-299"
+
+            ]
+        }, {
+            "id": "project-22",
+            "images": [
+                "image-306",
+                "image-305",
+                "image-304",
+                "image-303"
+
+            ]
+        }, {
+            "id": "project-21",
+            "images": [
+                "image-311",
+                "image-310",
+                "image-309",
+                "image-308",
+                "image-307"
+
+            ]
+        }, {
+            "id": "project-20",
+            "images": [
+                "image-316",
+                "image-315",
+                "image-314",
+                "image-313",
+                "image-312"
+
+            ]
+        },
+
+
+        {
+            "id": "project-19",
+            "images": [
+                "image-319",
+                "image-318",
+                "image-317"
+
+            ]
+        },
+
+
+        {
+            "id": "project-18",
+            "images": [
+                "image-323",
+                "image-322",
+                "image-321",
+                "image-320"
+
+            ]
+        }, {
+            "id": "project-17",
+            "images": [
+                "image-327",
+                "image-326",
+                "image-325",
+                "image-324"
+
+            ]
+        }, {
+            "id": "project-16",
+            "images": [
+                "image-332",
+                "image-331",
+                "image-330",
+                "image-329",
+                "image-328"
+
+            ]
+        }, {
+            "id": "project-15",
+            "images": [
+                "image-336",
+                "image-335",
+                "image-334",
+                "image-333"
+
+            ]
+        }, {
+            "id": "project-14",
+            "images": [
+                "image-339",
+                "image-338",
+                "image-337"
+
+            ]
+        }, {
+            "id": "project-13",
+            "images": [
+                "image-343",
+                "image-342",
+                "image-341",
+                "image-340"
+
+            ]
+        }, {
+            "id": "project-12",
+            "images": [
+                "image-348",
+                "image-347",
+                "image-346",
+                "image-345",
+                "image-344"
+
+            ]
+        }, {
+            "id": "project-11",
+            "images": [
+                "image-352",
+                "image-351",
+                "image-350",
+                "image-349"
+
+            ]
+        }, {
+            "id": "project-10",
+            "images": [
+                "image-357",
+                "image-356",
+                "image-355",
+                "image-354",
+                "image-353"
+
+            ]
+        }, {
+            "id": "project-9",
+            "images": [
+                "image-362",
+                "image-361",
+                "image-360",
+                "image-359",
+                "image-358"
+
+            ]
+        }, {
+            "id": "project-8",
+            "images": [
+                "image-366",
+                "image-365",
+                "image-364",
+                "image-363"
+
+            ]
+        }, {
+            "id": "project-7",
+            "images": [
+                "image-370",
+                "image-369",
+                "image-368",
+                "image-367"
+
+            ]
+        }, {
+            "id": "project-6",
+            "images": [
+                "image-376",
+                "image-375",
+                "image-374",
+                "image-373",
+                "image-372",
+                "image-371"
+
+            ]
+        }, {
+            "id": "project-5",
+            "images": [
+                "image-386",
+                "image-385",
+                "image-384",
+                "image-383",
+                "image-382",
+                "image-381",
+                "image-380",
+                "image-379",
+                "image-378",
+                "image-377"
+
+            ]
+        }, {
+            "id": "project-4",
+            "images": [
+                "image-390",
+                "image-389",
+                "image-388",
+                "image-387"
+
+            ]
+        }, {
+            "id": "project-3",
+            "images": [
+                "image-394",
+                "image-393",
+                "image-392",
+                "image-391"
+
+            ]
+        }, {
+            "id": "project-2",
+            "images": [
+                "image-402",
+                "image-401",
+                "image-400",
+                "image-399"
+
+            ]
+        }, {
+            "id": "project-1",
+            "images": [
+                "image-398",
+                "image-397",
+                "image-396",
+                "image-395"
+            ]
+        }
+    ]
+}
